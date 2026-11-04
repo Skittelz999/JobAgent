@@ -1,0 +1,8 @@
+experience_years = 2
+experience_basis = "part_time"
+roles = ["Fullstack developer"]
+experience_details = ["Approximately two years of part-time fullstack development", "REST API development"]
+university_credits = 157
+has_issued_degree = false
+skills = ["Java", "Spring Boot", "REST", "Python", "JavaScript", "Vue.js", "PostgreSQL", "MongoDB", "Git", "Maven", "Linux", "Docker", "CI/CD", "JUnit", "MockMvc", "Testcontainers", "JWT", "RBAC", "Networking"]
+# Language proficiency and work authorization are intentionally unspecified.

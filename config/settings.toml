@@ -1,0 +1,28 @@
+[storage]
+database = "var/jobagent.sqlite3"
+
+[source]
+base_url = "https://jobsearch.api.jobtechdev.se"
+timeout_seconds = 30
+request_interval_seconds = 1
+max_attempts = 3
+# Used only when the API supplies timestamps without an explicit offset.
+timezone = "Europe/Stockholm"
+
+[search]
+queries = ["Java", "Spring Boot", "backendutvecklare", "fullstackutvecklare", "testautomatisering", "testutvecklare"]
+days = 30
+page_size = 100
+# Bounds each query. Larger searches are explicitly reported as partial.
+max_pages = 21
+
+[matching]
+minimum_score = 70
+
+[llm]
+base_url = "http://127.0.0.1:1234/v1"
+model = "openai/gpt-oss-20b"
+timeout_seconds = 180
+max_tokens = 4000
+# Oversized input is rejected, never silently truncated.
+max_input_chars = 20000
