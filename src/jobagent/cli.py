@@ -1,4 +1,4 @@
-"""Manual CLI. Only the explicit analyze command contacts a local AI runtime."""
+"""Manual CLI. Only explicit analyze/match commands contact a local AI runtime."""
 import argparse
 from datetime import UTC, datetime
 import json
@@ -10,10 +10,10 @@ import tomllib
 
 from pydantic import ValidationError
 
-from jobagent.database import Database
+from jobagent.database import SCHEMA_VERSION, Database
 from jobagent.platsbanken import Platsbanken
 from jobagent.search import collect
-from jobagent.settings import Search, load_profile, load_settings
+from jobagent.settings import Search, load_profile, load_settings, load_yaml_profile
 
 
 class JsonLogFormatter(logging.Formatter):
@@ -34,7 +34,7 @@ def parser() -> argparse.ArgumentParser:
     commands = cli.add_subparsers(dest="command", required=True)
     commands.add_parser("init", help="Initialize the SQLite database")
     check = commands.add_parser("config-check", help="Validate settings without creating a database")
-    check.add_argument("--profile", type=Path, help="Optional profile TOML to validate")
+    check.add_argument("--profile", type=Path, help="Optional YAML or legacy TOML profile to validate")
     search = commands.add_parser("search", help="Collect ads manually")
     search.add_argument("--query", action="append", help="Override queries; repeat for multiple queries")
     search.add_argument("--days", type=int)
@@ -51,6 +51,12 @@ def parser() -> argparse.ArgumentParser:
     analyze.add_argument("id", type=int)
     analyze.add_argument("--profile", type=Path, default=Path("config/profile.example.toml"),
                          help="Profile TOML relative to project root (default: example profile)")
+    match = commands.add_parser("match", help="Compare a complete stored ad directly with a profile locally")
+    match.add_argument("id", type=int)
+    match.add_argument("--profile", type=Path, default=Path("config/profile.yaml"), help="YAML profile")
+    match.add_argument("--grouped", action="store_true", help="Experimental required/preferred/practical arrays")
+    saved = commands.add_parser("match-show", help="Show a saved match result without calling the model")
+    saved.add_argument("id", type=int, help="Saved match result ID")
     return cli
 
 
@@ -72,7 +78,8 @@ def main(argv: list[str] | None = None) -> int:
             output = {"valid": True, "settings": settings.model_dump(mode="json")}
             if args.profile:
                 path = args.profile if args.profile.is_absolute() else args.root / args.profile
-                load_profile(path)
+                loader = load_yaml_profile if path.suffix.lower() in {".yaml", ".yml"} else load_profile
+                loader(path)
                 output["profile_valid"] = True
             emit(output)
             return 0
@@ -87,6 +94,32 @@ def main(argv: list[str] | None = None) -> int:
                     values[field] = getattr(args, argument)
             spec = Search.model_validate(values)
         database = Database(settings.storage.database)
+        if args.command == "match-show":
+            saved = database.get_match_result(args.id)
+            if saved is None:
+                raise ValueError("No saved match result with that ID")
+            emit({"result_id": saved["id"], "created_at": saved["created_at"],
+                  **json.loads(saved["result_json"])})
+            return 0
+        if args.command == "match":
+            from jobagent.matching import match_job
+            from jobagent.llm import LocalLLM
+            from jobagent.models import JobAd
+
+            profile_path = args.profile if args.profile.is_absolute() else args.root / args.profile
+            profile = load_yaml_profile(profile_path)
+            row = database.get_job(args.id)
+            if row is None:
+                raise ValueError("No stored job with that ID")
+            job = JobAd.model_validate_json(row["payload_json"])
+            database.initialize()
+            result = match_job(job, profile, LocalLLM(settings.llm), grouped=args.grouped)
+            result = {"job_id": args.id, "ad_version": row["version"],
+                      "ad_content_hash": row["content_hash"], "title": job.title, **result}
+            result_id = database.save_match_result(args.id, row["version"], result)
+            saved = database.get_match_result(result_id)
+            emit({"result_id": result_id, "created_at": saved["created_at"], **result})
+            return 0
         if args.command == "analyze":
             # Lazy imports and read-only access keep collection independent of AI.
             from jobagent.analysis import analyze_job
@@ -106,7 +139,7 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         database.initialize()
         if args.command == "init":
-            emit({"database": str(database.path), "schema_version": 1})
+            emit({"database": str(database.path), "schema_version": SCHEMA_VERSION})
         elif args.command == "search":
             with Platsbanken(settings.source) as source:
                 result = collect(database, source, spec)

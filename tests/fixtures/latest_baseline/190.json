@@ -1,0 +1,159 @@
+{
+  "source": {
+    "application_url": "https://jobb.skill.se/jobs/8431224-cloud-infrastructure-engineer/applications/new?promotion=2228734-arbetsformedlingen",
+    "deadline": "2026-11-04T22:59:59Z",
+    "description": "Autocom is a high-tech company that develops advanced diagnostic equipment for vehicles. Our end customers include vehicle repair shops and inspection companies. Our Autocom products are available in most European countries, and we work with several major companies worldwide in the automotive aftermarket. Our economic growth is stable, which allows us to continue to hire new employees, and we currently have around 120 employees. Autocom is part of the Würth Group, which has over 90,000 employees globally. More information about AUTOCOM can be found at www.autocom.se.\n\nAbout the role\nAutocom is undergoing a major technological transformation, with our entire product portfolio gradually moving to the cloud. As an Infrastructure Engineer, you will be part of our Cloud Enablement Team, responsible for the shared infrastructure and technical building blocks that enable our development teams to build, deploy and operate their services efficiently.\nOur development teams are responsible for their own services and databases, while you and the Cloud Enablement Team provide the underlying platform, network and tools they need to work effectively. You will work with modern cloud technologies in AWS and play an important role in building the foundation for the next generation of our products, with a strong focus on security, scalability, automation and a great developer experience.\nYou will design, develop and maintain the services and tooling at the core of our platform, including edge services, API gateways and reusable modules used by other development teams. This role requires strong software engineering and programming skills: you will write, test, review and operate production code—not just configure or integrate existing IT tools. You will have hands-on responsibility for building and evolving reliable software components that support the platform.\nThe role includes:\n\nDeveloping and managing scalable and reliable AWS cloud infrastructure, including networking, load balancing and service mesh.\n\n\nAutomating and standardizing infrastructure using Infrastructure as Code (Terraform), while developing CI/CD and GitLab infrastructure.\n\n\nBuilding self-service solutions and reusable modules to enable efficient DevOps practices across development teams.\n\n\nManaging observability, monitoring and security, including platform modernization and TISAX-related controls.\n\n\nTroubleshooting complex infrastructure issues and driving improvements in scalability, stability, performance and cost efficiency.\n\n\nYou will also have the opportunity to influence the future direction of our cloud platform and work with technology supporting a broad product portfolio, including Windows, iOS and Android solutions, as well as hardware that communicates with the cloud.\nYour profile\nWe are looking for someone with:\n\nA university degree in engineering, IT, computer science or a related field.\n\n\nExperience working in a larger cloud environment, such as AWS, Azure or Google Cloud.\n\n\nComfortable working in Linux environments\n\n\nExperience with Infrastructure as Code, preferably Terraform.\n\n\nExperience in programming and software development. Familiarity with languages such as Go, Java or Kotlin is a plus.\n\n\nExperience with container technologies such as Docker and Kubernetes.\n\n\nA good understanding of networking, cloud infrastructure and how different services communicate with each other.\n\n\nExperience with CI/CD and automated development and delivery pipelines.\n\n\nYou don't need to have many years of experience to be successful in this role - we are also open to more junior profiles with a strong technical foundation, relevant experience and, most importantly, a genuine drive to learn and develop. You enjoy taking ownership, solving technical challenges and understanding how different parts of a technical platform fit together. You are curious about new technologies and motivated by the opportunity to help build something that is continuously evolving.\n Application\nIn this recruitment process, Autocom is collaborating with Skill. Applications are reviewed on an ongoing basis, and the position may be filled before the application deadline. If you have any questions about the role or the recruitment process, please contact Johan Zizala at Skill, johan.zizala@skill.se / 0721-43 93 42.\n#LI-DNI",
+    "employer": "Skill Kompetenspartner AB",
+    "external_id": "31552536",
+    "location": "Trollhättan",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31552536",
+    "published_at": "2026-10-05T09:00:29Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "7jMK_KQk_M9L",
+        "label": "Molntekniker/Cloudutvecklare",
+        "legacy_ams_taxonomy_id": null
+      },
+      "occupation_group": {
+        "concept_id": "VCpu_5EN_bBt",
+        "label": "Nätverks- och systemtekniker m.fl.",
+        "legacy_ams_taxonomy_id": "3514"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Trollhättan",
+          "coordinates": [
+            12.2790806165503,
+            58.2716366587861
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Trollhättan",
+          "municipality_code": "1488",
+          "municipality_concept_id": "CSy8_41F_YvX",
+          "postcode": "46153",
+          "region": "Västra Götalands län",
+          "region_code": "14",
+          "region_concept_id": "zdoY_6u5_Krt",
+          "street_address": "Nohabgatan 14"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Cloud Infrastructure Engineer",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Autocom is a high-tech company that develops advanced diagnostic equipment for vehicles.",
+    "p0002": "Our end customers include vehicle repair shops and inspection companies.",
+    "p0003": "Our Autocom products are available in most European countries, and we work with several major companies worldwide in the automotive aftermarket.",
+    "p0004": "Our economic growth is stable, which allows us to continue to hire new employees, and we currently have around 120 employees.",
+    "p0005": "Autocom is part of the Würth Group, which has over 90,000 employees globally.",
+    "p0006": "More information about AUTOCOM can be found at www.autocom.se.",
+    "p0007": "About the role",
+    "p0008": "Autocom is undergoing a major technological transformation, with our entire product portfolio gradually moving to the cloud.",
+    "p0009": "As an Infrastructure Engineer, you will be part of our Cloud Enablement Team, responsible for the shared infrastructure and technical building blocks that enable our development teams to build, deploy and operate their services efficiently.",
+    "p0010": "Our development teams are responsible for their own services and databases, while you and the Cloud Enablement Team provide the underlying platform, network and tools they need to work effectively.",
+    "p0011": "You will work with modern cloud technologies in AWS and play an important role in building the foundation for the next generation of our products, with a strong focus on security, scalability, automation and a great developer experience.",
+    "p0012": "You will design, develop and maintain the services and tooling at the core of our platform, including edge services, API gateways and reusable modules used by other development teams.",
+    "p0013": "This role requires strong software engineering and programming skills: you will write, test, review and operate production code—not just configure or integrate existing IT tools.",
+    "p0014": "You will have hands-on responsibility for building and evolving reliable software components that support the platform.",
+    "p0015": "The role includes:",
+    "p0016": "Developing and managing scalable and reliable AWS cloud infrastructure, including networking, load balancing and service mesh.",
+    "p0017": "Automating and standardizing infrastructure using Infrastructure as Code (Terraform), while developing CI/CD and GitLab infrastructure.",
+    "p0018": "Building self-service solutions and reusable modules to enable efficient DevOps practices across development teams.",
+    "p0019": "Managing observability, monitoring and security, including platform modernization and TISAX-related controls.",
+    "p0020": "Troubleshooting complex infrastructure issues and driving improvements in scalability, stability, performance and cost efficiency.",
+    "p0021": "You will also have the opportunity to influence the future direction of our cloud platform and work with technology supporting a broad product portfolio, including Windows, iOS and Android solutions, as well as hardware that communicates with the cloud.",
+    "p0022": "Your profile",
+    "p0023": "We are looking for someone with:",
+    "p0024": "A university degree in engineering, IT, computer science or a related field.",
+    "p0025": "Experience working in a larger cloud environment, such as AWS, Azure or Google Cloud.",
+    "p0026": "Comfortable working in Linux environments",
+    "p0027": "Experience with Infrastructure as Code, preferably Terraform.",
+    "p0028": "Experience in programming and software development.",
+    "p0029": "Familiarity with languages such as Go, Java or Kotlin is a plus.",
+    "p0030": "Experience with container technologies such as Docker and Kubernetes.",
+    "p0031": "A good understanding of networking, cloud infrastructure and how different services communicate with each other.",
+    "p0032": "Experience with CI/CD and automated development and delivery pipelines.",
+    "p0033": "You don't need to have many years of experience to be successful in this role - we are also open to more junior profiles with a strong technical foundation, relevant experience and, most importantly, a genuine drive to learn and develop.",
+    "p0034": "You enjoy taking ownership, solving technical challenges and understanding how different parts of a technical platform fit together.",
+    "p0035": "You are curious about new technologies and motivated by the opportunity to help build something that is continuously evolving.",
+    "p0036": "Application",
+    "p0037": "In this recruitment process, Autocom is collaborating with Skill.",
+    "p0038": "Applications are reviewed on an ongoing basis, and the position may be filled before the application deadline.",
+    "p0039": "If you have any questions about the role or the recruitment process, please contact Johan Zizala at Skill, johan.zizala@skill.se / 0721-43 93 42.",
+    "p0040": "#LI-DNI"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0024",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "expected"
+      }
+    ]
+  }
+}

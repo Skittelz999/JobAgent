@@ -1,0 +1,284 @@
+{
+  "source": {
+    "application_url": "https://www.hykmann.com/careers/jobs/81ce1652-4c9f-43d3-af69-48cb9780f9be",
+    "deadline": "2026-11-26T22:59:59Z",
+    "description": "🚀 We’re Hiring: Java Developer – Microservices, Serverless & AWS Cloud\nHykmann Global Business Solutions AB is looking for a skilled Java Developer for an exciting consulting opportunity within connected vehicle services and automotive software.\nAre you curious about technology, passionate about clean and maintainable code, and enthusiastic about solving problems collaboratively? Do you enjoy pair programming, mob programming, and building cloud-native services that are reliable, scalable, and ready for production? This opportunity could be an excellent fit for you!\n🔧 About the Role\nYou will join an open-minded and collaborative software engineering team working primarily with Java, microservices, and serverless architectures. The team values experimentation, knowledge sharing, continuous improvement, and thoughtful engineering decisions.\nYou will take responsibility for the services you help build, from understanding requirements and designing solutions to implementation, testing, deployment, and ongoing support. The team follows agile practices and emphasises DevSecOps, continuous integration, and continuous delivery.\nStakeholder support and on-call responsibilities are shared across the team, offering an opportunity to contribute to both development and the reliable operation of production services.\n🎯 Key Responsibilities\nDesign, develop, test, and maintain backend services using Java.\nBuild and enhance applications based on microservices and serverless architectures.\nDevelop cloud-native solutions using AWS services such as Lambda, API Gateway, DynamoDB, and SQS.\nCollaborate with colleagues through pair programming and mob programming.\nWrite clean, maintainable, and testable code, with a focus on long-term quality.\nAnalyze existing code, understand technical problems, and identify appropriate solutions.\nDesign and implement automated tests to ensure reliability and prevent regressions.\nParticipate in agile ceremonies, planning, refinement, and continuous improvement activities.\nContribute to CI/CD pipelines and reliable production deployments.\nSupport the services developed by the team, including troubleshooting and shared on-call responsibilities.\nCollaborate with stakeholders and other technical teams to deliver business value.\nShare knowledge and contribute to a culture of collective ownership and engineering excellence.\n\n✅ Required Skills & Experience\nWe are looking for a collaborative developer with strong Java fundamentals and an interest in modern cloud engineering.\nStrong development skills in Java.\nUnderstanding of microservices and serverless architectures.\nExperience working with agile methodologies.\nKnowledge of Amazon Web Services (AWS), preferably including:\nAWS Lambda\nAPI Gateway\nDynamoDB\nSQS\nCloudFormation\nWillingness to work collaboratively through pair programming and mob programming.\nAbility to analyze problems, evaluate alternative solutions, and consider how code can be tested and maintained.\nStrong collaboration and knowledge-sharing skills.\nFluency in both Swedish and English, spoken and written.\n\n⭐ Nice to Have\nExperience or knowledge in the following areas is an advantage:\nContainer-based architectures and technologies.\nInfrastructure as Code (IaC).\nSpring Boot and the Java ecosystem.\nDevOps practices and automated software delivery.\nContinuous Integration and Continuous Deployment (CI/CD).\nDevSecOps principles and secure software development.\nProduction support, monitoring, and troubleshooting of cloud-based applications.\n\n🤝 Team & Ways of Working\nYou will join a team that values openness, curiosity, and shared responsibility. The team adapts its way of working to the task, using pair or mob programming when appropriate.\nThe engineering culture focuses on:\nCollaborative development: Solving problems together and sharing knowledge.\nQuality-first engineering: Writing maintainable code and testing solutions thoroughly.\nCloud-native delivery: Building scalable services using modern cloud technologies.\nDevSecOps: Taking responsibility for security, development, deployment, and operations.\nContinuous delivery: Using automated pipelines to release changes reliably and efficiently.\nContinuous improvement: Experimenting with technologies and improving engineering practices over time.\n\n👤 Who Should Apply?\nWe are looking for a thoughtful and curious Java developer who wants to understand not only how to solve a problem, but also why a particular solution is appropriate and how to ensure it continues working reliably.\nYou enjoy experimenting with new technologies, collaborating closely with colleagues, and taking ownership of the software you build. You value feedback, shared learning, and solutions that deliver lasting results rather than just quick fixes.\n📩 Interested in This Opportunity?\nPlease submit your updated CV highlighting your experience with Java, microservices, serverless architectures, AWS, agile development, and collaborative engineering practices. Include relevant experience with Spring Boot, CI/CD, DevOps, or Infrastructure as Code where applicable.\n👉 Explore the opportunity and apply: https://www.hykmann.com/careers",
+    "employer": "Hykmann Global Business Solutions AB",
+    "external_id": "31652746",
+    "location": "Göteborg",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31652746",
+    "published_at": "2026-10-27T20:48:25Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [
+          {
+            "concept_id": "WFCz_teU_KFf",
+            "label": "Teknik och teknisk industri",
+            "legacy_ams_taxonomy_id": "15",
+            "weight": 10
+          }
+        ],
+        "education_level": [
+          {
+            "concept_id": "SdS6_SLL_mRJ",
+            "label": "Forskarutbildning",
+            "legacy_ams_taxonomy_id": "7",
+            "weight": 10
+          }
+        ],
+        "languages": [],
+        "skills": [],
+        "work_experiences": [
+          {
+            "concept_id": "rQds_YGd_quU",
+            "label": "Mjukvaruutvecklare",
+            "legacy_ams_taxonomy_id": "80",
+            "weight": 10
+          }
+        ]
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [
+          {
+            "concept_id": "zSLA_vw2_FXN",
+            "label": "Svenska",
+            "legacy_ams_taxonomy_id": "502",
+            "weight": 5
+          },
+          {
+            "concept_id": "NVxJ_hLg_TYS",
+            "label": "Engelska",
+            "legacy_ams_taxonomy_id": "283",
+            "weight": 5
+          }
+        ],
+        "skills": [
+          {
+            "concept_id": "jCsR_WQX_CKD",
+            "label": "Java, programmeringsspråk",
+            "legacy_ams_taxonomy_id": "200028",
+            "weight": null
+          },
+          {
+            "concept_id": "KRDJ_nhm_wLb",
+            "label": "Amazon Web Services (AWS), molnplattform",
+            "legacy_ams_taxonomy_id": "609418",
+            "weight": null
+          }
+        ],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "rQds_YGd_quU",
+        "label": "Mjukvaruutvecklare",
+        "legacy_ams_taxonomy_id": "80"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "GÖTEBORG",
+          "coordinates": [
+            11.974057738332414,
+            57.69821688323396
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Göteborg",
+          "municipality_code": "1480",
+          "municipality_concept_id": "PVZL_BQT_XtL",
+          "postcode": "41134",
+          "region": "Västra Götalands län",
+          "region_code": "14",
+          "region_concept_id": "zdoY_6u5_Krt",
+          "street_address": null
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "ZxwM_gtz_n61",
+        "label": "Arbete på plats"
+      }
+    },
+    "title": "ava Developer  Microservices, Serverless & AWS Cloud",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "🚀 We’re Hiring: Java Developer – Microservices, Serverless & AWS Cloud",
+    "p0002": "Hykmann Global Business Solutions AB is looking for a skilled Java Developer for an exciting consulting opportunity within connected vehicle services and automotive software.",
+    "p0003": "Are you curious about technology, passionate about clean and maintainable code, and enthusiastic about solving problems collaboratively?",
+    "p0004": "Do you enjoy pair programming, mob programming, and building cloud-native services that are reliable, scalable, and ready for production?",
+    "p0005": "This opportunity could be an excellent fit for you!",
+    "p0006": "🔧 About the Role",
+    "p0007": "You will join an open-minded and collaborative software engineering team working primarily with Java, microservices, and serverless architectures.",
+    "p0008": "The team values experimentation, knowledge sharing, continuous improvement, and thoughtful engineering decisions.",
+    "p0009": "You will take responsibility for the services you help build, from understanding requirements and designing solutions to implementation, testing, deployment, and ongoing support.",
+    "p0010": "The team follows agile practices and emphasises DevSecOps, continuous integration, and continuous delivery.",
+    "p0011": "Stakeholder support and on-call responsibilities are shared across the team, offering an opportunity to contribute to both development and the reliable operation of production services.",
+    "p0012": "🎯 Key Responsibilities",
+    "p0013": "Design, develop, test, and maintain backend services using Java.",
+    "p0014": "Build and enhance applications based on microservices and serverless architectures.",
+    "p0015": "Develop cloud-native solutions using AWS services such as Lambda, API Gateway, DynamoDB, and SQS.",
+    "p0016": "Collaborate with colleagues through pair programming and mob programming.",
+    "p0017": "Write clean, maintainable, and testable code, with a focus on long-term quality.",
+    "p0018": "Analyze existing code, understand technical problems, and identify appropriate solutions.",
+    "p0019": "Design and implement automated tests to ensure reliability and prevent regressions.",
+    "p0020": "Participate in agile ceremonies, planning, refinement, and continuous improvement activities.",
+    "p0021": "Contribute to CI/CD pipelines and reliable production deployments.",
+    "p0022": "Support the services developed by the team, including troubleshooting and shared on-call responsibilities.",
+    "p0023": "Collaborate with stakeholders and other technical teams to deliver business value.",
+    "p0024": "Share knowledge and contribute to a culture of collective ownership and engineering excellence.",
+    "p0025": "✅ Required Skills & Experience",
+    "p0026": "We are looking for a collaborative developer with strong Java fundamentals and an interest in modern cloud engineering.",
+    "p0027": "Strong development skills in Java.",
+    "p0028": "Understanding of microservices and serverless architectures.",
+    "p0029": "Experience working with agile methodologies.",
+    "p0030": "Knowledge of Amazon Web Services (AWS), preferably including:",
+    "p0031": "AWS Lambda",
+    "p0032": "API Gateway",
+    "p0033": "DynamoDB",
+    "p0034": "SQS",
+    "p0035": "CloudFormation",
+    "p0036": "Willingness to work collaboratively through pair programming and mob programming.",
+    "p0037": "Ability to analyze problems, evaluate alternative solutions, and consider how code can be tested and maintained.",
+    "p0038": "Strong collaboration and knowledge-sharing skills.",
+    "p0039": "Fluency in both Swedish and English, spoken and written.",
+    "p0040": "⭐ Nice to Have",
+    "p0041": "Experience or knowledge in the following areas is an advantage:",
+    "p0042": "Container-based architectures and technologies.",
+    "p0043": "Infrastructure as Code (IaC).",
+    "p0044": "Spring Boot and the Java ecosystem.",
+    "p0045": "DevOps practices and automated software delivery.",
+    "p0046": "Continuous Integration and Continuous Deployment (CI/CD).",
+    "p0047": "DevSecOps principles and secure software development.",
+    "p0048": "Production support, monitoring, and troubleshooting of cloud-based applications.",
+    "p0049": "🤝 Team & Ways of Working",
+    "p0050": "You will join a team that values openness, curiosity, and shared responsibility.",
+    "p0051": "The team adapts its way of working to the task, using pair or mob programming when appropriate.",
+    "p0052": "The engineering culture focuses on:",
+    "p0053": "Collaborative development: Solving problems together and sharing knowledge.",
+    "p0054": "Quality-first engineering: Writing maintainable code and testing solutions thoroughly.",
+    "p0055": "Cloud-native delivery: Building scalable services using modern cloud technologies.",
+    "p0056": "DevSecOps: Taking responsibility for security, development, deployment, and operations.",
+    "p0057": "Continuous delivery: Using automated pipelines to release changes reliably and efficiently.",
+    "p0058": "Continuous improvement: Experimenting with technologies and improving engineering practices over time.",
+    "p0059": "👤 Who Should Apply?",
+    "p0060": "We are looking for a thoughtful and curious Java developer who wants to understand not only how to solve a problem, but also why a particular solution is appropriate and how to ensure it continues working reliably.",
+    "p0061": "You enjoy experimenting with new technologies, collaborating closely with colleagues, and taking ownership of the software you build.",
+    "p0062": "You value feedback, shared learning, and solutions that deliver lasting results rather than just quick fixes.",
+    "p0063": "📩 Interested in This Opportunity?",
+    "p0064": "Please submit your updated CV highlighting your experience with Java, microservices, serverless architectures, AWS, agile development, and collaborative engineering practices.",
+    "p0065": "Include relevant experience with Spring Boot, CI/CD, DevOps, or Infrastructure as Code where applicable.",
+    "p0066": "👉 Explore the opportunity and apply: https://www.hykmann.com/careers"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0026",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0034",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0035",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0036",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0037",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0038",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0039",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0041",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0042",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0043",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0044",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0045",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0046",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0047",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0048",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

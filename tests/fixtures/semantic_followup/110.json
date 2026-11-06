@@ -1,0 +1,187 @@
+{
+  "source": {
+    "application_url": "https://www.academicwork.se/lediga-jobb/p/platsbanken/W8GIG4",
+    "deadline": "2027-04-18T21:59:59Z",
+    "description": "Brinner du för kvalitetssäkring och testautomatisering av mobilappar kopplade till fysiska produkter? Vi söker en drivande Mobile Application Test Engineer till ett internationellt R&D-team i Landskrona. Sök tjänsten redan idag!\nOm tjänsten\nDet här är ett konsultuppdrag på heltid med start senast 1 december och med ett initialt avtal fram till 1 juli (med möjligheter till förlängning). Du blir anställd som konsult hos Academic Work och arbetar ute på plats hos vår kund i Landskrona.\nI denna roll får du kvalitetssäkra mobila appar (Android/iOS) för IoT-produkter och driv testautomatisering i CI/CD i ett agilt R&D-team.\nArbetsuppgifter\nTestautomatisering & Design: Designa, implementera och underhålla automatiserade tester för mobila applikationer för både Android och iOS.  \nTestutförande & Felsökning: Utföra funktionella tester, regressionstester samt systemtester på både mjukvara och mot fysisk hårdvara samt analysera och rapportera avvikelser.  \nCI/CD-integration: Arbeta med testautomatisering i CI/CD-flöden i nära samarbete med DevOps (t.ex. i Azure DevOps eller GitLab).  \nAgilt samarbete & Kravgranskning: Samarbeta nära utvecklare, produktägare och andra intressenter samt delta i sprintplanering och kravgranskningar för att säkerställa hög testbarhet och kvalitet.  \nProcessförbättring: Bidra till kontinuerliga förbättringar av testmetoder, verktyg och interna testprocesser.\n\nVi söker dig som\nErfarenhet av mobiltestning: Minst 3 års dokumenterad erfarenhet av mjukvarutestning av mobila applikationer (Android och/eller iOS).\nTestautomatisering: Påvisad och praktisk erfarenhet av testautomatisering för Android och/eller iOS.\nCI/CD-integration: Erfarenhet av att arbeta med testautomatisering i CI/CD-baserade utvecklingsflöden.\nTestmetodik & Livscykel: God förståelse för mjukvarutestning genom hela utvecklingslivscykeln (funktionella tester, regressionstester, systemtester).\nAgilt arbetssätt: Erfarenhet av arbete i agila utvecklingsteam samt deltagande i sprintplanering och kravgranskningar.\nFelsökning & Avvikelsehantering: Vana vid analys, felsökning, buggrapportering och att upprätta testdokumentation.\nSpråkkrav: Flytande kunskaper i engelska i både tal och skrift (eftersom utvecklingsmiljön är internationell).\n\nDet är meriterande om du har\nTestverktyg: Erfarenhet av Appium eller liknande ramverk för mobil testautomatisering.\nProgrammering:Programmeringskunskaper i Python.\nErfarenhet av Kotlin, Java eller andra objektorienterade språk.\n\nCI/CD-plattformar: Praktisk erfarenhet av Azure DevOps, GitLab eller motsvarande verktyg.\nHårdvarunära testning & IoT: Erfarenhet av testning av uppkopplade produkter, IoT, embedded-system eller testning direkt mot fysisk hårdvara.\nTrådlösa protokoll: Erfarenhet av kommunikation och testning via Bluetooth, Wi-Fi eller andra trådlösa protokoll.\nUtbildningsbakgrund: Akademisk examen inom Datateknik, Mjukvaruteknik, Elektroteknik eller motsvarande.\n\nFör att lyckas i rollen har du följande personliga egenskaper:\nOrdningsam\nStabil\nAnsvarstagande\nIntellektuellt nyfiken",
+    "employer": "Academic Work Sweden AB",
+    "external_id": "31617239",
+    "location": "Landskrona",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31617239",
+    "published_at": "2026-10-20T06:56:35Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [
+          {
+            "concept_id": "NVxJ_hLg_TYS",
+            "label": "Engelska",
+            "legacy_ams_taxonomy_id": "283",
+            "weight": 10
+          }
+        ],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [
+          {
+            "concept_id": "zSLA_vw2_FXN",
+            "label": "Svenska",
+            "legacy_ams_taxonomy_id": "502",
+            "weight": 5
+          }
+        ],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "843H_Mp1_EVL",
+        "label": "Mjukvarutestare",
+        "legacy_ams_taxonomy_id": "7752"
+      },
+      "occupation_group": {
+        "concept_id": "D9SL_mtn_vGM",
+        "label": "Systemtestare och testledare",
+        "legacy_ams_taxonomy_id": "2514"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Malmö",
+          "coordinates": [
+            13.005912037624,
+            55.6075939489136
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Landskrona",
+          "municipality_code": "1282",
+          "municipality_concept_id": "Yt5s_Vf9_rds",
+          "postcode": "21125",
+          "region": "Skåne län",
+          "region_code": "12",
+          "region_concept_id": "CaRE_1nn_cSU",
+          "street_address": "Östergatan 18"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Mobile Application Test Engineer till internationellt utvecklingsteam",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Brinner du för kvalitetssäkring och testautomatisering av mobilappar kopplade till fysiska produkter?",
+    "p0002": "Vi söker en drivande Mobile Application Test Engineer till ett internationellt R&D-team i Landskrona.",
+    "p0003": "Sök tjänsten redan idag!",
+    "p0004": "Om tjänsten",
+    "p0005": "Det här är ett konsultuppdrag på heltid med start senast 1 december och med ett initialt avtal fram till 1 juli (med möjligheter till förlängning).",
+    "p0006": "Du blir anställd som konsult hos Academic Work och arbetar ute på plats hos vår kund i Landskrona.",
+    "p0007": "I denna roll får du kvalitetssäkra mobila appar (Android/iOS) för IoT-produkter och driv testautomatisering i CI/CD i ett agilt R&D-team.",
+    "p0008": "Arbetsuppgifter",
+    "p0009": "Testautomatisering & Design: Designa, implementera och underhålla automatiserade tester för mobila applikationer för både Android och iOS.",
+    "p0010": "Testutförande & Felsökning: Utföra funktionella tester, regressionstester samt systemtester på både mjukvara och mot fysisk hårdvara samt analysera och rapportera avvikelser.",
+    "p0011": "CI/CD-integration: Arbeta med testautomatisering i CI/CD-flöden i nära samarbete med DevOps (t.ex. i Azure DevOps eller GitLab).",
+    "p0012": "Agilt samarbete & Kravgranskning: Samarbeta nära utvecklare, produktägare och andra intressenter samt delta i sprintplanering och kravgranskningar för att säkerställa hög testbarhet och kvalitet.",
+    "p0013": "Processförbättring: Bidra till kontinuerliga förbättringar av testmetoder, verktyg och interna testprocesser.",
+    "p0014": "Vi söker dig som",
+    "p0015": "Erfarenhet av mobiltestning: Minst 3 års dokumenterad erfarenhet av mjukvarutestning av mobila applikationer (Android och/eller iOS).",
+    "p0016": "Testautomatisering: Påvisad och praktisk erfarenhet av testautomatisering för Android och/eller iOS.",
+    "p0017": "CI/CD-integration: Erfarenhet av att arbeta med testautomatisering i CI/CD-baserade utvecklingsflöden.",
+    "p0018": "Testmetodik & Livscykel: God förståelse för mjukvarutestning genom hela utvecklingslivscykeln (funktionella tester, regressionstester, systemtester).",
+    "p0019": "Agilt arbetssätt: Erfarenhet av arbete i agila utvecklingsteam samt deltagande i sprintplanering och kravgranskningar.",
+    "p0020": "Felsökning & Avvikelsehantering: Vana vid analys, felsökning, buggrapportering och att upprätta testdokumentation.",
+    "p0021": "Språkkrav: Flytande kunskaper i engelska i både tal och skrift (eftersom utvecklingsmiljön är internationell).",
+    "p0022": "Det är meriterande om du har",
+    "p0023": "Testverktyg: Erfarenhet av Appium eller liknande ramverk för mobil testautomatisering.",
+    "p0024": "Programmering:Programmeringskunskaper i Python.",
+    "p0025": "Erfarenhet av Kotlin, Java eller andra objektorienterade språk.",
+    "p0026": "CI/CD-plattformar: Praktisk erfarenhet av Azure DevOps, GitLab eller motsvarande verktyg.",
+    "p0027": "Hårdvarunära testning & IoT: Erfarenhet av testning av uppkopplade produkter, IoT, embedded-system eller testning direkt mot fysisk hårdvara.",
+    "p0028": "Trådlösa protokoll: Erfarenhet av kommunikation och testning via Bluetooth, Wi-Fi eller andra trådlösa protokoll.",
+    "p0029": "Utbildningsbakgrund: Akademisk examen inom Datateknik, Mjukvaruteknik, Elektroteknik eller motsvarande.",
+    "p0030": "För att lyckas i rollen har du följande personliga egenskaper:",
+    "p0031": "Ordningsam",
+    "p0032": "Stabil",
+    "p0033": "Ansvarstagande",
+    "p0034": "Intellektuellt nyfiken"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0015",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0016",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0017",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0018",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0019",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0020",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0021",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0023",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

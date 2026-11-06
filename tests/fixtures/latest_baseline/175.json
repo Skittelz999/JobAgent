@@ -1,0 +1,155 @@
+{
+  "source": {
+    "application_url": "https://jobs.smartrecruiters.com/HMGroup/744000153744689-software-engineer-relevance-ranking-services-orchestration",
+    "deadline": "2026-11-06T22:59:59Z",
+    "description": "Job Description\n\nABOUT THE TEAM \nAt H&M Tech, we shape the future of fashion and design with efficient and effective technology. We work close to the business to create customer value, simplify our tech landscape and build scalable solutions that support H&M Group across brands, markets and channels. \nThe Relevance, Ranking Services & Orchestration team is part of the Digital area within the Commercial domain. We build and operate backend services that are an integral part of H&M’s global digital product discovery experience, including search, browsing, recommendations, autocomplete and related services across the customer journey. Our APIs and services help shape how customers discover products on H&M.com and contribute to a relevant, reliable and inspiring digital experience. \nWe work at the intersection of backend engineering, search, relevance, ranking and orchestration, connecting data, platforms and experience layers to deliver solutions at global scale. The team is distributed across several locations, including Europe, the Americas and India, and collaboration is central to how we work. \n \nWHAT YOU’LL DO \nAs a Software Engineer, you will be part of a collaborative product team building and improving high-performance backend services that support product discovery for millions of customers. You will work closely with engineers, product managers and other technical teams to solve complex problems and continuously improve the relevance, performance and reliability of our services. \nYou will contribute from design and development through testing, deployment and production support. You will also have the opportunity to explore how AI and GenAI can be applied to real business and engineering challenges, helping us bring promising solutions into production where they create meaningful value. \nYour responsibilities will include: \nDesign, develop and maintain high-performance backend services and APIs using Java and Spring Boot/WebFlux. \nBuild scalable microservices and distributed systems that operate reliably at global scale. \nDevelop asynchronous and event-driven solutions using messaging platforms such as Azure Service Bus. \nBuild and operate cloud-native applications using Microsoft Azure, including services such as Cosmos DB, Blob Storage and other Azure platform services. \nContribute to services that support product search, relevance, ranking, recommendations and orchestration across H&M’s digital customer journeys. \nCollaborate with product managers, engineering managers and cross-functional stakeholders to translate business needs into simple, scalable and robust technical solutions. \nBuild, test and deploy services using modern CI/CD, containerisation and Kubernetes practices. \nParticipate in code reviews and contribute to engineering standards, security, observability, reliability and performance improvements. \nInvestigate and troubleshoot complex production issues and contribute to improving system resilience and scalability. \nExplore and apply AI, GenAI and LLM-based technologies where they can help solve meaningful business or engineering challenges. \n\n \nWHO YOU ARE \nWe believe you are a curious and collaborative engineer who enjoys solving complex problems and building reliable services that create real customer and business value. You are comfortable working in an agile engineering environment and take ownership from idea and design through to production. \nYou enjoy working with others, sharing knowledge and continuously improving both the product and the way the team works. You communicate clearly with technical and non-technical stakeholders and are motivated by building solutions that are simple, scalable and effective. \nTo succeed in this role, we believe you have: \nStrong proficiency in Java and experience developing production-grade backend services. \nExperience with Spring Boot; experience with reactive programming and Spring WebFlux is highly valuable. \nGood understanding of microservices, distributed systems and API design. \nExperience working with cloud-based applications and cloud-native development practices. \nUnderstanding of asynchronous processing and event-driven architecture. \nExperience with automated testing, CI/CD, code reviews and production support. \nExperience working with containerised applications; knowledge of Docker and Kubernetes is beneficial. \nStrong problem-solving and debugging skills, with the ability to understand and troubleshoot complex systems. \nA collaborative mindset and the ability to work with colleagues across locations, disciplines and time zones. \nCuriosity about new technologies and a willingness to learn, experiment and improve. \n\n \nNICE TO HAVE \nIt is also a plus if you have experience with: \nMicrosoft Azure, especially Cosmos DB, Azure Service Bus, Blob Storage or equivalent cloud services. \nSearch, relevance, ranking, recommendation or information-retrieval systems. \nSearch technologies such as Elasticsearch or Solr. \nAI, GenAI or LLM-based applications. \nLarge-scale data, high-throughput services or customer-facing distributed systems. \nObservability, performance optimisation and production operations. \n\n \nQUALIFICATIONS \nWe believe you have around 3–6 years of professional experience in backend or software development, with hands-on experience building Java-based backend services and microservices. You have experience working with cloud technologies and modern software engineering practices, and you are comfortable contributing to systems that require reliability, scalability and high performance. \n \nWHAT YOU CAN EXPECT \nYou will join a team where backend engineering meets search, relevance, ranking and AI innovation. This is an opportunity to work on globally relevant systems, solve challenging distributed-systems problems and contribute to digital experiences used by customers across H&M markets. \nAt H&M Tech, we believe technology is a competitive advantage that helps liberate fashion for the many. We are passionate about creating customer value and elevating our brands with efficient and effective tech, balancing today’s needs with tomorrow’s opportunities.",
+    "employer": "H & M Hennes & Mauritz GBC AB",
+    "external_id": "31568229",
+    "location": "Stockholm",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31568229",
+    "published_at": "2026-10-07T17:35:45Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": [
+          {
+            "concept_id": "fg7B_yov_smw",
+            "label": "Systemutvecklare/Programmerare",
+            "legacy_ams_taxonomy_id": "2419",
+            "weight": 5
+          }
+        ]
+      },
+      "occupation": {
+        "concept_id": "fg7B_yov_smw",
+        "label": "Systemutvecklare/Programmerare",
+        "legacy_ams_taxonomy_id": "2419"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Stockholm",
+          "coordinates": [
+            18.0528391,
+            59.2877928
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Stockholm",
+          "municipality_code": "0180",
+          "municipality_concept_id": "AvNB_uwa_6n6",
+          "postcode": "10638",
+          "region": "Stockholms län",
+          "region_code": "01",
+          "region_concept_id": "CifL_Rzy_Mku",
+          "street_address": "Årstaängsvägen 13"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "ZxwM_gtz_n61",
+        "label": "Arbete på plats"
+      }
+    },
+    "title": "Software Engineer - Relevance, Ranking Services & Orchestration",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Job Description",
+    "p0002": "ABOUT THE TEAM",
+    "p0003": "At H&M Tech, we shape the future of fashion and design with efficient and effective technology.",
+    "p0004": "We work close to the business to create customer value, simplify our tech landscape and build scalable solutions that support H&M Group across brands, markets and channels.",
+    "p0005": "The Relevance, Ranking Services & Orchestration team is part of the Digital area within the Commercial domain.",
+    "p0006": "We build and operate backend services that are an integral part of H&M’s global digital product discovery experience, including search, browsing, recommendations, autocomplete and related services across the customer journey.",
+    "p0007": "Our APIs and services help shape how customers discover products on H&M.com and contribute to a relevant, reliable and inspiring digital experience.",
+    "p0008": "We work at the intersection of backend engineering, search, relevance, ranking and orchestration, connecting data, platforms and experience layers to deliver solutions at global scale.",
+    "p0009": "The team is distributed across several locations, including Europe, the Americas and India, and collaboration is central to how we work.",
+    "p0010": "WHAT YOU’LL DO",
+    "p0011": "As a Software Engineer, you will be part of a collaborative product team building and improving high-performance backend services that support product discovery for millions of customers.",
+    "p0012": "You will work closely with engineers, product managers and other technical teams to solve complex problems and continuously improve the relevance, performance and reliability of our services.",
+    "p0013": "You will contribute from design and development through testing, deployment and production support.",
+    "p0014": "You will also have the opportunity to explore how AI and GenAI can be applied to real business and engineering challenges, helping us bring promising solutions into production where they create meaningful value.",
+    "p0015": "Your responsibilities will include:",
+    "p0016": "Design, develop and maintain high-performance backend services and APIs using Java and Spring Boot/WebFlux.",
+    "p0017": "Build scalable microservices and distributed systems that operate reliably at global scale.",
+    "p0018": "Develop asynchronous and event-driven solutions using messaging platforms such as Azure Service Bus.",
+    "p0019": "Build and operate cloud-native applications using Microsoft Azure, including services such as Cosmos DB, Blob Storage and other Azure platform services.",
+    "p0020": "Contribute to services that support product search, relevance, ranking, recommendations and orchestration across H&M’s digital customer journeys.",
+    "p0021": "Collaborate with product managers, engineering managers and cross-functional stakeholders to translate business needs into simple, scalable and robust technical solutions.",
+    "p0022": "Build, test and deploy services using modern CI/CD, containerisation and Kubernetes practices.",
+    "p0023": "Participate in code reviews and contribute to engineering standards, security, observability, reliability and performance improvements.",
+    "p0024": "Investigate and troubleshoot complex production issues and contribute to improving system resilience and scalability.",
+    "p0025": "Explore and apply AI, GenAI and LLM-based technologies where they can help solve meaningful business or engineering challenges.",
+    "p0026": "WHO YOU ARE",
+    "p0027": "We believe you are a curious and collaborative engineer who enjoys solving complex problems and building reliable services that create real customer and business value.",
+    "p0028": "You are comfortable working in an agile engineering environment and take ownership from idea and design through to production.",
+    "p0029": "You enjoy working with others, sharing knowledge and continuously improving both the product and the way the team works.",
+    "p0030": "You communicate clearly with technical and non-technical stakeholders and are motivated by building solutions that are simple, scalable and effective.",
+    "p0031": "To succeed in this role, we believe you have:",
+    "p0032": "Strong proficiency in Java and experience developing production-grade backend services.",
+    "p0033": "Experience with Spring Boot; experience with reactive programming and Spring WebFlux is highly valuable.",
+    "p0034": "Good understanding of microservices, distributed systems and API design.",
+    "p0035": "Experience working with cloud-based applications and cloud-native development practices.",
+    "p0036": "Understanding of asynchronous processing and event-driven architecture.",
+    "p0037": "Experience with automated testing, CI/CD, code reviews and production support.",
+    "p0038": "Experience working with containerised applications; knowledge of Docker and Kubernetes is beneficial.",
+    "p0039": "Strong problem-solving and debugging skills, with the ability to understand and troubleshoot complex systems.",
+    "p0040": "A collaborative mindset and the ability to work with colleagues across locations, disciplines and time zones.",
+    "p0041": "Curiosity about new technologies and a willingness to learn, experiment and improve.",
+    "p0042": "NICE TO HAVE",
+    "p0043": "It is also a plus if you have experience with:",
+    "p0044": "Microsoft Azure, especially Cosmos DB, Azure Service Bus, Blob Storage or equivalent cloud services.",
+    "p0045": "Search, relevance, ranking, recommendation or information-retrieval systems.",
+    "p0046": "Search technologies such as Elasticsearch or Solr.",
+    "p0047": "AI, GenAI or LLM-based applications.",
+    "p0048": "Large-scale data, high-throughput services or customer-facing distributed systems.",
+    "p0049": "Observability, performance optimisation and production operations.",
+    "p0050": "QUALIFICATIONS",
+    "p0051": "We believe you have around 3–6 years of professional experience in backend or software development, with hands-on experience building Java-based backend services and microservices.",
+    "p0052": "You have experience working with cloud technologies and modern software engineering practices, and you are comfortable contributing to systems that require reliability, scalability and high performance.",
+    "p0053": "WHAT YOU CAN EXPECT",
+    "p0054": "You will join a team where backend engineering meets search, relevance, ranking and AI innovation.",
+    "p0055": "This is an opportunity to work on globally relevant systems, solve challenging distributed-systems problems and contribute to digital experiences used by customers across H&M markets.",
+    "p0056": "At H&M Tech, we believe technology is a competitive advantage that helps liberate fashion for the many.",
+    "p0057": "We are passionate about creating customer value and elevating our brands with efficient and effective tech, balancing today’s needs with tomorrow’s opportunities."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0051",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0052",
+        "importance": "expected"
+      }
+    ]
+  }
+}

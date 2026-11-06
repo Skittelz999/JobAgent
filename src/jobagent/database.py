@@ -10,6 +10,7 @@ from typing import Any, Literal
 
 from jobagent.models import SourceAd
 
+SCHEMA_VERSION = 2
 
 def utc_now() -> str:
     return datetime.now(UTC).isoformat()
@@ -39,7 +40,7 @@ class Database:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         with self.connect() as connection:
             version = connection.execute("PRAGMA user_version").fetchone()[0]
-            if version > 1:
+            if version > SCHEMA_VERSION:
                 raise ValueError("Database is newer than this application")
             connection.execute("PRAGMA journal_mode=WAL")
             if version == 0:
@@ -81,6 +82,23 @@ class Database:
                     );
                     CREATE INDEX jobs_published ON jobs(published_at);
                     PRAGMA user_version=1;
+                    COMMIT;
+                """)
+            if version < 2:
+                connection.executescript("""
+                    BEGIN IMMEDIATE;
+                    CREATE TABLE IF NOT EXISTS match_results (
+                        id INTEGER PRIMARY KEY,
+                        job_id INTEGER NOT NULL,
+                        ad_version INTEGER NOT NULL,
+                        result_json TEXT NOT NULL,
+                        profile_hash TEXT NOT NULL,
+                        model TEXT NOT NULL,
+                        prompt_version TEXT NOT NULL,
+                        created_at TEXT NOT NULL,
+                        FOREIGN KEY(job_id, ad_version) REFERENCES ad_versions(job_id, version)
+                    );
+                    PRAGMA user_version=2;
                     COMMIT;
                 """)
 
@@ -162,3 +180,17 @@ class Database:
         with self.connect() as connection:
             return [dict(row) for row in connection.execute(
                 "SELECT * FROM search_runs ORDER BY id DESC LIMIT ?", (limit,))]
+
+    def save_match_result(self, job_id: int, ad_version: int, result: dict[str, Any]) -> int:
+        """Append a validated result for the exact ad version that was matched."""
+        with self.connect() as connection:
+            cursor = connection.execute("""INSERT INTO match_results
+                (job_id, ad_version, result_json, profile_hash, model, prompt_version, created_at)
+                VALUES(?,?,?,?,?,?,?)""", (job_id, ad_version, json_text(result),
+                result["profile_hash"], result["model"], result["prompt_version"], utc_now()))
+            return int(cursor.lastrowid)
+
+    def get_match_result(self, result_id: int) -> dict[str, Any] | None:
+        with self.connect(read_only=True) as connection:
+            row = connection.execute("SELECT * FROM match_results WHERE id=?", (result_id,)).fetchone()
+            return dict(row) if row else None

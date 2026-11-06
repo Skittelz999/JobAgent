@@ -6,6 +6,7 @@ from typing import Literal
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
+import yaml
 
 
 class StrictModel(BaseModel):
@@ -102,6 +103,52 @@ class Profile(StrictModel):
     experience_details: list[str] = Field(default_factory=list)
 
 
+class YamlSection(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+
+class Education(YamlSection):
+    university_credits: float | None = Field(default=None, ge=0)
+    has_issued_degree: bool | None = None
+    details: list[str] = Field(default_factory=list)
+
+
+class DocumentedExperience(YamlSection):
+    role: str = Field(min_length=1)
+    years: float | None = Field(default=None, ge=0)
+    basis: Literal["part_time", "full_time"] | None = None
+    details: list[str] = Field(default_factory=list)
+
+
+class Experience(YamlSection):
+    total_professional_years: float | None = Field(default=None, ge=0)
+    documented: list[DocumentedExperience] = Field(default_factory=list)
+
+
+class Certification(YamlSection):
+    name: str = Field(min_length=1)
+    category: str = Field(min_length=1)
+
+
+class Skills(YamlSection):
+    programming_languages: list[str] = Field(default_factory=list)
+    backend: list[str] = Field(default_factory=list)
+    frontend: list[str] = Field(default_factory=list)
+    databases: list[str] = Field(default_factory=list)
+    tools_and_technical: list[str] = Field(default_factory=list)
+    testing: list[str] = Field(default_factory=list)
+    methodologies: list[str] = Field(default_factory=list)
+
+
+class YamlProfile(YamlSection):
+    education: Education = Field(default_factory=Education)
+    certifications: list[Certification] = Field(default_factory=list)
+    experience: Experience = Field(default_factory=Experience)
+    skills: Skills = Field(default_factory=Skills)
+    languages: list[str] = Field(default_factory=list)
+    other_qualifications: list[str] = Field(default_factory=list)
+
+
 def load_settings(project_root: Path, config_path: Path | None = None) -> Settings:
     root = project_root.resolve()
     path = config_path or root / "config/settings.toml"
@@ -128,3 +175,14 @@ def load_settings(project_root: Path, config_path: Path | None = None) -> Settin
 def load_profile(path: Path) -> Profile:
     with path.open("rb") as stream:
         return Profile.model_validate(tomllib.load(stream))
+
+
+def load_yaml_profile(path: Path) -> YamlProfile:
+    """Load data only. Missing fields stay unspecified, never false or zero."""
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    except yaml.YAMLError:
+        raise ValueError("Invalid YAML profile syntax; check the profile file.") from None
+    if not isinstance(data, dict) or not data:
+        raise ValueError("YAML profile must be a non-empty mapping of profile sections.")
+    return YamlProfile.model_validate(data)
