@@ -1,6 +1,4 @@
 """Evidence-first single-ad review. No scores, application decisions or DB writes."""
-from collections import Counter
-import hashlib
 import json
 import re
 import time
@@ -8,11 +6,9 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
-from jobagent.comparison import POLICY_VERSION, compare_requirement
 from jobagent.llm import LLMError, LocalLLM
 from jobagent.models import JobAd
 from jobagent.passages import SOURCE_POLICY_VERSION, Passage, number_passages
-from jobagent.settings import Profile
 
 PROMPT_VERSION = "model-led-extraction-v2"
 REFERENCE_VALIDATION_VERSION = "source-references-v2"
@@ -100,23 +96,17 @@ def summarize_requirements(title: str, requirements: list[dict]) -> dict:
              for r in requirements]
     groups = [{"label_sv": label, "requirements": [item for item in items if item["importance"] == level]}
               for level, label in LABELS.items()]
-    counts = Counter(r["match"] for r in requirements)
     summary = f"{title}. " + "; ".join(f"{g['label_sv']}: {len(g['requirements'])}" for g in groups) + ". Se originalcitaten per grupp."
-    recommendation = (f"Enligt den angivna profilen: {counts['not_met']} kända avvikelser, "
-                      f"{counts['partial']} villkor med delvis stöd och {counts['unknown']} oklara bedömningar. "
-                      "Granska villkoren och eventuella alternativ manuellt innan du beslutar om ansökan.")
     return {"summary_sv": summary, "summary_groups": groups,
-            "uncertainties_sv": ["Relaterade poster kan överlappa och är inte oberoende krav. Kravtäckning och språklig räckvidd behöver granskas; kontrollerna bevisar inte att alla villkor identifierats.",
-                                  "Okända uppgifter betyder inte att kompetens saknas. Kända avvikelser gäller endast den angivna profilen."],
-            "recommendation_sv": recommendation}
+            "uncertainties_sv": ["Relaterade poster kan överlappa och är inte oberoende krav. Kravtäckning och språklig räckvidd behöver granskas; kontrollerna bevisar inte att alla villkor identifierats."]}
 
 
-def finalize_extraction(extraction: Extraction, passages: list[Passage], profile: Profile, title: str) -> dict:
-    """Verify references, retain the model's semantics, then compare separately.
+def finalize_extraction(extraction: Extraction, passages: list[Passage], title: str) -> dict:
+    """Verify references and retain the model's semantics.
 
     No automatic additions, heading filters or strength overrides. Unknown and
     conditional labels require review, as do ALL other model interpretations.
-    Context is provenance only; arbitrary context must not prove candidate facts.
+    Context records the source scope of a requirement.
     """
     by_id = {p.id: p for p in passages}
     selected = set()
@@ -147,7 +137,6 @@ def finalize_extraction(extraction: Extraction, passages: list[Passage], profile
         if item.kind == "responsibility":
             responsibilities.append(row)
         else:
-            compare_requirement(row, profile)
             requirements.append(row)
     if not requirements:
         raise LLMError("No qualification passages identified. Review the source ad manually.")
@@ -161,11 +150,10 @@ def finalize_extraction(extraction: Extraction, passages: list[Passage], profile
                                 "scope": "model_selection_only_no_automatic_coverage_claim"}}
 
 
-def analyze_job(job: JobAd, profile: Profile, provider: LocalLLM) -> dict:
+def analyze_job(job: JobAd, provider: LocalLLM) -> dict:
     if not job.description.strip():
         raise LLMError("Ad has no description to analyze.")
     passages = number_passages(job.description)
-    profile_data = profile.model_dump()
     user_data = json.dumps({"task": "Interpret the complete ordered ad; select and classify relevant source passages.",
                             "job": {"title": job.title, "passages": [
                                 {"id": p.id, "text": p.text} for p in passages]}}, ensure_ascii=False)
@@ -179,12 +167,10 @@ def analyze_job(job: JobAd, profile: Profile, provider: LocalLLM) -> dict:
         result = Extraction.model_validate_json(response["content"])
     except ValidationError:
         raise LLMError("Model output failed JSON schema validation. No analysis was saved.") from None
-    analysis_data = finalize_extraction(result, passages, profile, job.title)
+    analysis_data = finalize_extraction(result, passages, job.title)
     return {"model": response["model"], "prompt_version": PROMPT_VERSION,
             "reference_validation_version": REFERENCE_VALIDATION_VERSION,
-            "comparison_policy_version": POLICY_VERSION,
             "source_policy_version": SOURCE_POLICY_VERSION,
-            "profile_hash": hashlib.sha256(json.dumps(profile_data, sort_keys=True).encode()).hexdigest(),
             "seconds": round(time.monotonic() - start, 2),
             "validation": {"schema_valid": True, "evidence_quotes_verified": True, "human_review_required": True},
             "summary_method": "derived_from_canonical_requirements",

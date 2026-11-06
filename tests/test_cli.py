@@ -1,4 +1,6 @@
 import json
+
+import pytest
 from pathlib import Path
 
 from jobagent.cli import main
@@ -10,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_config_check_has_no_storage_side_effect(tmp_path, monkeypatch, capsys):
     path = tmp_path / "not-created" / "jobs.db"
     monkeypatch.setenv("JOBAGENT_DATABASE", str(path))
-    assert main(["--root", str(ROOT), "config-check", "--profile", "config/profile.example.toml"]) == 0
-    assert json.loads(capsys.readouterr().out)["profile_valid"] is True
+    assert main(["--root", str(ROOT), "config-check"]) == 0
+    assert json.loads(capsys.readouterr().out)["valid"] is True
     assert not path.parent.exists()
 
 
@@ -68,6 +70,9 @@ def test_analyze_is_read_only_and_never_initializes_database(tmp_path, monkeypat
     result = json.loads(capsys.readouterr().out)
     assert result["validation"]["human_review_required"] is True
     assert result["ad_version"] == 1
+    assert "profile_path" not in result
+    assert "profile_hash" not in result
+    assert result["analysis"]["requirements"]
     assert path.read_bytes() == before
     assert db.history() == []
 
@@ -87,3 +92,22 @@ def test_search_never_calls_llm(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr("jobagent.platsbanken.Platsbanken.search", lambda *args:
                         Page.model_validate({"total": {"value": 0}, "hits": []}))
     assert main(["--root", str(ROOT), "search", "--query", "Java"]) == 0
+
+
+@pytest.mark.parametrize("command", ["match", "match-show"])
+def test_removed_commands_rejected_before_storage_or_network(command, monkeypatch, capsys):
+    def fail(*args, **kwargs):
+        pytest.fail("Removed commands must be rejected before configuration is loaded")
+    monkeypatch.setattr("jobagent.cli.load_settings", fail)
+    with pytest.raises(SystemExit) as error:
+        main([command, "1"])
+    assert error.value.code == 2
+    assert "invalid choice" in capsys.readouterr().err
+
+
+@pytest.mark.parametrize("arguments", [["config-check"], ["analyze", "1"]])
+def test_profile_option_rejected(arguments, capsys):
+    with pytest.raises(SystemExit) as error:
+        main([*arguments, "--profile", "missing.toml"])
+    assert error.value.code == 2
+    assert "unrecognized arguments" in capsys.readouterr().err

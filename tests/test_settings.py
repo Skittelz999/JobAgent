@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from jobagent.settings import LLMSettings, Search, Source, load_profile, load_settings
+from jobagent.settings import LLMSettings, Search, Source, load_settings
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -17,19 +17,8 @@ def test_defaults_resolve_to_project_not_current_directory(tmp_path, monkeypatch
 
 def test_environment_override(monkeypatch):
     monkeypatch.setenv("JOBAGENT_DATABASE", "var/test.sqlite3")
-    monkeypatch.setenv("JOBAGENT_MINIMUM_SCORE", "80")
     settings = load_settings(ROOT)
     assert settings.storage.database == ROOT / "var/test.sqlite3"
-    assert settings.matching.minimum_score == 80
-
-
-def test_profile_preserves_actual_qualifications():
-    profile = load_profile(ROOT / "config/profile.example.toml")
-    assert profile.has_issued_degree is False
-    assert profile.experience_basis == "part_time"
-    assert profile.university_credits == 157
-    assert "Fullstack developer" in profile.roles
-    assert "REST API development" in profile.experience_details
 
 
 def test_llm_environment_override(monkeypatch):
@@ -55,3 +44,17 @@ def test_invalid_search_configuration(kwargs):
 def test_reject_credentials_in_source_url():
     with pytest.raises(ValidationError):
         Source(base_url="https://user:password@example.com")
+
+
+@pytest.mark.parametrize("legacy_section", ["matching", "profile"])
+@pytest.mark.parametrize("command", ["config-check", "search"])
+def test_obsolete_settings_rejected_without_creating_database(tmp_path, capsys, legacy_section, command):
+    from jobagent.cli import main
+    root = tmp_path / "project"
+    (root / "config").mkdir(parents=True)
+    (root / "config/settings.toml").write_text(
+        f"[{legacy_section}]\nminimum_score = 70\n", encoding="utf-8")
+    assert main(["--root", str(root), command]) == 1
+    error = capsys.readouterr().err
+    assert legacy_section in error and "Extra inputs are not permitted" in error
+    assert not (root / "var").exists()

@@ -7,7 +7,7 @@ name = "local-jobagent"
 version = "0.1.0"
 description = "Local Windows job search assistant"
 requires-python = ">=3.12"
-dependencies = ["httpx>=0.28,<0.29", "pydantic>=2.12,<3", "PyYAML>=6.0.2,<7", "tzdata>=2025.2; sys_platform == 'win32'"]
+dependencies = ["httpx>=0.28,<0.29", "pydantic>=2.12,<3", "tzdata>=2025.2; sys_platform == 'win32'"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]

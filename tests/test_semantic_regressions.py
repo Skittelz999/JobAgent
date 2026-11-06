@@ -10,10 +10,8 @@ from pathlib import Path
 import pytest
 from jobagent.analysis import Extraction,finalize_extraction
 from jobagent.passages import number_passages
-from jobagent.settings import load_profile
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = load_profile(ROOT / 'config/profile.example.toml')
 FIXTURES = sorted((ROOT/'tests/fixtures').glob('*/*.json'))
 
 
@@ -48,7 +46,7 @@ def test_legacy_raw_choices_preserved_without_automatic_additions(path):
     # test in independent batches, never bypass schema or truncate real requests.
     for start in range(0,len(selected),60):
         batch = selected[start:start+60]
-        r = finalize_extraction(Extraction.model_validate({'requirements':batch}),passages,PROFILE,'Replay')
+        r = finalize_extraction(Extraction.model_validate({'requirements':batch}),passages,'Replay')
         rows = r['requirements']
         assert r['coverage_review']['added_passage_ids'] == []
         assert r['coverage_review']['excluded_nonqualification_ids'] == []
