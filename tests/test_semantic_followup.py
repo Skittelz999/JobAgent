@@ -1,8 +1,8 @@
 """Mocked semantic examples from documented failures; manual live eval is separate."""
 import json
 import pytest
-from test_analysis import choice, profile
-from test_semantic_regressions import ROOT, PROFILE, load_fixture
+from test_analysis import choice
+from test_semantic_regressions import ROOT, load_fixture
 from jobagent.analysis import Extraction,finalize_extraction
 from jobagent.passages import number_passages
 
@@ -14,7 +14,7 @@ def finalize(ad, fragments):
     for fragment,level,kind,conditional in fragments:
         p = next(p for p in ps if fragment in p.text)
         selections.append(choice(p.id,level,kind,conditional))
-    return finalize_extraction(Extraction.model_validate({'requirements':selections}),ps,PROFILE,src['title'])
+    return finalize_extraction(Extraction.model_validate({'requirements':selections}),ps,src['title'])
 
 
 @pytest.mark.parametrize('ad,fragments', [
@@ -44,7 +44,7 @@ def test_python_does_not_add_employer_sections(ad,fragments):
     paths=list((ROOT/'tests/fixtures').glob(f'*/{ad}.json'))
     f,src=load_fixture(paths[0]);ps=number_passages(src['description'])
     p=next(p for p in ps if fragments[0][0] in p.text)
-    r=finalize_extraction(Extraction.model_validate({'requirements':[choice(p.id)]}),ps,PROFILE,src['title'])
+    r=finalize_extraction(Extraction.model_validate({'requirements':[choice(p.id)]}),ps,src['title'])
     assert len(r['requirements'])==1
     assert r['requirements'][0]['quote']==p.text
 
@@ -52,7 +52,7 @@ def test_python_does_not_add_employer_sections(ad,fragments):
 def test_kind_controls_routing_not_heading_words():
     ps=number_passages('Krav\nDevelop and maintain Java services\nOffice three days a week')
     r=finalize_extraction(Extraction.model_validate({'requirements':[
-        choice(ps[1].id,'expected','responsibility'),choice(ps[2].id,'mandatory','condition')]}),ps,PROFILE,'Job')
+        choice(ps[1].id,'expected','responsibility'),choice(ps[2].id,'mandatory','condition')]}),ps,'Job')
     assert len(r['role_responsibilities'])==len(r['requirements'])==1
     assert r['requirements'][0]['kind']=='condition'
 
@@ -60,5 +60,5 @@ def test_kind_controls_routing_not_heading_words():
 def test_different_strength_or_condition_never_merge():
     ps=number_passages('English\nEnglish\nEnglish')
     data={'requirements':[choice('p0001','mandatory'),choice('p0002','preferred'),choice('p0003','mandatory',conditional=True)]}
-    r=finalize_extraction(Extraction.model_validate(data),ps,PROFILE,'Job')
+    r=finalize_extraction(Extraction.model_validate(data),ps,'Job')
     assert len(r['requirements'])==3

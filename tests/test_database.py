@@ -70,37 +70,40 @@ def test_page_rollback_on_database_error(db):
     assert db.list_jobs() == []
 
 
-def match_result():
-    return {"requirements": [{"requirement": "Java", "type": "required", "status": "FALSE",
-                              "reason": "Modellens motivering bevaras utan semantisk rättning."}],
-            "profile_hash": "abc123", "model": "mock", "prompt_version": "yaml-match-v1"}
-
-
-def test_match_results_append_and_reference_historical_ad_versions(db):
+def test_schema_two_preserves_all_rows_including_legacy_results(db):
     db.upsert_page([ad()])
-    result = match_result()
-    first = db.save_match_result(1, 1, result)
-    db.upsert_page([ad(title="Changed")])
-    second = db.save_match_result(1, 2, result)
-    # A concurrent ad update must not attach an old inference to the new version.
-    third = db.save_match_result(1, 1, result)
-    assert len({first, second, third}) == 3
-    saved = db.get_match_result(first)
-    assert saved["job_id"] == 1 and saved["ad_version"] == 1
-    assert json.loads(saved["result_json"]) == result
-    for key in ("profile_hash", "model", "prompt_version"):
-        assert saved[key] == result[key]
-    assert saved["created_at"]
-    assert db.get_match_result(second)["ad_version"] == 2
-    assert db.get_match_result(999) is None
-
-
-def test_match_result_cannot_reference_missing_ad_version(db):
-    import sqlite3
-    db.upsert_page([ad()])
-    with pytest.raises(sqlite3.IntegrityError):
-        db.save_match_result(1, 99, match_result())
-    assert db.get_match_result(1) is None
+    run = db.start_run({"queries": ["Java"]})
+    db.finish_run(run, "complete", {})
+    # Seed an opaque historical row through SQL, without active matching code.
+    with db.connect() as connection:
+        connection.execute("""INSERT INTO match_results
+            (job_id, ad_version, result_json, profile_hash, model, prompt_version, created_at)
+            VALUES(1, 1, ?, 'historical-hash', 'historical-model', 'historical-prompt', '2026-11-01')""",
+            ('{"legacy":true}',))
+        tables = ("jobs", "ad_versions", "search_runs", "match_results")
+        before = {table: [tuple(row) for row in connection.execute("SELECT * FROM " + table)]
+                  for table in tables}
+        schema_before = [tuple(row) for row in connection.execute(
+            "SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name")]
+    db.initialize()
+    db.initialize()
+    db.list_jobs()
+    db.get_job(1)
+    db.history()
+    with db.connect(read_only=True) as connection:
+        assert connection.execute("PRAGMA user_version").fetchone()[0] == 2
+        for table, rows in before.items():
+            assert [tuple(row) for row in connection.execute("SELECT * FROM " + table)] == rows
+        assert [tuple(row) for row in connection.execute(
+            "SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name")] == schema_before
+        assert connection.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+        assert connection.execute("PRAGMA foreign_key_check").fetchall() == []
+    # Collection can create a new ad version while the historical reference stays intact.
+    assert db.upsert_page([ad(title="Changed")])["updated"] == 1
+    with db.connect(read_only=True) as connection:
+        assert connection.execute("SELECT ad_version FROM match_results").fetchone()[0] == 1
+        assert connection.execute("SELECT count(*) FROM ad_versions").fetchone()[0] == 2
+        assert connection.execute("PRAGMA foreign_key_check").fetchall() == []
 
 
 def test_schema_one_migration_preserves_all_original_rows(db):
@@ -119,7 +122,6 @@ def test_schema_one_migration_preserves_all_original_rows(db):
         for table, rows in before.items():
             assert [tuple(r) for r in connection.execute("SELECT * FROM " + table)] == rows
         assert connection.execute("SELECT count(*) FROM match_results").fetchone()[0] == 0
-    assert db.save_match_result(1, 1, match_result()) == 1
 
 
 def test_newer_schema_rejected(db):

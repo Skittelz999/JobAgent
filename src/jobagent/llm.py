@@ -7,7 +7,7 @@ from jobagent.settings import LLMSettings
 
 
 class LLMError(ValueError):
-    """Safe diagnostic without exposing prompts, profile or response bodies."""
+    """Safe diagnostic without exposing prompts or response bodies."""
 
 
 class LocalLLM:

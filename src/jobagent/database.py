@@ -85,6 +85,8 @@ class Database:
                     COMMIT;
                 """)
             if version < 2:
+                # Preserve the schema-2 contract and historical results. No active
+                # application flow reads or writes this legacy table.
                 connection.executescript("""
                     BEGIN IMMEDIATE;
                     CREATE TABLE IF NOT EXISTS match_results (
@@ -180,17 +182,3 @@ class Database:
         with self.connect() as connection:
             return [dict(row) for row in connection.execute(
                 "SELECT * FROM search_runs ORDER BY id DESC LIMIT ?", (limit,))]
-
-    def save_match_result(self, job_id: int, ad_version: int, result: dict[str, Any]) -> int:
-        """Append a validated result for the exact ad version that was matched."""
-        with self.connect() as connection:
-            cursor = connection.execute("""INSERT INTO match_results
-                (job_id, ad_version, result_json, profile_hash, model, prompt_version, created_at)
-                VALUES(?,?,?,?,?,?,?)""", (job_id, ad_version, json_text(result),
-                result["profile_hash"], result["model"], result["prompt_version"], utc_now()))
-            return int(cursor.lastrowid)
-
-    def get_match_result(self, result_id: int) -> dict[str, Any] | None:
-        with self.connect(read_only=True) as connection:
-            row = connection.execute("SELECT * FROM match_results WHERE id=?", (result_id,)).fetchone()
-            return dict(row) if row else None
