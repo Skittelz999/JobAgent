@@ -1,0 +1,199 @@
+{
+  "source": {
+    "application_url": "https://cambio.teamtailor.com/jobs/8544487-lead-ai-engineer/applications/new?promotion=2245791-arbetsformedlingen",
+    "deadline": "2027-04-12T21:59:59Z",
+    "description": "Cambio is one of the Nordics' leading suppliers in e-health with a comprehensive offering for the entire health and care chain. Our e-health solutions supports health care professionals in their daily work and offer patients safer and more easily accessible care. We are proud to be an important part of Swedish healthcare. We are growing continuously and now have about 1000 employees in several countries.\n\nThe position Imagine being able to improve how an entire company works through AI.\nAs AI Enablement Lead, you will help teams across Cambio identify opportunities, solve real business problems and turn ideas into working AI solutions that save time, improve quality and create measurable business value.\nYou will be part of our virtual AI engineering team; an internal AI acceleration team focused on helping nearly 1,000 colleagues work smarter through practical AI solutions. From building agents and automations to supporting Product Engineers and scaling successful initiatives, you will play a key role in shaping how AI is adopted across Cambio.\nThis is a hands-on builder role. You are expected to create solutions, not just talk about them.\nWhat You'll Be Doing\nBuild\n\nPrototype and build AI agents, automations, internal applications and workflows.\n\n\nWork directly with users to turn real problems into working solutions.\n\n\nUse Microsoft 365, Copilot and modern AI technologies to rapidly test, iterate and deploy solutions.\n\n\nCreate reusable components and patterns that accelerate future development.\n\n\nDrive\n\nOwn and shape the pipeline of AI opportunities across Cambio.\n\n\nPrioritize initiatives, support Product Engineers and remove blockers.\n\n\nEnsure delivery remains focused on measurable business value.\n\n\nEnable\n\nHelp teams identify opportunities where AI can improve everyday work.\n\n\nRun workshops, demos and coaching sessions that drive adoption.\n\n\nCapture and share proven patterns, solutions and best practices.\n\n\nScale\n\nIdentify solutions with broader potential across Cambio.\n\n\nPartner with the AI Platform Team to turn successful initiatives into scalable capabilities.\n\n\nFeed recurring needs and learnings back into the platform roadmap.\n\n\nHow You'll Work\nYou will work in a highly iterative way:\nDiscover → Build → Test → Adopt → Measure → Scale\nOne day you might be building an AI agent with a business team, the next supporting Product Engineers or helping scale a successful solution across the organization.\nThis role sits at the intersection of product, engineering, enablement and operations.\n\nAbout you\n\nBuilder: You enjoy turning ideas into working solutions and getting them into the hands of users.\n\n\nAI-native: AI is already a core part of how you solve problems and create value.\n\n\nTechnically capable: You are comfortable working with code, APIs, automation, agents and modern AI tooling.\n\n\nBusiness-minded: You care about solving real problems and delivering measurable outcomes.\n\n\nInfluential: You can work effectively with both technical and non-technical stakeholders and help drive adoption.\n\n\nTechnical Experience\nWe believe you have experience in several of the following areas:\n\n5+ years of modern software development.\n\n\n2+ years of building AI-powered solutions, agents, automations or copilots.\n\n\nExperience with Microsoft technologies such as Microsoft 365 Copilot, Microsoft Graph, Entra ID, Power Platform or Azure AI services.\n\n\nExperience integrating systems through APIs and building workflow automations.\n\n\nExperience using AI-assisted development tools in day-to-day software development.\n\n\nExperience taking solutions from prototype to production and adoption.\n\n\nExperience with one or more modern programming languages such as Python, C#, Java, JavaScript or TypeScript\n\n\n Place of employment: Stockholm eller Linköping \nScope: Full-time, hybrid work model (three days per week in-office)\nForm of employment: Permanent employment, 6 months trial period\nAdditional Information: The role involves access to sensitive information, therefore a background check will be conducted on the final candidate.\nWe review applications and conduct interviews on a rolling basis, so we encourage you to apply as soon as possible via the link.\nWe look forward to receiving your application!\nCAMBIO- FOR A HEALTHIER TOMORROW\nWelcome to a company where healthcare is improved every day. Here you will work with leading technology in a collaborative, trusting and empowering environment where your contribution will be appreciated and celebrated. In our caring culture you will have the opportunity to pursue different paths of professional growth. Seize the opportunity to do the most important work of your life. Read more about us here!\n A healthier tomorrow also means taking care of those who make it possible -explore our employee benefits\nLearn more about our recruitment process here\nAre you interested in Cambio but you don’t feel that this position is the perfect match? Check out our other open positions at our career site.",
+    "employer": "Cambio Healthcare Systems AB",
+    "external_id": "31595194",
+    "location": "Stockholm",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31595194",
+    "published_at": "2026-10-14T09:34:24Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "fg7B_yov_smw",
+        "label": "Systemutvecklare/Programmerare",
+        "legacy_ams_taxonomy_id": "2419"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Stockholm",
+          "coordinates": [
+            18.0625616149858,
+            59.3369161713183
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Stockholm",
+          "municipality_code": "0180",
+          "municipality_concept_id": "AvNB_uwa_6n6",
+          "postcode": "11134",
+          "region": "Stockholms län",
+          "region_code": "01",
+          "region_concept_id": "CifL_Rzy_Mku",
+          "street_address": "Sveavägen 44"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Lead AI Engineer",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Cambio is one of the Nordics' leading suppliers in e-health with a comprehensive offering for the entire health and care chain.",
+    "p0002": "Our e-health solutions supports health care professionals in their daily work and offer patients safer and more easily accessible care.",
+    "p0003": "We are proud to be an important part of Swedish healthcare.",
+    "p0004": "We are growing continuously and now have about 1000 employees in several countries.",
+    "p0005": "The position Imagine being able to improve how an entire company works through AI.",
+    "p0006": "As AI Enablement Lead, you will help teams across Cambio identify opportunities, solve real business problems and turn ideas into working AI solutions that save time, improve quality and create measurable business value.",
+    "p0007": "You will be part of our virtual AI engineering team; an internal AI acceleration team focused on helping nearly 1,000 colleagues work smarter through practical AI solutions.",
+    "p0008": "From building agents and automations to supporting Product Engineers and scaling successful initiatives, you will play a key role in shaping how AI is adopted across Cambio.",
+    "p0009": "This is a hands-on builder role.",
+    "p0010": "You are expected to create solutions, not just talk about them.",
+    "p0011": "What You'll Be Doing",
+    "p0012": "Build",
+    "p0013": "Prototype and build AI agents, automations, internal applications and workflows.",
+    "p0014": "Work directly with users to turn real problems into working solutions.",
+    "p0015": "Use Microsoft 365, Copilot and modern AI technologies to rapidly test, iterate and deploy solutions.",
+    "p0016": "Create reusable components and patterns that accelerate future development.",
+    "p0017": "Drive",
+    "p0018": "Own and shape the pipeline of AI opportunities across Cambio.",
+    "p0019": "Prioritize initiatives, support Product Engineers and remove blockers.",
+    "p0020": "Ensure delivery remains focused on measurable business value.",
+    "p0021": "Enable",
+    "p0022": "Help teams identify opportunities where AI can improve everyday work.",
+    "p0023": "Run workshops, demos and coaching sessions that drive adoption.",
+    "p0024": "Capture and share proven patterns, solutions and best practices.",
+    "p0025": "Scale",
+    "p0026": "Identify solutions with broader potential across Cambio.",
+    "p0027": "Partner with the AI Platform Team to turn successful initiatives into scalable capabilities.",
+    "p0028": "Feed recurring needs and learnings back into the platform roadmap.",
+    "p0029": "How You'll Work",
+    "p0030": "You will work in a highly iterative way:",
+    "p0031": "Discover → Build → Test → Adopt → Measure → Scale",
+    "p0032": "One day you might be building an AI agent with a business team, the next supporting Product Engineers or helping scale a successful solution across the organization.",
+    "p0033": "This role sits at the intersection of product, engineering, enablement and operations.",
+    "p0034": "About you",
+    "p0035": "Builder: You enjoy turning ideas into working solutions and getting them into the hands of users.",
+    "p0036": "AI-native: AI is already a core part of how you solve problems and create value.",
+    "p0037": "Technically capable: You are comfortable working with code, APIs, automation, agents and modern AI tooling.",
+    "p0038": "Business-minded: You care about solving real problems and delivering measurable outcomes.",
+    "p0039": "Influential: You can work effectively with both technical and non-technical stakeholders and help drive adoption.",
+    "p0040": "Technical Experience",
+    "p0041": "We believe you have experience in several of the following areas:",
+    "p0042": "5+ years of modern software development.",
+    "p0043": "2+ years of building AI-powered solutions, agents, automations or copilots.",
+    "p0044": "Experience with Microsoft technologies such as Microsoft 365 Copilot, Microsoft Graph, Entra ID, Power Platform or Azure AI services.",
+    "p0045": "Experience integrating systems through APIs and building workflow automations.",
+    "p0046": "Experience using AI-assisted development tools in day-to-day software development.",
+    "p0047": "Experience taking solutions from prototype to production and adoption.",
+    "p0048": "Experience with one or more modern programming languages such as Python, C#, Java, JavaScript or TypeScript",
+    "p0049": "Place of employment: Stockholm eller Linköping",
+    "p0050": "Scope: Full-time, hybrid work model (three days per week in-office)",
+    "p0051": "Form of employment: Permanent employment, 6 months trial period",
+    "p0052": "Additional Information: The role involves access to sensitive information, therefore a background check will be conducted on the final candidate.",
+    "p0053": "We review applications and conduct interviews on a rolling basis, so we encourage you to apply as soon as possible via the link.",
+    "p0054": "We look forward to receiving your application!",
+    "p0055": "CAMBIO- FOR A HEALTHIER TOMORROW",
+    "p0056": "Welcome to a company where healthcare is improved every day.",
+    "p0057": "Here you will work with leading technology in a collaborative, trusting and empowering environment where your contribution will be appreciated and celebrated.",
+    "p0058": "In our caring culture you will have the opportunity to pursue different paths of professional growth.",
+    "p0059": "Seize the opportunity to do the most important work of your life.",
+    "p0060": "Read more about us here!",
+    "p0061": "A healthier tomorrow also means taking care of those who make it possible -explore our employee benefits",
+    "p0062": "Learn more about our recruitment process here",
+    "p0063": "Are you interested in Cambio but you don’t feel that this position is the perfect match?",
+    "p0064": "Check out our other open positions at our career site."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0040",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0041",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0042",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0043",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0044",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0045",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0046",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0047",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0048",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0049",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0050",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0051",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0052",
+        "importance": "expected"
+      }
+    ]
+  }
+}

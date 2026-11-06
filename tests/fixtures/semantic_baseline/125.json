@@ -1,0 +1,112 @@
+{
+  "ad_id": 125,
+  "description": "About the role\nHykmann Global Business Solutions AB is looking for a skilled Data Engineer to join an exciting technology-driven assignment focused on building scalable data solutions and backend services.\nDuration: 1 Year Contract.\nAre you passionate about data engineering, distributed processing, and solving complex technical challenges? This role offers the opportunity to build and maintain data pipelines, develop backend APIs, and contribute to solutions used across a collaborative engineering environment.\nWe’re looking for someone who combines strong programming skills with a proactive mindset, takes ownership of deliverables, and enjoys sharing knowledge with fellow engineers.\n📍 Location: Malmö, Sweden\n🏢 Work model: Hybrid – on-site at the client’s office 3 days per week\n🎯 About the Role\nAs a Data Engineer, you will contribute to the design, development, and maintenance of scalable data-processing solutions. You will work with modern data technologies and backend frameworks to ensure reliable access to data and efficient data workflows.\nYou will collaborate closely with other engineers, provide technical guidance where needed, and help drive continuous improvements across the team's data engineering capabilities.\n🔧 Key Responsibilities\nBuild, maintain, and improve data pipelines using distributed data-processing technologies.\nDevelop and maintain scalable data solutions that support the team's needs.\nBuild backend APIs and services to enable efficient and reliable access to data.\nProvide technical support and share knowledge with colleagues on data engineering topics.\nIdentify opportunities for technical improvements and drive initiatives from idea to implementation.\nCollaborate with engineers and other stakeholders to design practical, scalable solutions.\nTake end-to-end ownership of your work and ensure high-quality delivery.\nContribute to a collaborative, high-trust, and fast-paced engineering environment.\nSkills\nPython\nScala\nJava\n\nSkills & requirements\n✅ Required Skills & Qualifications\nProfessional experience as a Data Engineer or in a similar technical role.\nStrong programming skills in Python and Java or Scala.\nSolid backend development experience, ideally with Scala Play Framework or an equivalent framework.\nStrong general software engineering and problem-solving skills.\nExperience developing and maintaining software solutions and data-processing workflows.\nA bachelor's degree in a relevant field; a master's degree is a strong advantage.\nExcellent written and verbal communication skills in English.\nAbility to work independently, take responsibility, and drive tasks forward.\nA collaborative mindset with a willingness to share knowledge and support colleagues.\nAbility to work on-site at the client's office in Malmö three days per week.\n⭐ Nice-to-Have Skills & Technologies\nExperience with one or more of the following technologies will be an advantage:\nApache Spark and Apache Flink for distributed data processing.\nApache Iceberg for modern data lake architectures.\nMicroservices deployed on Kubernetes.\nSnowflake for cloud data warehousing.\nApache Kafka for event streaming and data integration.\nAkka for concurrent and distributed applications.\nGrafana for monitoring and data visualisation.\nMachine learning concepts, tools, or practical ML projects.\n👤 Our Ideal Candidate\nYou thrive in an environment where you are trusted to take ownership and make independent decisions. You are analytical, creative, and comfortable tackling challenges with limited guidance.\nAt the same time, you value teamwork, communicate your ideas clearly, and enjoy helping others succeed. You balance technical innovation with practical delivery and continuously look for ways to improve existing systems and workflows.\n📩 Interested in This Opportunity?\nIf you have strong Python and Java/Scala skills, backend development experience, and an interest in scalable data engineering, we’d like to hear from you.\nSend us your updated CV highlighting your data engineering projects, programming expertise, backend experience, and relevant technologies.",
+  "original_passages": {
+    "p0001": "About the role",
+    "p0002": "Hykmann Global Business Solutions AB is looking for a skilled Data Engineer to join an exciting technology-driven assignment focused on building scalable data solutions and backend services.",
+    "p0003": "Duration: 1 Year Contract.",
+    "p0004": "Are you passionate about data engineering, distributed processing, and solving complex technical challenges?",
+    "p0005": "This role offers the opportunity to build and maintain data pipelines, develop backend APIs, and contribute to solutions used across a collaborative engineering environment.",
+    "p0006": "We’re looking for someone who combines strong programming skills with a proactive mindset, takes ownership of deliverables, and enjoys sharing knowledge with fellow engineers.",
+    "p0007": "📍 Location: Malmö, Sweden",
+    "p0008": "🏢 Work model: Hybrid – on-site at the client’s office 3 days per week",
+    "p0009": "🎯 About the Role",
+    "p0010": "As a Data Engineer, you will contribute to the design, development, and maintenance of scalable data-processing solutions.",
+    "p0011": "You will work with modern data technologies and backend frameworks to ensure reliable access to data and efficient data workflows.",
+    "p0012": "You will collaborate closely with other engineers, provide technical guidance where needed, and help drive continuous improvements across the team's data engineering capabilities.",
+    "p0013": "🔧 Key Responsibilities",
+    "p0014": "Build, maintain, and improve data pipelines using distributed data-processing technologies.",
+    "p0015": "Develop and maintain scalable data solutions that support the team's needs.",
+    "p0016": "Build backend APIs and services to enable efficient and reliable access to data.",
+    "p0017": "Provide technical support and share knowledge with colleagues on data engineering topics.",
+    "p0018": "Identify opportunities for technical improvements and drive initiatives from idea to implementation.",
+    "p0019": "Collaborate with engineers and other stakeholders to design practical, scalable solutions.",
+    "p0020": "Take end-to-end ownership of your work and ensure high-quality delivery.",
+    "p0021": "Contribute to a collaborative, high-trust, and fast-paced engineering environment.",
+    "p0022": "Skills",
+    "p0023": "Python",
+    "p0024": "Scala",
+    "p0025": "Java",
+    "p0026": "Skills & requirements",
+    "p0027": "✅ Required Skills & Qualifications",
+    "p0028": "Professional experience as a Data Engineer or in a similar technical role.",
+    "p0029": "Strong programming skills in Python and Java or Scala.",
+    "p0030": "Solid backend development experience, ideally with Scala Play Framework or an equivalent framework.",
+    "p0031": "Strong general software engineering and problem-solving skills.",
+    "p0032": "Experience developing and maintaining software solutions and data-processing workflows.",
+    "p0033": "A bachelor's degree in a relevant field; a master's degree is a strong advantage.",
+    "p0034": "Excellent written and verbal communication skills in English.",
+    "p0035": "Ability to work independently, take responsibility, and drive tasks forward.",
+    "p0036": "A collaborative mindset with a willingness to share knowledge and support colleagues.",
+    "p0037": "Ability to work on-site at the client's office in Malmö three days per week.",
+    "p0038": "⭐ Nice-to-Have Skills & Technologies",
+    "p0039": "Experience with one or more of the following technologies will be an advantage:",
+    "p0040": "Apache Spark and Apache Flink for distributed data processing.",
+    "p0041": "Apache Iceberg for modern data lake architectures.",
+    "p0042": "Microservices deployed on Kubernetes.",
+    "p0043": "Snowflake for cloud data warehousing.",
+    "p0044": "Apache Kafka for event streaming and data integration.",
+    "p0045": "Akka for concurrent and distributed applications.",
+    "p0046": "Grafana for monitoring and data visualisation.",
+    "p0047": "Machine learning concepts, tools, or practical ML projects.",
+    "p0048": "👤 Our Ideal Candidate",
+    "p0049": "You thrive in an environment where you are trusted to take ownership and make independent decisions.",
+    "p0050": "You are analytical, creative, and comfortable tackling challenges with limited guidance.",
+    "p0051": "At the same time, you value teamwork, communicate your ideas clearly, and enjoy helping others succeed.",
+    "p0052": "You balance technical innovation with practical delivery and continuously look for ways to improve existing systems and workflows.",
+    "p0053": "📩 Interested in This Opportunity?",
+    "p0054": "If you have strong Python and Java/Scala skills, backend development experience, and an interest in scalable data engineering, we’d like to hear from you.",
+    "p0055": "Send us your updated CV highlighting your data engineering projects, programming expertise, backend experience, and relevant technologies."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0027",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0034",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0035",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0036",
+        "importance": "mandatory"
+      }
+    ]
+  },
+  "source_attribution": {
+    "source": "platsbanken",
+    "external_id": "31610312",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31610312",
+    "employer": "Hykmann Global Business Solutions AB",
+    "title": "Data Engineer (Python and Java/Scala skills)"
+  }
+}

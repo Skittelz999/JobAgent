@@ -1,0 +1,147 @@
+{
+  "source": {
+    "application_url": null,
+    "deadline": "2026-11-07T22:59:59Z",
+    "description": "I den här rollen ställs du i fronten för att utveckla Sveriges digitala infrastruktur i samklang med EU:s direktiv, andra utvecklare och AI-verktyg.  Uppgifterna innefattar backendtjänster, webbgränssnitt och integrationer inom säkerhet, användarvänlighet och interoperabilitet. Du ska kunna arbeta både självständighet och i grupp, samt kunna leda mindre team.\n\n\nKrav:\nBekväm med att använda AI-verktyg\nJava\nMicroservices\nKubernetes\nTypescript\nUtfört arbete end-to-end i en containerbaserad miljö: bygg-, test- och leverans.\nErfarenhet av identitets- och säkerhetslösningar, ex. PKI, SAML2, OIDC, OAUTH.\nErfarenhet av att arbeta i agila team.",
+    "employer": "Rosenthal, Emanuel",
+    "external_id": "31669519",
+    "location": "Stockholm",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31669519",
+    "published_at": "2026-11-01T17:10:25Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "sTu5_NBQ_udq",
+        "label": "Tidsbegränsad anställning",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [
+          {
+            "concept_id": "zSLA_vw2_FXN",
+            "label": "Svenska",
+            "legacy_ams_taxonomy_id": "502",
+            "weight": 10
+          },
+          {
+            "concept_id": "NVxJ_hLg_TYS",
+            "label": "Engelska",
+            "legacy_ams_taxonomy_id": "283",
+            "weight": 10
+          }
+        ],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": [
+          {
+            "concept_id": "71Ji_irM_rSJ",
+            "label": "Fullstack-utvecklare",
+            "legacy_ams_taxonomy_id": "7829",
+            "weight": 5
+          }
+        ]
+      },
+      "occupation": {
+        "concept_id": "71Ji_irM_rSJ",
+        "label": "Fullstack-utvecklare",
+        "legacy_ams_taxonomy_id": "7829"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": null,
+          "coordinates": [
+            null,
+            null
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Stockholm",
+          "municipality_code": "0180",
+          "municipality_concept_id": "AvNB_uwa_6n6",
+          "postcode": null,
+          "region": "Stockholms län",
+          "region_code": "01",
+          "region_concept_id": "CifL_Rzy_Mku",
+          "street_address": null
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "Vbpe_rGe_vCW",
+        "label": "Hybridarbete"
+      }
+    },
+    "title": "Fullstackutvecklare: Infrastruktur",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "I den här rollen ställs du i fronten för att utveckla Sveriges digitala infrastruktur i samklang med EU:s direktiv, andra utvecklare och AI-verktyg.",
+    "p0002": "Uppgifterna innefattar backendtjänster, webbgränssnitt och integrationer inom säkerhet, användarvänlighet och interoperabilitet.",
+    "p0003": "Du ska kunna arbeta både självständighet och i grupp, samt kunna leda mindre team.",
+    "p0004": "Krav:",
+    "p0005": "Bekväm med att använda AI-verktyg",
+    "p0006": "Java",
+    "p0007": "Microservices",
+    "p0008": "Kubernetes",
+    "p0009": "Typescript",
+    "p0010": "Utfört arbete end-to-end i en containerbaserad miljö: bygg-, test- och leverans.",
+    "p0011": "Erfarenhet av identitets- och säkerhetslösningar, ex. PKI, SAML2, OIDC, OAUTH.",
+    "p0012": "Erfarenhet av att arbeta i agila team."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0005",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0006",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0007",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0008",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0009",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0010",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0011",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0012",
+        "importance": "mandatory"
+      }
+    ]
+  }
+}

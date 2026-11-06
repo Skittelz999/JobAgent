@@ -1,0 +1,118 @@
+{
+  "ad_id": 41,
+  "description": "Arbetsbeskrivning\nÄr du en vass och driven Fullstackutvecklare som vill bygga framtidens säkra och europeiska digitala infrastruktur? Randstad Digital söker nu konsulter för ett högaktuellt och samhällsviktigt uppdrag hos en central statlig myndighet med ansvar för Sveriges digitalisering. \n\n\n\nOm uppdraget\nI detta uppdrag får du en nyckelroll i utvecklingen av Sveriges digitala identitetsplånbok (EUDI-wallet) – ett initiativ som gör det möjligt för privatpersoner att styrka sin identitet och dela digitala intyg i hela EU. Du blir en del av ett korsfunktionellt och agilt utvecklingsteam som arbetar enligt DevSecOps-metodik och med stöd av moderna AI-verktyg. Arbetet omfattar hela kedjan från teknisk utformning och implementation till leverans, med starkt fokus på backendtjänster, webbgränssnitt, säkerhet och hög interoperabilitet i takt med att EU-krav och tekniska standarder utvecklas över tid. \n\nAnsvarsområden\nI rollen kommer du att:\nUtveckla backendtjänster, webbgränssnitt och integrationer med fokus på säkerhet, användbarhet och prestanda. \nTillämpa DevSecOps och utveckla lösningar med hjälp av AI-verktyg. \nBygga microservice-arkitekturer med exempelvis Java, Spring Boot eller Quarkus. \nUtveckla användargränssnitt med moderna frontend-ramverk och TypeScript/JavaScript. \nHantera containeriserade miljöer i Kubernetes och automatisera CI/CD-flöden. \nArbeta aktivt i ett korsfunktionellt team enligt agila principer. \n\nUppdragsfakta:\nOmfattning: Heltid (100 %) \nStationeringsort: Sundsvall eller Stockholm \nNärvaro: Minst tre (3) dagar per vecka på kontoret i Sundsvall eller Stockholm \nAvtalsperiod: 2027-01-11 till 2029-01-10 \n\nAtt vara konsult via Randstad Digital \nRandstad Digital är din karriärpartner inom IT och digital transformation. Som konsult hos oss får du konkurrenskraftig lön, förmåner och kollektivavtalade villkor. Din konsultchef, som alltid finns nära till hands, ser till att du får varierande och utvecklande uppdrag på olika företag och myndigheter. Som din karriärpartner tillämpar vi vår talangcentrerade strategi som sätter din utveckling i fokus, vilket hjälper dig att uppnå din fulla potential och öppnar upp för nya spännande karriärmöjligheter. \n\n\n\nOm Randstad Digital \nRandstad Digital är specialiserade inom kompetensområdet IT och är en del av Randstad, en global ledare för talanger med visionen att vara världens mest rättvisa och specialiserade talangföretag. Med huvudkontor i Nederländerna verkar Randstad på 39 marknader och har cirka 40 000 medarbetare. Genom detta globala nätverk i kombination med en stark lokal förankring kan vi erbjuda ett stort utbud av varierande och utvecklande uppdrag och tjänster för dig som är specialist inom IT-området. Som en partner för talanger och genom vår utpräglade specialisering hjälper vi dig att säkra rätt jobb, utveckla relevant kompetens och hitta tillhörighet i arbetslivet. \n\n\n\nLåter detta som nästa utmaning för dig? \nSkicka in din ansökan senast den 2026-11-08. (Observera att vi jobbar med ett tight fönster mot kund och urval sker löpande, så skicka gärna in din ansökan så snart som möjligt!) \n\nKvalifikationer\nDå detta är ett avrop till en myndighet är det viktigt att du uppfyller samtliga krav för att vara aktuell för tjänsten: \nKompetensnivå: Motsvarande Kompetensnivå 3 (normalt 4–8 års relevant yrkeserfarenhet inom rollen, hög självständighet samt förmåga att leda delområden och vägleda andra). \nAI-verktyg: Erfarenhet av att utveckla lösningar med hjälp av AI-verktyg. \nBackend: Erfarenhet av Javautveckling. \nMicroservices: Erfarenhet av microservicearkitektur (t.ex. Quarkus, Spring Boot eller liknande). \nFrontend: Erfarenhet av frontend-utveckling med t.ex. Vue, React, Angular eller liknande. \nProgrammeringsspråk: Erfarenhet av Javascript och Typescript. \nInfrastruktur & Plattform: Erfarenhet av Kubernetes samt Linux som utvecklings- och driftmiljö. \nCI/CD: Erfarenhet av automatisering av bygg-, test- och leveransflöden i containerbaserade miljöer. \nArbetssätt: Erfarenhet av teambaserad utveckling enligt agila principer. \nSpråk: Goda kunskaper i svenska och engelska i både tal och skrift (CV ska lämnas på svenska). \n\nMycket meriterande (Bör-krav):\nIdentitets- och säkerhetslösningar: Erfarenhet av lösningar där PKI, certifikathantering, SAML2, OIDC, OAuth och liknande ingår. \n\n\nOm företaget\n\nRandstad\nPå Randstad vet vi att alla människor har en plats på arbetsmarknaden. Med verksamhet över hela landet och inom alla kompetensområden hjälper vi människor att hitta ett jobb som känns bra, och där de får möjlighet att växa, utvecklas och uppnå sin fulla potential. \nMed närmare 600 000 anställda i 38 länder är Randstad världsledande inom HR-tjänster, med målsättningen att bli världens främsta och mest uppskattade partner på arbetsmarknaden. Genom att kombinera vår passion för människor med kraften i dagens teknologi hjälper vi människor och företag att uppnå deras fulla potential. Vi kallar det Human Forward.",
+  "original_passages": {
+    "p0001": "Arbetsbeskrivning",
+    "p0002": "Är du en vass och driven Fullstackutvecklare som vill bygga framtidens säkra och europeiska digitala infrastruktur?",
+    "p0003": "Randstad Digital söker nu konsulter för ett högaktuellt och samhällsviktigt uppdrag hos en central statlig myndighet med ansvar för Sveriges digitalisering.",
+    "p0004": "Om uppdraget",
+    "p0005": "I detta uppdrag får du en nyckelroll i utvecklingen av Sveriges digitala identitetsplånbok (EUDI-wallet) – ett initiativ som gör det möjligt för privatpersoner att styrka sin identitet och dela digitala intyg i hela EU.",
+    "p0006": "Du blir en del av ett korsfunktionellt och agilt utvecklingsteam som arbetar enligt DevSecOps-metodik och med stöd av moderna AI-verktyg.",
+    "p0007": "Arbetet omfattar hela kedjan från teknisk utformning och implementation till leverans, med starkt fokus på backendtjänster, webbgränssnitt, säkerhet och hög interoperabilitet i takt med att EU-krav och tekniska standarder utvecklas över tid.",
+    "p0008": "Ansvarsområden",
+    "p0009": "I rollen kommer du att:",
+    "p0010": "Utveckla backendtjänster, webbgränssnitt och integrationer med fokus på säkerhet, användbarhet och prestanda.",
+    "p0011": "Tillämpa DevSecOps och utveckla lösningar med hjälp av AI-verktyg.",
+    "p0012": "Bygga microservice-arkitekturer med exempelvis Java, Spring Boot eller Quarkus.",
+    "p0013": "Utveckla användargränssnitt med moderna frontend-ramverk och TypeScript/JavaScript.",
+    "p0014": "Hantera containeriserade miljöer i Kubernetes och automatisera CI/CD-flöden.",
+    "p0015": "Arbeta aktivt i ett korsfunktionellt team enligt agila principer.",
+    "p0016": "Uppdragsfakta:",
+    "p0017": "Omfattning: Heltid (100 %)",
+    "p0018": "Stationeringsort: Sundsvall eller Stockholm",
+    "p0019": "Närvaro: Minst tre (3) dagar per vecka på kontoret i Sundsvall eller Stockholm",
+    "p0020": "Avtalsperiod: 2027-01-11 till 2029-01-10",
+    "p0021": "Att vara konsult via Randstad Digital",
+    "p0022": "Randstad Digital är din karriärpartner inom IT och digital transformation.",
+    "p0023": "Som konsult hos oss får du konkurrenskraftig lön, förmåner och kollektivavtalade villkor.",
+    "p0024": "Din konsultchef, som alltid finns nära till hands, ser till att du får varierande och utvecklande uppdrag på olika företag och myndigheter.",
+    "p0025": "Som din karriärpartner tillämpar vi vår talangcentrerade strategi som sätter din utveckling i fokus, vilket hjälper dig att uppnå din fulla potential och öppnar upp för nya spännande karriärmöjligheter.",
+    "p0026": "Om Randstad Digital",
+    "p0027": "Randstad Digital är specialiserade inom kompetensområdet IT och är en del av Randstad, en global ledare för talanger med visionen att vara världens mest rättvisa och specialiserade talangföretag.",
+    "p0028": "Med huvudkontor i Nederländerna verkar Randstad på 39 marknader och har cirka 40 000 medarbetare.",
+    "p0029": "Genom detta globala nätverk i kombination med en stark lokal förankring kan vi erbjuda ett stort utbud av varierande och utvecklande uppdrag och tjänster för dig som är specialist inom IT-området.",
+    "p0030": "Som en partner för talanger och genom vår utpräglade specialisering hjälper vi dig att säkra rätt jobb, utveckla relevant kompetens och hitta tillhörighet i arbetslivet.",
+    "p0031": "Låter detta som nästa utmaning för dig?",
+    "p0032": "Skicka in din ansökan senast den 2026-11-08. (Observera att vi jobbar med ett tight fönster mot kund och urval sker löpande, så skicka gärna in din ansökan så snart som möjligt!)",
+    "p0033": "Kvalifikationer",
+    "p0034": "Då detta är ett avrop till en myndighet är det viktigt att du uppfyller samtliga krav för att vara aktuell för tjänsten:",
+    "p0035": "Kompetensnivå: Motsvarande Kompetensnivå 3 (normalt 4–8 års relevant yrkeserfarenhet inom rollen, hög självständighet samt förmåga att leda delområden och vägleda andra).",
+    "p0036": "AI-verktyg: Erfarenhet av att utveckla lösningar med hjälp av AI-verktyg.",
+    "p0037": "Backend: Erfarenhet av Javautveckling.",
+    "p0038": "Microservices: Erfarenhet av microservicearkitektur (t.ex. Quarkus, Spring Boot eller liknande).",
+    "p0039": "Frontend: Erfarenhet av frontend-utveckling med t.ex. Vue, React, Angular eller liknande.",
+    "p0040": "Programmeringsspråk: Erfarenhet av Javascript och Typescript.",
+    "p0041": "Infrastruktur & Plattform: Erfarenhet av Kubernetes samt Linux som utvecklings- och driftmiljö.",
+    "p0042": "CI/CD: Erfarenhet av automatisering av bygg-, test- och leveransflöden i containerbaserade miljöer.",
+    "p0043": "Arbetssätt: Erfarenhet av teambaserad utveckling enligt agila principer.",
+    "p0044": "Språk: Goda kunskaper i svenska och engelska i både tal och skrift (CV ska lämnas på svenska).",
+    "p0045": "Mycket meriterande (Bör-krav):",
+    "p0046": "Identitets- och säkerhetslösningar: Erfarenhet av lösningar där PKI, certifikathantering, SAML2, OIDC, OAuth och liknande ingår.",
+    "p0047": "Om företaget",
+    "p0048": "Randstad",
+    "p0049": "På Randstad vet vi att alla människor har en plats på arbetsmarknaden.",
+    "p0050": "Med verksamhet över hela landet och inom alla kompetensområden hjälper vi människor att hitta ett jobb som känns bra, och där de får möjlighet att växa, utvecklas och uppnå sin fulla potential.",
+    "p0051": "Med närmare 600 000 anställda i 38 länder är Randstad världsledande inom HR-tjänster, med målsättningen att bli världens främsta och mest uppskattade partner på arbetsmarknaden.",
+    "p0052": "Genom att kombinera vår passion för människor med kraften i dagens teknologi hjälper vi människor och företag att uppnå deras fulla potential.",
+    "p0053": "Vi kallar det Human Forward."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0019",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0035",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0036",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0037",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0038",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0039",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0040",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0041",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0042",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0043",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0044",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0046",
+        "importance": "preferred"
+      }
+    ]
+  },
+  "source_attribution": {
+    "source": "platsbanken",
+    "external_id": "31653792",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31653792",
+    "employer": "Randstad AB",
+    "title": "Fullstackutvecklare till statlig myndighet – Stockholm eller Sundsvall"
+  }
+}

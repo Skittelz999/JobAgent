@@ -1,0 +1,165 @@
+{
+  "source": {
+    "application_url": "https://carla-go.se/jobs/a6f1ded4-293a-4509-a191-c50a07c10746/06a3fbfd-86a8-4601-a2dd-e538cce763ea",
+    "deadline": "2026-12-14T22:59:59Z",
+    "description": "Join our team and help shape the future of technology by contributing to cutting-edge products and platforms.\nAbout us\nSynteda AB specializes in helping companies effectively embrace the era of artificial intelligence and computer vision. By delivering innovative solutions, we empower businesses to take full advantage of the vast possibilities presented by these cutting-edge technologies. We firmly believe in the potential of AI and computer vision to benefit society, and we’re committed to leveraging our expertise to facilitate businesses in their journey towards this exciting new era. Our close collaboration with top universities in Sweden enables us to work with clients across a broad range of industry fields.\nWe’re actively engaged in developing several unique products and solutions, using a work process that we call “dream-innovate-create.” This approach involves subjecting our ideas to rigorous scrutiny and feasibility testing, using agile methodologies to refine our solutions until we’ve achieved a full-scale product.\nWe’re proud to have a core team of highly qualified experts who excel at providing assessment services to identify business challenges and develop customized algorithms to overcome them. We’re guided by our commitment to ethical awareness, curiosity, transparency, respect, participation and science.\nWhat are we looking for?\nWe are looking for a highly skilled and motivated Computer Vision Specialist to join our team. The successful candidate will be responsible for developing and implementing state-of-the-art computer vision solutions that will drive innovation and growth in our organization.\nResponsibilities\nDesign and implement algorithms for innovative products and platforms.\nDevelop advanced computer vision and AI techniques.\nDesign, implement, and optimize AI algorithms.\nInnovate and enforce intellectual property rights (IPR) protection.\nValidate, analyze, and evaluate models.\nPerform research, analysis, and modeling on data.\nTrain, validate, and test algorithms.\nCollaborate with cross-functional team members.\n\nRequired skills\nBachelor’s, Master’s, or Ph.D. degree in Computer Science or a related field.\nProgramming experience in a combination of Python, C#, C/C++, Spark, Java/Scala.\nKnowledge of scientific computing languages such as MATLAB or R.\nSolid experience with data analytics, predictive, and prescriptive data.\nFamiliarity with frameworks like PyTorch, Scikit-Learn, and others.\nHands-on experience with computer vision algorithms.\nExperience with OpenCV and other computer vision libraries.\nExperience working with depth sensors.\nStrong knowledge of analytics and image processing.\nFamiliarity with agile development methodologies.\nFluency in English, both spoken and written, is required.\nProficiency in Swedish is a plus.",
+    "employer": "Synteda AB",
+    "external_id": "31583138",
+    "location": "Göteborg",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31583138",
+    "published_at": "2026-10-12T08:50:15Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "rQds_YGd_quU",
+        "label": "Mjukvaruutvecklare",
+        "legacy_ams_taxonomy_id": "80"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": null,
+          "coordinates": [
+            null,
+            null
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Göteborg",
+          "municipality_code": "1480",
+          "municipality_concept_id": "PVZL_BQT_XtL",
+          "postcode": null,
+          "region": "Västra Götalands län",
+          "region_code": "14",
+          "region_concept_id": "zdoY_6u5_Krt",
+          "street_address": null
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "ZxwM_gtz_n61",
+        "label": "Arbete på plats"
+      }
+    },
+    "title": "Computer vision specialist",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Join our team and help shape the future of technology by contributing to cutting-edge products and platforms.",
+    "p0002": "About us",
+    "p0003": "Synteda AB specializes in helping companies effectively embrace the era of artificial intelligence and computer vision.",
+    "p0004": "By delivering innovative solutions, we empower businesses to take full advantage of the vast possibilities presented by these cutting-edge technologies.",
+    "p0005": "We firmly believe in the potential of AI and computer vision to benefit society, and we’re committed to leveraging our expertise to facilitate businesses in their journey towards this exciting new era.",
+    "p0006": "Our close collaboration with top universities in Sweden enables us to work with clients across a broad range of industry fields.",
+    "p0007": "We’re actively engaged in developing several unique products and solutions, using a work process that we call “dream-innovate-create.” This approach involves subjecting our ideas to rigorous scrutiny and feasibility testing, using agile methodologies to refine our solutions until we’ve achieved a full-scale product.",
+    "p0008": "We’re proud to have a core team of highly qualified experts who excel at providing assessment services to identify business challenges and develop customized algorithms to overcome them.",
+    "p0009": "We’re guided by our commitment to ethical awareness, curiosity, transparency, respect, participation and science.",
+    "p0010": "What are we looking for?",
+    "p0011": "We are looking for a highly skilled and motivated Computer Vision Specialist to join our team.",
+    "p0012": "The successful candidate will be responsible for developing and implementing state-of-the-art computer vision solutions that will drive innovation and growth in our organization.",
+    "p0013": "Responsibilities",
+    "p0014": "Design and implement algorithms for innovative products and platforms.",
+    "p0015": "Develop advanced computer vision and AI techniques.",
+    "p0016": "Design, implement, and optimize AI algorithms.",
+    "p0017": "Innovate and enforce intellectual property rights (IPR) protection.",
+    "p0018": "Validate, analyze, and evaluate models.",
+    "p0019": "Perform research, analysis, and modeling on data.",
+    "p0020": "Train, validate, and test algorithms.",
+    "p0021": "Collaborate with cross-functional team members.",
+    "p0022": "Required skills",
+    "p0023": "Bachelor’s, Master’s, or Ph.D. degree in Computer Science or a related field.",
+    "p0024": "Programming experience in a combination of Python, C#, C/C++, Spark, Java/Scala.",
+    "p0025": "Knowledge of scientific computing languages such as MATLAB or R.",
+    "p0026": "Solid experience with data analytics, predictive, and prescriptive data.",
+    "p0027": "Familiarity with frameworks like PyTorch, Scikit-Learn, and others.",
+    "p0028": "Hands-on experience with computer vision algorithms.",
+    "p0029": "Experience with OpenCV and other computer vision libraries.",
+    "p0030": "Experience working with depth sensors.",
+    "p0031": "Strong knowledge of analytics and image processing.",
+    "p0032": "Familiarity with agile development methodologies.",
+    "p0033": "Fluency in English, both spoken and written, is required.",
+    "p0034": "Proficiency in Swedish is a plus."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0023",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0034",
+        "importance": "mandatory"
+      }
+    ]
+  }
+}

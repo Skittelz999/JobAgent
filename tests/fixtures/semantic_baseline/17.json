@@ -1,0 +1,76 @@
+{
+  "ad_id": 17,
+  "description": "We are now looking for Android Developers who wants to be part of building smart, connected solutions – close to both the technology and the end user.\nThe role\nYou will work in projects where performance, usability and reliability are critical, and where your contribution directly impacts how machines are operated in real life.\nYou will:\n\nTake ownership of Android application development – from idea to deployment\n\n\nDesign and build solutions using Kotlin and Java\n\n\nCollaborate with team mates and translate requrements into great solutions\n\n\nContribute to architecture, quality and continuous improvement\n\n\nWho you are\nWe are looking for someone who is not only skilled, but also motivated by working in a collaborative and knowledge-sharing environment.\nYou:\n\nEnjoy working close to real products and real users\n\n\nTake ownership and pride in delivering high-quality solutions\n\n\nAre curious and eager to learn and grow continuously\n\n\nThrive in a team-oriented environment where we succeed together\n\n\nExperience from in car app development, navi, speach etc.\n\n\nYour background\n\nBachelor’s or Master’s degree in Computer Science, IT or similar\n\n\n2–5 years of experience in:\n\nAndroid development\n\n\nKotlin and Java\n\n\nSQL and databases\n\n\nLinux environments\n\n\n\nWe offer\nAt Sigma Embedded Engineering, we believe in you and that together we can create the most exciting opportunities by building the workplace and environment we want to work in. Together, we also find assignments where you thrive and grow. We have assignments in everything from self-driving cars (ADAS), application development, Medtech, Active Safety, IoT, Machine Learning, Cybersecurity, 5G, and algorithm development.\n\nWho are we? We love doing things together and strive for a good balance between work and leisure. This could be after-work hangouts, events, sports activities, ski trips, or inspirational talks. We've been on many fun trips together, which have been fantastic, and something we want to continue doing.\nSkills development has always been important to us, and in addition to growth opportunities within your consulting assignments and various technical trainings, we also have internal programs for personal development.\n\nWe are part of the Sigma Group As part of the Sigma Group, we offer the best of both worlds: stability and entrepreneurial spirit. Sigma consists of several companies within different technical competence areas and currently has over 5,000 employees and operations in many countries. This makes us Sweden’s largest privately-owned consulting group.",
+  "original_passages": {
+    "p0001": "We are now looking for Android Developers who wants to be part of building smart, connected solutions – close to both the technology and the end user.",
+    "p0002": "The role",
+    "p0003": "You will work in projects where performance, usability and reliability are critical, and where your contribution directly impacts how machines are operated in real life.",
+    "p0004": "You will:",
+    "p0005": "Take ownership of Android application development – from idea to deployment",
+    "p0006": "Design and build solutions using Kotlin and Java",
+    "p0007": "Collaborate with team mates and translate requrements into great solutions",
+    "p0008": "Contribute to architecture, quality and continuous improvement",
+    "p0009": "Who you are",
+    "p0010": "We are looking for someone who is not only skilled, but also motivated by working in a collaborative and knowledge-sharing environment.",
+    "p0011": "You:",
+    "p0012": "Enjoy working close to real products and real users",
+    "p0013": "Take ownership and pride in delivering high-quality solutions",
+    "p0014": "Are curious and eager to learn and grow continuously",
+    "p0015": "Thrive in a team-oriented environment where we succeed together",
+    "p0016": "Experience from in car app development, navi, speach etc.",
+    "p0017": "Your background",
+    "p0018": "Bachelor’s or Master’s degree in Computer Science, IT or similar",
+    "p0019": "2–5 years of experience in:",
+    "p0020": "Android development",
+    "p0021": "Kotlin and Java",
+    "p0022": "SQL and databases",
+    "p0023": "Linux environments",
+    "p0024": "We offer",
+    "p0025": "At Sigma Embedded Engineering, we believe in you and that together we can create the most exciting opportunities by building the workplace and environment we want to work in.",
+    "p0026": "Together, we also find assignments where you thrive and grow.",
+    "p0027": "We have assignments in everything from self-driving cars (ADAS), application development, Medtech, Active Safety, IoT, Machine Learning, Cybersecurity, 5G, and algorithm development.",
+    "p0028": "Who are we?",
+    "p0029": "We love doing things together and strive for a good balance between work and leisure.",
+    "p0030": "This could be after-work hangouts, events, sports activities, ski trips, or inspirational talks.",
+    "p0031": "We've been on many fun trips together, which have been fantastic, and something we want to continue doing.",
+    "p0032": "Skills development has always been important to us, and in addition to growth opportunities within your consulting assignments and various technical trainings, we also have internal programs for personal development.",
+    "p0033": "We are part of the Sigma Group As part of the Sigma Group, we offer the best of both worlds: stability and entrepreneurial spirit.",
+    "p0034": "Sigma consists of several companies within different technical competence areas and currently has over 5,000 employees and operations in many countries.",
+    "p0035": "This makes us Sweden’s largest privately-owned consulting group."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0018",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0019",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0020",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0021",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0022",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0023",
+        "importance": "mandatory"
+      }
+    ]
+  },
+  "source_attribution": {
+    "source": "platsbanken",
+    "external_id": "31664917",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31664917",
+    "employer": "Sigma Embedded Engineering AB",
+    "title": "Android Developer"
+  }
+}

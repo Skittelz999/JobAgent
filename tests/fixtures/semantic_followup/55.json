@@ -1,0 +1,186 @@
+{
+  "source": {
+    "application_url": null,
+    "deadline": "2026-11-30T22:59:59Z",
+    "description": "Senior Full-Stack Engineer (Java/React)\nDomain knowledge in the area of Digital Automotive Car Service\nJoining the Commercial Ownership Cluster within our Commercial Digital area, you'll work across the entire end-to-end service flow: how service content is created, how we deliver our Service Information Platform at scale, how technicians use it in workshops every day, and ultimately how a tier one automotive conglomerate's customers experience the servicing of their car.\nYour work will have a direct and visible impact. The services you build help automotive technicians find the right information faster, improve performance quality and speed, which keeps cars safe, extends their lifetime, and gets customers back on the road sooner. In short, your contribution will directly shape both technician and customer satisfaction.\nYou'll collaborate with multiple product teams and clusters to build a robust, scalable digital platform at an exciting point in our journey. If you're an experienced engineer who enjoys solving real problems for real users, we'd love to hear from you.\nWhat Youʼll Do\nYou'll build and evolve the services and user interfaces behind the service information products for which we are responsible. On the backend, that means designing services with Java and Spring Boot, exposing them through REST APIs and GraphQL Federation, and using Kafka for event streaming. On the frontend, you'll help shape the React based micro frontends that technicians and content creators rely on.\nYou'll own what you build all the way to production. You'll deploy to Kubernetes with GitHub Actions and ArgoCD, and use Grafana to monitor, trace, and continuously improve how our services behave.\nWe're changing how we build software, and you'll help lead that shift. We're moving towards spec-driven development, where clear specifications come first, and AI agents help turn them into code, tests, and documentation. You'll explore new AI tools and agentic workflows, share what works with your team, and help define the practices we adopt as AI keeps evolving.\nYou'll stay close to the people who use what we build. You'll work directly with stakeholders such as product managers, content creators, and workshop teams, and gain first-hand insight by meeting technicians and seeing how they work. What you learn will guide what we build and how we prioritize.\nNot every problem comes with a clear answer. You'll be comfortable working with uncertainty, delivering in small steps, learning from feedback, and adapting quickly when priorities or insights change.\nYou and your skills\nWe'd love to hear from you if you have:\nSolid experience building backend services with Java and Spring Boot, with a deep understanding of microservices architecture and GraphQL Federation.\nHands-on experience with event-driven architecture, designing and running asynchronous services with Kafka.\nExperience building frontends with React and TypeScript, ideally within a micro frontend architecture: defining clear boundaries, integrating independently deployable modules, and keeping the user experience consistent.\nExperience with both SQL and NoSQL databases, and the judgment to choose the right one for the problem.\nA strong testing mindset, from well-designed test cases to automated integration tests and quality gates in your CI/CD pipelines.\nHigh standards for code quality and maintainable design, and a constructive approach to code reviews.\nCuriosity about AI-assisted engineering, with hands-on experience using AI coding agents or a strong interest in working in a spec-driven way.\nClear communication skills and the ability to turn conversations with users and stakeholders into well-defined, prioritized work.",
+    "employer": "Reloc AB",
+    "external_id": "31646970",
+    "location": "Göteborg",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31646970",
+    "published_at": "2026-10-26T16:17:20Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": [
+          {
+            "concept_id": "rQds_YGd_quU",
+            "label": "Mjukvaruutvecklare",
+            "legacy_ams_taxonomy_id": "80",
+            "weight": 10
+          }
+        ]
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "rQds_YGd_quU",
+        "label": "Mjukvaruutvecklare",
+        "legacy_ams_taxonomy_id": "80"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "GÖTEBORG",
+          "coordinates": [
+            11.836797889642453,
+            57.71301384407063
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Göteborg",
+          "municipality_code": "1480",
+          "municipality_concept_id": "PVZL_BQT_XtL",
+          "postcode": "41878",
+          "region": "Västra Götalands län",
+          "region_code": "14",
+          "region_concept_id": "zdoY_6u5_Krt",
+          "street_address": null
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "ZxwM_gtz_n61",
+        "label": "Arbete på plats"
+      }
+    },
+    "title": "Senior Full-Stack Engineer (Java/React)",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Senior Full-Stack Engineer (Java/React)",
+    "p0002": "Domain knowledge in the area of Digital Automotive Car Service",
+    "p0003": "Joining the Commercial Ownership Cluster within our Commercial Digital area, you'll work across the entire end-to-end service flow: how service content is created, how we deliver our Service Information Platform at scale, how technicians use it in workshops every day, and ultimately how a tier one automotive conglomerate's customers experience the servicing of their car.",
+    "p0004": "Your work will have a direct and visible impact.",
+    "p0005": "The services you build help automotive technicians find the right information faster, improve performance quality and speed, which keeps cars safe, extends their lifetime, and gets customers back on the road sooner.",
+    "p0006": "In short, your contribution will directly shape both technician and customer satisfaction.",
+    "p0007": "You'll collaborate with multiple product teams and clusters to build a robust, scalable digital platform at an exciting point in our journey.",
+    "p0008": "If you're an experienced engineer who enjoys solving real problems for real users, we'd love to hear from you.",
+    "p0009": "What Youʼll Do",
+    "p0010": "You'll build and evolve the services and user interfaces behind the service information products for which we are responsible.",
+    "p0011": "On the backend, that means designing services with Java and Spring Boot, exposing them through REST APIs and GraphQL Federation, and using Kafka for event streaming.",
+    "p0012": "On the frontend, you'll help shape the React based micro frontends that technicians and content creators rely on.",
+    "p0013": "You'll own what you build all the way to production.",
+    "p0014": "You'll deploy to Kubernetes with GitHub Actions and ArgoCD, and use Grafana to monitor, trace, and continuously improve how our services behave.",
+    "p0015": "We're changing how we build software, and you'll help lead that shift.",
+    "p0016": "We're moving towards spec-driven development, where clear specifications come first, and AI agents help turn them into code, tests, and documentation.",
+    "p0017": "You'll explore new AI tools and agentic workflows, share what works with your team, and help define the practices we adopt as AI keeps evolving.",
+    "p0018": "You'll stay close to the people who use what we build.",
+    "p0019": "You'll work directly with stakeholders such as product managers, content creators, and workshop teams, and gain first-hand insight by meeting technicians and seeing how they work.",
+    "p0020": "What you learn will guide what we build and how we prioritize.",
+    "p0021": "Not every problem comes with a clear answer.",
+    "p0022": "You'll be comfortable working with uncertainty, delivering in small steps, learning from feedback, and adapting quickly when priorities or insights change.",
+    "p0023": "You and your skills",
+    "p0024": "We'd love to hear from you if you have:",
+    "p0025": "Solid experience building backend services with Java and Spring Boot, with a deep understanding of microservices architecture and GraphQL Federation.",
+    "p0026": "Hands-on experience with event-driven architecture, designing and running asynchronous services with Kafka.",
+    "p0027": "Experience building frontends with React and TypeScript, ideally within a micro frontend architecture: defining clear boundaries, integrating independently deployable modules, and keeping the user experience consistent.",
+    "p0028": "Experience with both SQL and NoSQL databases, and the judgment to choose the right one for the problem.",
+    "p0029": "A strong testing mindset, from well-designed test cases to automated integration tests and quality gates in your CI/CD pipelines.",
+    "p0030": "High standards for code quality and maintainable design, and a constructive approach to code reviews.",
+    "p0031": "Curiosity about AI-assisted engineering, with hands-on experience using AI coding agents or a strong interest in working in a spec-driven way.",
+    "p0032": "Clear communication skills and the ability to turn conversations with users and stakeholders into well-defined, prioritized work."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0010",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0011",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0012",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0013",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0014",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0015",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0016",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0017",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "expected"
+      }
+    ]
+  }
+}

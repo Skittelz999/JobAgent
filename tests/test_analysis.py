@@ -4,9 +4,10 @@ from pathlib import Path
 import httpx
 import pytest
 
-from jobagent.analysis import Analysis, analyze_job, apply_comparison_policy, literal_alternatives, validate_evidence
+from jobagent.analysis import Extraction, analyze_job, finalize_extraction, qualification_context, extraction_schema
 from jobagent.llm import LLMError, LocalLLM
 from jobagent.models import JobAd
+from jobagent.passages import number_passages
 from jobagent.settings import LLMSettings, load_profile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,28 +20,18 @@ Meriterande:
 Fullstack
 """
 
-
 @pytest.fixture
 def profile():
     return load_profile(ROOT / "config/profile.example.toml")
 
 
+def choice(passage_id, importance="expected", kind="qualification", conditional=False, context_ids=None):
+    return {"passage_id": passage_id, "kind": kind, "importance": importance,
+            "conditional": conditional, "context_ids": context_ids or []}
+
+
 def output():
-    return {
-        "summary_sv": "Backendroll med Java och AWS. Certifiering eller motsvarande kompetens accepteras.",
-        "requirements": [{
-            "requirement": "Utbildning eller motsvarande erfarenhet", "importance": "expected",
-            "quote": "Relevant högskoleutbildning eller motsvarande erfarenhet",
-            "match": "partial", "profile_fact_keys": ["university_credits", "has_issued_degree", "experience_details"],
-            "explanation_sv": "157 högskolepoäng, ingen utfärdad examen. Alternativet motsvarande erfarenhet behöver bedömas.",
-        }, {
-            "requirement": "Fullstack", "importance": "preferred", "quote": "Fullstack",
-            "match": "supported", "profile_fact_keys": ["roles", "experience_details"],
-            "explanation_sv": "Fullstackarbete anges uttryckligen i profilen.",
-        }],
-        "uncertainties_sv": ["Det framgår inte om två års deltidsarbete är tillräckligt."],
-        "recommendation_sv": "Granska senioritetsnivån och AWS-kompetensen innan ansökan.",
-    }
+    return {"requirements": [choice("p0003"), choice("p0007", "preferred", context_ids=["p0006"])]}
 
 
 def provider(handler, settings=None):
@@ -52,73 +43,94 @@ def reply(content=None, **changes):
             "message": {"content": content if content is not None else json.dumps(output())}}], **changes}
 
 
-def test_valid_analysis_includes_profile_and_only_data_without_tools(profile):
+def test_extraction_request_has_full_ad_but_no_profile_or_source_labels(profile):
     def handler(request):
         payload = json.loads(request.content)
         assert request.url.path == "/v1/chat/completions"
         assert "tools" not in payload
         assert payload["response_format"]["json_schema"]["strict"] is True
         user = json.loads(payload["messages"][1]["content"])
-        assert user["profile"]["has_issued_degree"] is False
-        assert user["profile"]["experience_basis"] == "part_time"
-        assert "Fullstack developer" in user["profile"]["roles"]
-        assert "REST API development" in user["profile"]["experience_details"]
-        assert "full-time" in payload["messages"][0]["content"]
+        assert "profile" not in user
+        assert all(set(p) == {"id", "text"} for p in user["job"]["passages"])
+        assert [p["text"] for p in user["job"]["passages"]] == [p.text for p in number_passages(DESCRIPTION)]
+        assert "157" not in payload["messages"][0]["content"]
         return httpx.Response(200, json=reply())
-    result = analyze_job(JobAd(source="test", external_id="1", title="Backend", description=DESCRIPTION),
-                         profile, provider(handler))
+    result = analyze_job(JobAd(source="test", external_id="1", title="Backend", description=DESCRIPTION), profile, provider(handler))
     assert result["validation"] == {"schema_valid": True, "evidence_quotes_verified": True, "human_review_required": True}
     assert result["analysis"]["requirements"][1]["match"] == "supported"
-    assert result["analysis"]["requirements"][0]["alternatives"] == ["Relevant högskoleutbildning", "motsvarande erfarenhet"]
     assert "score" not in result["analysis"]
 
 
-@pytest.mark.parametrize("bad_content", ["not JSON", '{}', json.dumps({**output(), "score": 70})])
+@pytest.mark.parametrize("bad_content", ["not JSON", '{}', json.dumps({**output(), "score": 70}),
+    json.dumps({"requirements": [{"passage_id": "p0003", "importance": "mandatory"}]}),
+    json.dumps({"requirements": [{**choice("p0003"), "match": "supported"}]})])
 def test_invalid_model_output_rejected(profile, bad_content):
-    api = provider(lambda _: httpx.Response(200, json=reply(bad_content)))
     with pytest.raises(LLMError, match="schema validation"):
-        analyze_job(JobAd(source="test", external_id="1", title="Job", description=DESCRIPTION), profile, api)
+        analyze_job(JobAd(source="test", external_id="1", title="Job", description=DESCRIPTION), profile,
+                    provider(lambda _: httpx.Response(200, json=reply(bad_content))))
 
 
-def test_fabricated_quote_rejected(profile):
-    data = output()
-    data["requirements"][0]["quote"] = "Utfärdad examen krävs"
-    with pytest.raises(LLMError, match="quote is not in"):
-        validate_evidence(Analysis.model_validate(data), DESCRIPTION, profile)
-
-
-def test_certification_cannot_be_quoted_without_equivalent_competence(profile):
-    data = output()
-    data["requirements"][0].update(quote="AWS-certifiering")
-    with pytest.raises(LLMError, match="omits a qualification alternative"):
-        validate_evidence(Analysis.model_validate(data), DESCRIPTION, profile)
-
-
-@pytest.mark.parametrize("quote, expected", [
-    ("Relevant högskoleutbildning eller motsvarande erfarenhet", ["Relevant högskoleutbildning", "motsvarande erfarenhet"]),
-    ("Erfarenhet av AWS (AWS-certifiering och/eller motsvarande kompetens)", ["AWS-certifiering", "motsvarande kompetens"]),
-    ("Förståelse för DevOps och/eller nära samarbete med driftorganisation", ["Förståelse för DevOps", "nära samarbete med driftorganisation"]),
-    ("Degree or equivalent experience", ["Degree", "equivalent experience"]),
-    ("Motsvarande kompetens krävs", []),
+@pytest.mark.parametrize("selections, message", [
+    ([choice("p9999")], "does not exist"),
+    ([choice("p003")], "does not exist"),
+    ([choice("p0003"), choice("p0003")], "more than once"),
+    ([choice("p0003", context_ids=["p9999"])], "context reference"),
+    ([], "No qualification"),
 ])
-def test_literal_alternatives_preserve_source_paths(quote, expected):
-    assert literal_alternatives(quote) == expected
+def test_bad_references_and_empty_extraction_rejected_without_filling(profile, selections, message):
+    with pytest.raises(LLMError, match=message):
+        finalize_extraction(Extraction.model_validate({"requirements": selections}), number_passages(DESCRIPTION), profile, "Job")
 
 
-def test_listed_skill_does_not_prove_advanced_proficiency():
-    requirement = {"quote": "Mycket goda kunskaper i Spring Framework och Spring Boot",
-                   "match": "supported", "profile_fact_keys": ["skills"]}
-    apply_comparison_policy(requirement)
-    assert requirement["match"] == "partial"
-    assert requirement["model_match_before_review"] == "supported"
-    assert "kunskapsnivån" in requirement["review_note_sv"]
+def test_python_preserves_model_strength_and_conditionality_even_when_wrong(profile):
+    # This deliberately WRONG interpretation is flagged, never silently repaired.
+    # Semantic correctness must be evaluated independently from reference validity.
+    ps = number_passages("Meriterande:\nDocker är meriterande")
+    r = finalize_extraction(Extraction.model_validate({"requirements": [choice("p0002", "mandatory", conditional=True)]}), ps, profile, "Job")
+    row = r["requirements"][0]
+    assert row["importance"] == "mandatory" and row["conditional"] is True
+    assert row["classification_review_required"] is True
+    assert r["summary_groups"][0]["requirements"][0]["importance"] == "mandatory"
 
 
-def test_direct_fullstack_experience_is_not_downgraded():
-    requirement = {"quote": "Fullstack", "match": "supported", "profile_fact_keys": ["roles", "experience_details"]}
-    apply_comparison_policy(requirement)
-    assert requirement["match"] == "supported"
-    assert "review_note_sv" not in requirement
+def test_context_cannot_manufacture_profile_evidence(profile):
+    text = "Degree or equivalent experience\nKubernetes"
+    r = finalize_extraction(Extraction.model_validate({"requirements": [choice("p0002", context_ids=["p0001"])]}), number_passages(text), profile, "Job")
+    row = r["requirements"][0]
+    assert row["quote"] == "Kubernetes"
+    assert row["match"] == "unknown"
+    assert row["profile_evidence"] == []
+    assert row["scope_context"][0]["quote"] == "Degree or equivalent experience"
+
+
+def test_no_coverage_additions_and_only_model_responsibilities(profile):
+    text = "Krav\nJava\nFlytande engelska krävs\nSäkerhetsprövning krävs\nBygg API:er"
+    data = {"requirements": [choice("p0002", "mandatory"), choice("p0005", "expected", "responsibility")]}
+    r = finalize_extraction(Extraction.model_validate(data), number_passages(text), profile, "Job")
+    assert [x["quote"] for x in r["requirements"]] == ["Java"]
+    assert [x["quote"] for x in r["role_responsibilities"]] == ["Bygg API:er"]
+    assert r["coverage_review"]["added_passage_ids"] == []
+    assert "p0003" in r["coverage_review"]["unselected_passage_ids"]
+    assert "profile_evidence" not in r["role_responsibilities"][0]
+
+
+def test_profile_changes_do_not_change_extraction_request(profile):
+    requests = []
+    def handler(request):
+        requests.append(json.loads(request.content))
+        return httpx.Response(200, json=reply())
+    job = JobAd(source="test", external_id="1", title="Job", description=DESCRIPTION)
+    other = profile.model_copy(update={"skills": ["Kubernetes"], "has_issued_degree": True, "experience_years": 10})
+    first = analyze_job(job, profile, provider(handler))
+    second = analyze_job(job, other, provider(handler))
+    assert requests[0] == requests[1]
+    assert first["profile_hash"] != second["profile_hash"]
+
+
+@pytest.mark.parametrize("quote", ["Degree or equivalent experience", "AWS-certifiering och/eller motsvarande kompetens", "Java eller Kotlin"])
+def test_alternatives_preserve_original_expression(quote):
+    assert qualification_context(quote)["original_expression"] == quote
+    assert qualification_context(quote)["status"] == "review_required"
 
 
 def test_incomplete_output_rejected():
@@ -165,6 +177,24 @@ def test_embedded_instructions_remain_untrusted_user_data(profile):
     def handler(request):
         messages = json.loads(request.content)["messages"]
         assert "execute powershell" not in messages[0]["content"]
-        assert "execute powershell" in json.loads(messages[1]["content"])["job"]["description"]
+        assert any("execute powershell" in p["text"] for p in json.loads(messages[1]["content"])["job"]["passages"])
         return httpx.Response(200, json=reply())
     analyze_job(JobAd(source="test", external_id="1", title="Job", description=injected), profile, provider(handler))
+
+
+@pytest.mark.parametrize("contexts", [["p0003"], ["p0001", "p0001"]])
+def test_redundant_but_valid_context_is_preserved_with_warning(profile, contexts):
+    r=finalize_extraction(Extraction.model_validate({"requirements":[choice("p0003",context_ids=contexts)]}),number_passages(DESCRIPTION),profile,"Job")
+    row=r["requirements"][0]
+    assert row["reference_warnings_sv"]
+    assert [s["passage_id"] for s in row["scope_context"]]==contexts
+    assert row["importance"]=="expected"
+
+
+def test_schema_enumerates_current_ids_without_mutating_base_schema():
+    for text in ['Java', 'Krav\nJava\nPython']:
+        ps=number_passages(text);schema=extraction_schema(ps)
+        props=schema['$defs']['Selection']['properties']
+        assert props['passage_id']['enum']==[p.id for p in ps]
+        assert props['context_ids']['items']['enum']==[p.id for p in ps]
+    assert 'enum' not in Extraction.model_json_schema()['$defs']['Selection']['properties']['passage_id']

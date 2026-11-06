@@ -1,0 +1,101 @@
+{
+  "source": {
+    "application_url": "https://ericsson-ab.contactrh.com/jobs/9669/44543010",
+    "deadline": "2026-11-05T22:59:59Z",
+    "description": "Company description:\nEricsson AB\nJob description:   Join our Team    \n About the Opportunity\n  \n Ericsson Product Public Key Infrastructure (EPPKI) is an in-house organization hosted within BA Networks (BNEW), providing security services to Ericsson products and services globally. Our portfolio includes Certificate Authority (CA) management, hardware credential enrollment, Software and Hardware Bill of Materials (SBOM and HBOM) report generation, Malware Scanning Services (MSS), and Data Signing Services (DSS).\n We are now looking for a Data Signing Service DevSecOps Engineer to join the EPPKI organization.\n In this role, you will work closely with our product and development units to ensure that our data signing services are secure, reliable, and scalable. You will contribute across the service lifecycle, from infrastructure and tooling to development, automation, testing, and operations, while having the opportunity to deepen your expertise in the technical areas you are most passionate about.\n If you are motivated by software development, cybersecurity, and automation, enjoy using modern technologies to improve productivity and efficiency, and thrive in a dynamic and collaborative environment, this could be a great opportunity for you.\n  \n What you will do\n •    Develop and enhance service features, tools, and automation solutions•    Provide operational support, including system configuration and provisioning of signing flows•    Contribute to the secure design, development and operation of data signing services, applying security-by-design and DevSecOps principles•    Design test strategies and develop clear, maintainable automated test cases•    Act as a technical point of contact for users of the signing service•    Monitor, troubleshoot and continuously improve CI/CD flows•    Perform maintenance and lifecycle management of the service and its supporting infrastructure•    Drive continuous improvements across products, tools, automation, and processes•    Maintain clear, accurate and up-to-date technical and user documentation•    Collaborate closely with colleagues and stakeholders across product and development organizations\n  \n The skills you bring\n •    Bachelor’s degree in a relevant technical field, such as Computer Science, IT or Engineering•    Experience with Linux, preferably Red Hat, and scripting using Python and/or Bash•    Strong interest and competence in security and secure software/services•    Good programming skills, preferably in Java•    Experience with Git and modern software-development practices•    Experience with CI/CD platforms and deployment/configuration automation, such as Ansible•    Knowledge of software-testing principles and test automation•    Familiarity with test automation frameworks such as TestNG, JUnit, JCAT or similar•    Strong troubleshooting and problem-solving skills•    A collaborative mindset and willingness to share knowledge•    Curiosity, initiative, and clear professional communication skills•    A minimum of 5 years of relevant professional experience",
+    "employer": "Ericsson AB",
+    "external_id": "31666722",
+    "location": "Stockholm",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31666722",
+    "published_at": "2026-10-30T12:25:02Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "fg7B_yov_smw",
+        "label": "Systemutvecklare/Programmerare",
+        "legacy_ams_taxonomy_id": "2419"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Stockholm",
+          "coordinates": [
+            17.8268461,
+            59.4123492
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Stockholm",
+          "municipality_code": "0180",
+          "municipality_concept_id": "AvNB_uwa_6n6",
+          "postcode": "16483",
+          "region": "Stockholms län",
+          "region_code": "01",
+          "region_concept_id": "CifL_Rzy_Mku",
+          "street_address": null
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Data Signing Service DevSecOps Engineer",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Company description:",
+    "p0002": "Ericsson AB",
+    "p0003": "Job description:   Join our Team",
+    "p0004": "About the Opportunity",
+    "p0005": "Ericsson Product Public Key Infrastructure (EPPKI) is an in-house organization hosted within BA Networks (BNEW), providing security services to Ericsson products and services globally.",
+    "p0006": "Our portfolio includes Certificate Authority (CA) management, hardware credential enrollment, Software and Hardware Bill of Materials (SBOM and HBOM) report generation, Malware Scanning Services (MSS), and Data Signing Services (DSS).",
+    "p0007": "We are now looking for a Data Signing Service DevSecOps Engineer to join the EPPKI organization.",
+    "p0008": "In this role, you will work closely with our product and development units to ensure that our data signing services are secure, reliable, and scalable.",
+    "p0009": "You will contribute across the service lifecycle, from infrastructure and tooling to development, automation, testing, and operations, while having the opportunity to deepen your expertise in the technical areas you are most passionate about.",
+    "p0010": "If you are motivated by software development, cybersecurity, and automation, enjoy using modern technologies to improve productivity and efficiency, and thrive in a dynamic and collaborative environment, this could be a great opportunity for you.",
+    "p0011": "What you will do",
+    "p0012": "•    Develop and enhance service features, tools, and automation solutions•    Provide operational support, including system configuration and provisioning of signing flows•    Contribute to the secure design, development and operation of data signing services, applying security-by-design and DevSecOps principles•    Design test strategies and develop clear, maintainable automated test cases•    Act as a technical point of contact for users of the signing service•    Monitor, troubleshoot and continuously improve CI/CD flows•    Perform maintenance and lifecycle management of the service and its supporting infrastructure•    Drive continuous improvements across products, tools, automation, and processes•    Maintain clear, accurate and up-to-date technical and user documentation•    Collaborate closely with colleagues and stakeholders across product and development organizations",
+    "p0013": "The skills you bring",
+    "p0014": "•    Bachelor’s degree in a relevant technical field, such as Computer Science, IT or Engineering•    Experience with Linux, preferably Red Hat, and scripting using Python and/or Bash•    Strong interest and competence in security and secure software/services•    Good programming skills, preferably in Java•    Experience with Git and modern software-development practices•    Experience with CI/CD platforms and deployment/configuration automation, such as Ansible•    Knowledge of software-testing principles and test automation•    Familiarity with test automation frameworks such as TestNG, JUnit, JCAT or similar•    Strong troubleshooting and problem-solving skills•    A collaborative mindset and willingness to share knowledge•    Curiosity, initiative, and clear professional communication skills•    A minimum of 5 years of relevant professional experience"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0014",
+        "importance": "mandatory"
+      }
+    ]
+  }
+}

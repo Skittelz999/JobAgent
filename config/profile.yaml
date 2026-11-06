@@ -1,0 +1,68 @@
+# JobAgent – Candidate Profile
+# Uppdaterad med användarens profiluppgifter.
+# Saknade kompetenser ska tolkas som UNKNOWN, inte FALSE.
+education:
+  university_credits: 157
+  has_issued_degree: false
+
+certifications:
+  - name: Cisco CCNA 1
+    category: Networking
+  - name: Cisco CCNA 2
+    category: Networking
+  - name: Cisco CyberOps
+    category: Cybersecurity
+
+experience:
+  # Den dokumenterade perioden nedan fastställer inte total yrkeserfarenhet.
+  # total_professional_years lämnas ospecificerat.
+  documented:
+    - role: Fullstack developer
+      years: 2
+      basis: part_time
+      details:
+        - Java and Spring Boot backend development
+        - Vue.js frontend development
+        - REST API development
+        - Database development
+        - Git version control
+        - CI/CD workflows
+
+skills:
+  programming_languages:
+    - Java
+    - Python
+    - JavaScript
+    - HTML
+  backend:
+    - Spring Boot
+    - REST API
+    - JWT
+    - RBAC
+  frontend:
+    - Vue.js
+  databases:
+    - PostgreSQL
+    - MongoDB
+  tools_and_technical:
+    - Git
+    - Maven
+    - Linux
+    - Docker
+    - CI/CD
+    - Networking
+  testing:
+    - JUnit
+    - MockMvc
+    - Testcontainers
+    - TDD
+  methodologies:
+    - Agile software development
+
+languages:
+  - Swedish
+  - English
+  - Arabic
+
+other_qualifications:
+  - Driving licence category B

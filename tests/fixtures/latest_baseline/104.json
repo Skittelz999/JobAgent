@@ -1,0 +1,193 @@
+{
+  "source": {
+    "application_url": null,
+    "deadline": "2026-11-19T22:59:59Z",
+    "description": "About the assignment\nWe are looking for an experienced consultant specializing in the testing and test automation of mobile applications to join our test team, which focuses on the development of handheld products and their associated applications. You will play a key role in the quality assurance of our Android- and iOS-based applications. The position involves close collaboration with test leads, test engineers, developers, and product owners to ensure high quality throughout the entire development process. The work takes place in an international environment, involving interaction with several different development teams.\nResponsibilities\nDesign, implement, and maintain automated tests for mobile applications (Android and iOS)\nPerform functional, regression, and system testing\nTroubleshoot and analyze test results, and report any issues or discrepancies\nCreate and maintain test cases and test documentation\nContribute to the continuous improvement of testing methods and processes\nWork on test automation within CI/CD pipelines, in collaboration with our DevOps team\nCollaborate closely with developers, product owners, and other stakeholders to ensure testability and quality\nParticipate in requirements reviews, sprint planning, and quality-related activities.\nRequirements\nMandatory\nAt least 3 years of experience in testing mobile applications\nDocumented experience with test automation for Android and/or iOS\nA solid understanding of software testing throughout the entire development lifecycle\nExperience working in agile development teams\nExperience in analyzing, troubleshooting, and managing quality-related issues\nExperience working with CI/CD-based test automation\nStrong communication skills in English, both spoken and written.\nNice-to-have\nExperience with Appium or similar tools for mobile application test automation\nProgramming skills in Python Experience with Kotlin, Java, or other object-oriented programming languages ​​is also an advantage\nExperience with Azure DevOps, GitLab, or other CI/CD platforms\nExperience testing connected products, IoT, or embedded systems\nExperience testing with physical hardware\nExperience with communication via Bluetooth, Wi-Fi, or other wireless communication protocols.\n\n\nTo succeed in this role, we believe you are:\n\n\nStructured - Analytical - Collaborative - Quality-conscious - Communicative\nJava\nAgile\nAndroid\nHardware\niOS\nProgramming Languages\n Python\nSystem testing\nTest Automation\nTroubleshooting\nDocumentation\nEmbedded systems\nDevops\nContinuous integration\nKotlin\nCI/CD\nAzure DevOps Server\nGitLab\nAppium\nBluetooth\nInternet of things\nWi-Fi\nQuality assurance",
+    "employer": "SkillHuset Sweden AB",
+    "external_id": "31622037",
+    "location": "Landskrona",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31622037",
+    "published_at": "2026-10-20T15:05:10Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": [
+          {
+            "concept_id": "TU7g_mwa_VzB",
+            "label": "Testutvecklare",
+            "legacy_ams_taxonomy_id": "7753",
+            "weight": 5
+          }
+        ]
+      },
+      "occupation": {
+        "concept_id": "TU7g_mwa_VzB",
+        "label": "Testutvecklare",
+        "legacy_ams_taxonomy_id": "7753"
+      },
+      "occupation_group": {
+        "concept_id": "D9SL_mtn_vGM",
+        "label": "Systemtestare och testledare",
+        "legacy_ams_taxonomy_id": "2514"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "LANDSKRONA",
+          "coordinates": [
+            12.8507770023476,
+            55.8837922286663
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Landskrona",
+          "municipality_code": "1282",
+          "municipality_concept_id": "Yt5s_Vf9_rds",
+          "postcode": "26144",
+          "region": "Skåne län",
+          "region_code": "12",
+          "region_concept_id": "CaRE_1nn_cSU",
+          "street_address": "Lodjursgatan 10"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "L4T8_Z9y_DkN",
+        "label": "Distansarbete"
+      }
+    },
+    "title": "Mobile App Tester - Senior",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "About the assignment",
+    "p0002": "We are looking for an experienced consultant specializing in the testing and test automation of mobile applications to join our test team, which focuses on the development of handheld products and their associated applications.",
+    "p0003": "You will play a key role in the quality assurance of our Android- and iOS-based applications.",
+    "p0004": "The position involves close collaboration with test leads, test engineers, developers, and product owners to ensure high quality throughout the entire development process.",
+    "p0005": "The work takes place in an international environment, involving interaction with several different development teams.",
+    "p0006": "Responsibilities",
+    "p0007": "Design, implement, and maintain automated tests for mobile applications (Android and iOS)",
+    "p0008": "Perform functional, regression, and system testing",
+    "p0009": "Troubleshoot and analyze test results, and report any issues or discrepancies",
+    "p0010": "Create and maintain test cases and test documentation",
+    "p0011": "Contribute to the continuous improvement of testing methods and processes",
+    "p0012": "Work on test automation within CI/CD pipelines, in collaboration with our DevOps team",
+    "p0013": "Collaborate closely with developers, product owners, and other stakeholders to ensure testability and quality",
+    "p0014": "Participate in requirements reviews, sprint planning, and quality-related activities.",
+    "p0015": "Requirements",
+    "p0016": "Mandatory",
+    "p0017": "At least 3 years of experience in testing mobile applications",
+    "p0018": "Documented experience with test automation for Android and/or iOS",
+    "p0019": "A solid understanding of software testing throughout the entire development lifecycle",
+    "p0020": "Experience working in agile development teams",
+    "p0021": "Experience in analyzing, troubleshooting, and managing quality-related issues",
+    "p0022": "Experience working with CI/CD-based test automation",
+    "p0023": "Strong communication skills in English, both spoken and written.",
+    "p0024": "Nice-to-have",
+    "p0025": "Experience with Appium or similar tools for mobile application test automation",
+    "p0026": "Programming skills in Python Experience with Kotlin, Java, or other object-oriented programming languages ​​is also an advantage",
+    "p0027": "Experience with Azure DevOps, GitLab, or other CI/CD platforms",
+    "p0028": "Experience testing connected products, IoT, or embedded systems",
+    "p0029": "Experience testing with physical hardware",
+    "p0030": "Experience with communication via Bluetooth, Wi-Fi, or other wireless communication protocols.",
+    "p0031": "To succeed in this role, we believe you are:",
+    "p0032": "Structured - Analytical - Collaborative - Quality-conscious - Communicative",
+    "p0033": "Java",
+    "p0034": "Agile",
+    "p0035": "Android",
+    "p0036": "Hardware",
+    "p0037": "iOS",
+    "p0038": "Programming Languages",
+    "p0039": "Python",
+    "p0040": "System testing",
+    "p0041": "Test Automation",
+    "p0042": "Troubleshooting",
+    "p0043": "Documentation",
+    "p0044": "Embedded systems",
+    "p0045": "Devops",
+    "p0046": "Continuous integration",
+    "p0047": "Kotlin",
+    "p0048": "CI/CD",
+    "p0049": "Azure DevOps Server",
+    "p0050": "GitLab",
+    "p0051": "Appium",
+    "p0052": "Bluetooth",
+    "p0053": "Internet of things",
+    "p0054": "Wi-Fi",
+    "p0055": "Quality assurance"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0017",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0018",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0019",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0020",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0021",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0022",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "ad_id": 45,
+  "description": "Var med och kvalitetssäkra en samhällsviktig digital tjänst med fokus på testautomatisering, säkra flöden och moderna containerplattformar.\nVill du bidra till kvaliteten i en samhällsviktig digital tjänst? Vi söker en senior QA Engineer som vill utveckla robust testautomatisering för både webbgränssnitt och backendtjänster i en modern, containerbaserad miljö.\nOm rollen\nDu blir en viktig del av ett agilt utvecklingsteam med fokus på kvalitet genom hela leveransen.\nRollen kombinerar testanalys, testutveckling och teknisk felsökning.\nDu arbetar med lösningar där höga krav ställs på säkerhet, stabilitet och användarupplevelse.\n\nDet här kommer du göra\nOmsätta krav till automatiserade tester på enhets-, komponent-, integrations- och end-to-end-nivå.\nUtveckla och underhålla testlösningar för webbgränssnitt och backendtjänster.\nTa fram testdata, testmiljöer och prestandatester som speglar realistiska användningsscenarier.\nFelsöka och rapportera avvikelser med hjälp av loggar, nätverkstrafik och testdata.\nAutomatisera bygg-, test- och leveransflöden i containerbaserade miljöer.\n\nVi söker dig som har\nGedigen erfarenhet av testanalys och automatiserad testutveckling i större tekniska lösningar.\nErfarenhet av automatiserade tester i Java.\nKunskap om testning av både frontend och backend.\nErfarenhet av Kubernetes, Linux och agila arbetssätt.\nMeriterande erfarenhet av - och säkerhetslösningar, exempelvis PKI, certifikat, SAML2, OIDC eller OAuth.\n\nTeknik & Verktyg\nJava, JUnit, Mockito och Testcontainers.\nKubernetes och containerbaserade miljöer.\nCI/CD för bygg-, test- och leveransautomation.\nLinux, logganalys och nätverkstrafik.\n\nPraktisk information\nOrt: Sundsvall eller Stockholm.\nArbetssätt: Hybrid, med minst tre dagar per vecka på plats.\nSpråk: Svenska och engelska i tal och skrift.",
+  "original_passages": {
+    "p0001": "Var med och kvalitetssäkra en samhällsviktig digital tjänst med fokus på testautomatisering, säkra flöden och moderna containerplattformar.",
+    "p0002": "Vill du bidra till kvaliteten i en samhällsviktig digital tjänst?",
+    "p0003": "Vi söker en senior QA Engineer som vill utveckla robust testautomatisering för både webbgränssnitt och backendtjänster i en modern, containerbaserad miljö.",
+    "p0004": "Om rollen",
+    "p0005": "Du blir en viktig del av ett agilt utvecklingsteam med fokus på kvalitet genom hela leveransen.",
+    "p0006": "Rollen kombinerar testanalys, testutveckling och teknisk felsökning.",
+    "p0007": "Du arbetar med lösningar där höga krav ställs på säkerhet, stabilitet och användarupplevelse.",
+    "p0008": "Det här kommer du göra",
+    "p0009": "Omsätta krav till automatiserade tester på enhets-, komponent-, integrations- och end-to-end-nivå.",
+    "p0010": "Utveckla och underhålla testlösningar för webbgränssnitt och backendtjänster.",
+    "p0011": "Ta fram testdata, testmiljöer och prestandatester som speglar realistiska användningsscenarier.",
+    "p0012": "Felsöka och rapportera avvikelser med hjälp av loggar, nätverkstrafik och testdata.",
+    "p0013": "Automatisera bygg-, test- och leveransflöden i containerbaserade miljöer.",
+    "p0014": "Vi söker dig som har",
+    "p0015": "Gedigen erfarenhet av testanalys och automatiserad testutveckling i större tekniska lösningar.",
+    "p0016": "Erfarenhet av automatiserade tester i Java.",
+    "p0017": "Kunskap om testning av både frontend och backend.",
+    "p0018": "Erfarenhet av Kubernetes, Linux och agila arbetssätt.",
+    "p0019": "Meriterande erfarenhet av - och säkerhetslösningar, exempelvis PKI, certifikat, SAML2, OIDC eller OAuth.",
+    "p0020": "Teknik & Verktyg",
+    "p0021": "Java, JUnit, Mockito och Testcontainers.",
+    "p0022": "Kubernetes och containerbaserade miljöer.",
+    "p0023": "CI/CD för bygg-, test- och leveransautomation.",
+    "p0024": "Linux, logganalys och nätverkstrafik.",
+    "p0025": "Praktisk information",
+    "p0026": "Ort: Sundsvall eller Stockholm.",
+    "p0027": "Arbetssätt: Hybrid, med minst tre dagar per vecka på plats.",
+    "p0028": "Språk: Svenska och engelska i tal och skrift."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0015",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0016",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0017",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0018",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0019",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0021",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0022",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0023",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "mandatory"
+      }
+    ]
+  },
+  "source_attribution": {
+    "source": "platsbanken",
+    "external_id": "31652586",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31652586",
+    "employer": "Agile Resources AB",
+    "title": "Senior QA Engineer"
+  }
+}

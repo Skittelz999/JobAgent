@@ -1,0 +1,100 @@
+{
+  "ad_id": 9,
+  "description": "Etteplan är ett ledande ingenjörsföretag som formar framtidens industrier. Vi är över 4 000 teknikspecialister som brinner för teknik och människor. Nu bygger vi ett team i Stockholmsregionen och söker dig som är senior mjukvaruarkitekt med erfarenhet av stora realtidssystem.\n\nDin roll\n\nI det här uppdraget arbetar du med ett stort, realtidskritiskt mjukvarusystem inom försvarsindustrin. Systemet samlar data från sensorer, stödjer operatörens beslut och har gränssnitt mot flera andra delsystem. Det är byggt för att användas under lång tid och levereras till kunder i flera länder, vilket ställer höga krav på stabilitet, prestanda och en arkitektur som håller över tid.\n\nDu blir en del av ett nytt team av mjukvaru- och systemarkitekter som arbetar nära kundens utvecklingsteam. Du ansvarar för mjukvaruarkitekturen inom ditt område och för hur den passar in i helheten. Rollen handlar om arkitektur och tekniska vägval, inte om ren kodning, men du behöver förstå koden för att fatta rätt beslut. Dina huvudsakliga uppgifter:\n\nTa fram och förvalta mjukvaruarkitektur och designbeskrivningar.\nDefiniera och äga gränssnitt mellan mjukvarukomponenter och delsystem.\nSäkerställa att arkitekturen uppfyller kraven på prestanda, realtid och tillförlitlighet.\nDriva tekniska vägval tillsammans med utvecklingsteamen.\nGranska design ur ett arkitekturperspektiv och coacha utvecklare.\nStödja integration och verifiering när arkitekturen möter verkligheten.\nBidra till att modernisera utvecklingsmiljön och verktygskedjan.\n\n\nDin profil\n\nEtteplan växer vilket gör att vi behöver olika typer av individer och kompetenser. Vi lägger stor vikt på personliga egenskaper och söker dig som vill utvecklas som ingenjör. Du är en person som tycker om att ta dig an nya utmaningar, har en positiv attityd och gillar att ta ansvar.\n\nDu ser helheten men kan gå på djupet i koden när det behövs. Du är självgående, tar ansvar och kommunicerar tydligt med både utvecklare och projektledning. För att lyckas i rollen ser vi att du har:\n\nCivilingenjörs- eller högskoleingenjörsexamen inom datateknik eller motsvarande.\nMinst 8 års erfarenhet av mjukvaruutveckling, varav flera år som mjukvaruarkitekt.\nErfarenhet av arkitektur för stora realtidssystem med många gränssnitt.\nGod kunskap i minst ett av språken Ada, Java eller C++.\nMycket goda kunskaper i svenska och engelska, i både tal och skrift.\n\n\nMeriterande är erfarenhet av ledningssystem inom försvar, säkerhetskritisk mjukvara samt Linux.\n\nFlera av våra uppdrag är säkerhetsklassade. Därför kan det i den här rollen komma att krävas en säkerhetsprövning och för vissa uppdrag kan det även ställas krav på svenskt medborgarskap.\n\nAtt vara konsult hos Etteplan\n\nSom konsult hos Etteplan får du arbeta med komplexa uppdrag där din erfarenhet verkligen gör skillnad. Du kombinerar tryggheten hos en stabil arbetsgivare med möjligheten att bidra i tekniskt utmanande och samhällsviktiga projekt. Hos oss kan du fördjupa dig som specialist eller utvecklas mot tekniskt ledande roller. Vi erbjuder kollektivavtal, tjänstepension enligt ITP1 eller ITP2 inklusive flexpension, försäkringar, friskvårdsbidrag och företagshälsovård.\n\nTjänsten är placerad i Stockholmsregionen, Solna med arbete på plats hos kund.\n\nAnsökan och nästa steg\n\nAnsökan sker genom att du laddar upp ditt CV och besvarar några korta frågor kopplade till tjänsten. Urval och intervjuer sker löpande, så avvakta inte med din ansökan. Rekryteringsprocessen inleds med en telefonintervju och följs av möten med ansvarig konsultchef samt vid behov ytterligare kollegor. Vårt mål är att processen ska vara smidig för att vi tillsammans ska kunna ta nästa kliv framåt.\n\nKänner du att Etteplan är rätt för dig? Skicka in din ansökan idag och bli en del av vårt team!\n\nEtteplan är ett ledande ingenjörsföretag som formar framtidens industrier. Med en dynamisk och inkluderande arbetskultur, erbjuder vi spännande uppdrag, mångfaldiga kundrelationer och en miljö där din ambition får blomma. Vi är över 700 teknikspecialister i Sverige som brinner för teknik och människor. Tillsammans formar vi framtidens innovationer och utveckling inom en global affärsmiljö. Hos oss finns många möjligheter för dig som vill växa och utvecklas i en framåtsträvande organisation.",
+  "original_passages": {
+    "p0001": "Etteplan är ett ledande ingenjörsföretag som formar framtidens industrier.",
+    "p0002": "Vi är över 4 000 teknikspecialister som brinner för teknik och människor.",
+    "p0003": "Nu bygger vi ett team i Stockholmsregionen och söker dig som är senior mjukvaruarkitekt med erfarenhet av stora realtidssystem.",
+    "p0004": "Din roll",
+    "p0005": "I det här uppdraget arbetar du med ett stort, realtidskritiskt mjukvarusystem inom försvarsindustrin.",
+    "p0006": "Systemet samlar data från sensorer, stödjer operatörens beslut och har gränssnitt mot flera andra delsystem.",
+    "p0007": "Det är byggt för att användas under lång tid och levereras till kunder i flera länder, vilket ställer höga krav på stabilitet, prestanda och en arkitektur som håller över tid.",
+    "p0008": "Du blir en del av ett nytt team av mjukvaru- och systemarkitekter som arbetar nära kundens utvecklingsteam.",
+    "p0009": "Du ansvarar för mjukvaruarkitekturen inom ditt område och för hur den passar in i helheten.",
+    "p0010": "Rollen handlar om arkitektur och tekniska vägval, inte om ren kodning, men du behöver förstå koden för att fatta rätt beslut.",
+    "p0011": "Dina huvudsakliga uppgifter:",
+    "p0012": "Ta fram och förvalta mjukvaruarkitektur och designbeskrivningar.",
+    "p0013": "Definiera och äga gränssnitt mellan mjukvarukomponenter och delsystem.",
+    "p0014": "Säkerställa att arkitekturen uppfyller kraven på prestanda, realtid och tillförlitlighet.",
+    "p0015": "Driva tekniska vägval tillsammans med utvecklingsteamen.",
+    "p0016": "Granska design ur ett arkitekturperspektiv och coacha utvecklare.",
+    "p0017": "Stödja integration och verifiering när arkitekturen möter verkligheten.",
+    "p0018": "Bidra till att modernisera utvecklingsmiljön och verktygskedjan.",
+    "p0019": "Din profil",
+    "p0020": "Etteplan växer vilket gör att vi behöver olika typer av individer och kompetenser.",
+    "p0021": "Vi lägger stor vikt på personliga egenskaper och söker dig som vill utvecklas som ingenjör.",
+    "p0022": "Du är en person som tycker om att ta dig an nya utmaningar, har en positiv attityd och gillar att ta ansvar.",
+    "p0023": "Du ser helheten men kan gå på djupet i koden när det behövs.",
+    "p0024": "Du är självgående, tar ansvar och kommunicerar tydligt med både utvecklare och projektledning.",
+    "p0025": "För att lyckas i rollen ser vi att du har:",
+    "p0026": "Civilingenjörs- eller högskoleingenjörsexamen inom datateknik eller motsvarande.",
+    "p0027": "Minst 8 års erfarenhet av mjukvaruutveckling, varav flera år som mjukvaruarkitekt.",
+    "p0028": "Erfarenhet av arkitektur för stora realtidssystem med många gränssnitt.",
+    "p0029": "God kunskap i minst ett av språken Ada, Java eller C++.",
+    "p0030": "Mycket goda kunskaper i svenska och engelska, i både tal och skrift.",
+    "p0031": "Meriterande är erfarenhet av ledningssystem inom försvar, säkerhetskritisk mjukvara samt Linux.",
+    "p0032": "Flera av våra uppdrag är säkerhetsklassade.",
+    "p0033": "Därför kan det i den här rollen komma att krävas en säkerhetsprövning och för vissa uppdrag kan det även ställas krav på svenskt medborgarskap.",
+    "p0034": "Att vara konsult hos Etteplan",
+    "p0035": "Som konsult hos Etteplan får du arbeta med komplexa uppdrag där din erfarenhet verkligen gör skillnad.",
+    "p0036": "Du kombinerar tryggheten hos en stabil arbetsgivare med möjligheten att bidra i tekniskt utmanande och samhällsviktiga projekt.",
+    "p0037": "Hos oss kan du fördjupa dig som specialist eller utvecklas mot tekniskt ledande roller.",
+    "p0038": "Vi erbjuder kollektivavtal, tjänstepension enligt ITP1 eller ITP2 inklusive flexpension, försäkringar, friskvårdsbidrag och företagshälsovård.",
+    "p0039": "Tjänsten är placerad i Stockholmsregionen, Solna med arbete på plats hos kund.",
+    "p0040": "Ansökan och nästa steg",
+    "p0041": "Ansökan sker genom att du laddar upp ditt CV och besvarar några korta frågor kopplade till tjänsten.",
+    "p0042": "Urval och intervjuer sker löpande, så avvakta inte med din ansökan.",
+    "p0043": "Rekryteringsprocessen inleds med en telefonintervju och följs av möten med ansvarig konsultchef samt vid behov ytterligare kollegor.",
+    "p0044": "Vårt mål är att processen ska vara smidig för att vi tillsammans ska kunna ta nästa kliv framåt.",
+    "p0045": "Känner du att Etteplan är rätt för dig?",
+    "p0046": "Skicka in din ansökan idag och bli en del av vårt team!",
+    "p0047": "Etteplan är ett ledande ingenjörsföretag som formar framtidens industrier.",
+    "p0048": "Med en dynamisk och inkluderande arbetskultur, erbjuder vi spännande uppdrag, mångfaldiga kundrelationer och en miljö där din ambition får blomma.",
+    "p0049": "Vi är över 700 teknikspecialister i Sverige som brinner för teknik och människor.",
+    "p0050": "Tillsammans formar vi framtidens innovationer och utveckling inom en global affärsmiljö.",
+    "p0051": "Hos oss finns många möjligheter för dig som vill växa och utvecklas i en framåtsträvande organisation."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0026",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "unclear"
+      }
+    ]
+  },
+  "source_attribution": {
+    "source": "platsbanken",
+    "external_id": "31666777",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31666777",
+    "employer": "Etteplan Sweden AB",
+    "title": "Senior mjukvaruarkitekt"
+  }
+}
