@@ -54,6 +54,8 @@ def parser() -> argparse.ArgumentParser:
     manual = commands.add_parser("import", help="Import a UTF-8 JSON ad without fetching a URL")
     manual.add_argument("file", type=Path)
     commands.add_parser("analyze-pending", help="Analyze new, changed, failed or outdated ads")
+    serve = commands.add_parser("serve", help="Start the local web UI and durable worker")
+    serve.add_argument("--port", type=int, default=8765)
     return cli
 
 
@@ -85,6 +87,13 @@ def main(argv: list[str] | None = None) -> int:
                 if getattr(args, argument) is not None:
                     values[field] = getattr(args, argument)
             spec = Search.model_validate(values)
+        if args.command == "serve":
+            if not 1 <= args.port <= 65535:
+                raise ValueError("--port must be between 1 and 65535")
+            import uvicorn
+            from jobagent.web import create_app
+            uvicorn.run(create_app(settings), host="127.0.0.1", port=args.port)
+            return 0
         database = Database(settings.storage.database)
         if args.command == "analyze":
             # Preflight all IDs without creating a missing database or calling AI.

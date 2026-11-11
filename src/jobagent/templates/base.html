@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{% block title %}JobAgent{% endblock %}</title><link rel="stylesheet" href="/static/app.css"><script src="/static/app.js" defer></script></head>
+<body><header><a class="brand" href="/">J<span>JobAgent</span></a><nav aria-label="Huvudmeny"><a href="/">Annonser</a><a href="/import">Importera</a><a href="/tasks">Aktivitet</a></nav><span class="local"><i></i> {{ "Lokal webbvy · OpenAI-analys" if llm_provider == "openai" else "Lokalt på din dator" }}</span></header>
+<main>{% block content %}{% endblock %}</main><footer>JobAgent · Din lokala jobböversikt · Originalannonserna finns alltid kvar</footer></body></html>
