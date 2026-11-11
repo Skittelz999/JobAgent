@@ -1,5 +1,6 @@
-"""Local model transport for structured analysis."""
+"""Explicit local or OpenAI transport; no automatic provider fallback."""
 import copy
+import os
 from typing import Any, Protocol
 
 import httpx
@@ -88,5 +89,62 @@ def openai_schema(schema: dict, *, enforce_limit: bool = True) -> dict:
     return result
 
 
+class OpenAILLM:
+    endpoint = "https://api.openai.com/v1/responses"
+
+    def __init__(self, settings: LLMSettings, client: httpx.Client | None = None):
+        self.settings = settings.model_copy(update={"provider": "openai", "model": settings.openai_model})
+        self._client = client
+
+    def generate_json(self, messages: list[dict[str, str]], schema: dict[str, Any]) -> dict[str, Any]:
+        key = os.environ.get("OPENAI_API_KEY", "").strip()
+        if not key:
+            raise LLMError("OPENAI_API_KEY is missing. Set it in the server/CLI environment before using OpenAI.")
+        payload = {"model": self.settings.model, "input": messages,
+                   "max_output_tokens": self.settings.max_tokens, "store": False,
+                   "text": {"format": {"type": "json_schema", "name": "job_analysis", "strict": True,
+                                       "schema": openai_schema(schema)}}}
+        owned = self._client is None
+        client = self._client or httpx.Client(timeout=httpx.Timeout(self.settings.timeout_seconds, connect=10),
+                                              follow_redirects=False, trust_env=False)
+        try:
+            response = client.post(self.endpoint, json=payload, headers={"Authorization": "Bearer " + key},
+                                   follow_redirects=False)
+        except httpx.TimeoutException:
+            raise LLMError("OpenAI timed out. No valid result was produced; retry explicitly if needed.") from None
+        except httpx.TransportError:
+            raise LLMError("Cannot reach OpenAI. Check the network and retry explicitly.") from None
+        finally:
+            if owned:
+                client.close()
+        if response.status_code != 200:
+            hints = {401: "Check OPENAI_API_KEY.", 403: "Check project/model access.",
+                     429: "Check quota and rate limits; retry later.", 400: "Check model and structured-output support."}
+            raise LLMError(f"OpenAI returned HTTP {response.status_code}. " + hints.get(response.status_code, "Retry later."))
+        try:
+            data = response.json()
+            if data.get("status") != "completed":
+                raise LLMError("OpenAI response was incomplete or failed. Increase token budget if needed; no partial result was accepted.")
+            texts = []
+            for item in data["output"]:
+                if item.get("type") != "message":
+                    continue
+                if item.get("status") not in (None, "completed"):
+                    raise LLMError("OpenAI message was incomplete; analysis rejected.")
+                for part in item["content"]:
+                    if part.get("type") == "refusal":
+                        raise LLMError("OpenAI declined this analysis; no result was accepted.")
+                    if part.get("type") == "output_text":
+                        texts.append(part["text"])
+            model = data["model"]
+            if len(texts) != 1 or not isinstance(texts[0], str) or not texts[0] or not isinstance(model, str) or not model:
+                raise ValueError
+            return {"content": texts[0], "model": model}
+        except LLMError:
+            raise
+        except (ValueError, KeyError, TypeError, AttributeError):
+            raise LLMError("OpenAI returned an invalid API response.") from None
+
+
 def create_provider(settings: LLMSettings) -> LLMProvider:
-    return LocalLLM(settings)
+    return OpenAILLM(settings) if settings.provider == "openai" else LocalLLM(settings)
