@@ -1,8 +1,8 @@
 """Explicit configuration loading; no filesystem side effects at import time."""
 import os
 from pathlib import Path
-import tomllib
 from typing import Literal
+import tomllib
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -56,16 +56,19 @@ class Search(StrictModel):
         return list(dict.fromkeys(value.strip() for value in values))
 
 
-class Matching(StrictModel):
-    minimum_score: int = Field(default=70, ge=0, le=100)
-
-
 class LLMSettings(StrictModel):
+    provider: Literal["local", "openai"] = "local"
+    openai_model: str = Field(default="gpt-4.1-mini", min_length=1)
+
+    @property
+    def active_model(self) -> str:
+        return self.openai_model if self.provider == "openai" else self.model
+
     base_url: str = "http://127.0.0.1:1234/v1"
     model: str = Field(default="openai/gpt-oss-20b", min_length=1)
     timeout_seconds: float = Field(default=180, gt=0, le=600)
-    max_tokens: int = Field(default=4000, ge=256, le=16000)
-    max_input_chars: int = Field(default=20000, ge=1000, le=100000)
+    max_tokens: int = Field(default=8000, ge=256, le=16000)
+    max_input_chars: int = Field(default=40000, ge=1000, le=100000)
 
     @field_validator("base_url")
     @classmethod
@@ -84,26 +87,45 @@ class LLMSettings(StrictModel):
         return base + "/v1" if not parsed.path.strip("/") else base
 
 
+class FilterSettings(StrictModel):
+    max_required_years: float = Field(default=3, ge=0, allow_inf_nan=False, strict=True)
+
+
 class Settings(StrictModel):
     storage: Storage = Field(default_factory=Storage)
     source: Source = Field(default_factory=Source)
     search: Search = Field(default_factory=Search)
-    matching: Matching = Field(default_factory=Matching)
     llm: LLMSettings = Field(default_factory=LLMSettings)
+    filter: FilterSettings = Field(default_factory=FilterSettings)
 
 
-class Profile(StrictModel):
-    experience_years: float = Field(ge=0)
-    experience_basis: Literal["part_time", "full_time"]
-    university_credits: float = Field(ge=0)
-    has_issued_degree: bool
-    skills: list[str] = Field(min_length=1)
-    roles: list[str] = Field(default_factory=list)
-    experience_details: list[str] = Field(default_factory=list)
+def load_dotenv(path: Path) -> None:
+    """Load simple KEY=VALUE lines from a .env file without overriding existing os.environ."""
+    if not path.is_file():
+        return
+    for raw_line in path.read_text(encoding="utf-8-sig").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export ") and "=" in line[7:]:
+            line = line[7:].strip()
+        if "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        if not key or key in os.environ:
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+            value = value[1:-1]
+        elif " #" in value:
+            value = value.split(" #", 1)[0].rstrip()
+        os.environ[key] = value
 
 
 def load_settings(project_root: Path, config_path: Path | None = None) -> Settings:
     root = project_root.resolve()
+    load_dotenv(root / ".env")
     path = config_path or root / "config/settings.toml"
     if not path.is_absolute():
         path = root / path
@@ -112,9 +134,10 @@ def load_settings(project_root: Path, config_path: Path | None = None) -> Settin
     overrides = {
         "JOBAGENT_DATABASE": ("storage", "database"),
         "JOBAGENT_API_BASE_URL": ("source", "base_url"),
-        "JOBAGENT_MINIMUM_SCORE": ("matching", "minimum_score"),
         "JOBAGENT_LLM_BASE_URL": ("llm", "base_url"),
         "JOBAGENT_LLM_MODEL": ("llm", "model"),
+        "JOBAGENT_LLM_PROVIDER": ("llm", "provider"),
+        "JOBAGENT_OPENAI_MODEL": ("llm", "openai_model"),
     }
     for name, (section, key) in overrides.items():
         if name in os.environ:
@@ -123,8 +146,3 @@ def load_settings(project_root: Path, config_path: Path | None = None) -> Settin
     if not settings.storage.database.is_absolute():
         settings.storage.database = root / settings.storage.database
     return settings
-
-
-def load_profile(path: Path) -> Profile:
-    with path.open("rb") as stream:
-        return Profile.model_validate(tomllib.load(stream))

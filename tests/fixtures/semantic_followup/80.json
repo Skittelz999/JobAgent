@@ -1,0 +1,185 @@
+{
+  "source": {
+    "application_url": "https://recruit.visma.com/spa/public/apply?guidAssignment=86e280f1-fd30-4d2d-805b-3ba52aee017f&publishCode=PB&TK=8f888ddd-af24-49b9-a499-0874478b53d0",
+    "deadline": "2026-11-17T22:59:59Z",
+    "description": "Lantmäteriet är den myndighet som kartlägger Sverige. Till våra uppgifter hör också att registrera och säkra ägandet av alla fastigheter samt hantera deras gränser. Nu söker vi dig som har ett starkt samhällsengagemang.\n\nUtveckling och IT utgör en central del av Lantmäteriets verksamhet och är avgörande för vår långsiktiga utveckling. I nära samverkan med övriga verksamhetsområden arbetar vi med strategiska, taktiska och operativa frågor för att säkerställa att våra tekniska lösningar möter både dagens och morgondagens behov. Vi strävar efter att vara en modern myndighet där teknik och samhällsnytta går hand i hand samtidigt som vi erbjuder en kreativ och välkomnande arbetsmiljö.\r\n\r\nVi har flera stora intressanta och samhällsviktiga utvecklingsprojekt på gång samt en utveckling av myndighetens digitala infrastruktur. Där behöver vi dig som vill vara med och forma framtiden.\n\n\r\n\r\n1 plats(er). \r\n\r\nARBETSUPPGIFTER\r\nSom systemutvecklare hos oss blir du en del av ett team som utvecklar Sveriges fastighetsinskrivnings ärenderegister. Teamet arbetar självständigt och tar ett gemensamt ansvar för planering, prioritering och genomförande av sitt arbete. Du kommer att ansvara för hela utvecklingskedjan, från kravhantering och processanalys till utveckling, test, leverans och förvaltning. Du har en nära dialog med verksamheten och ansvarar för de kontakter som krävs för att driva både ditt eget och teamets arbete framåt.\n\nDu kommer att arbeta i en modern utvecklingsmiljö där backend-utvecklingen huvudsakligen sker i Java/Kotlin med Spring Boot och frontend-utvecklingen i Angular.\n\nVi värdesätter kunskapsdelning högt och ser det som en självklarhet att du bidrar till teamets gemensamma arbetssätt, följer etablerade ramverk och aktivt deltar i det kontinuerliga förbättringsarbetet. På samma sätt stöttar teamet dig i din introduktion och vidare kompetensutveckling.\r\n\r\nKVALIFIKATIONER\r\nVi söker dig som har flerårig och relevant arbetslivserfarenhet inom systemutveckling och har god förmåga att kommunicera på svenska i tal och skrift. \n\nDet är meriterande om du har erfarenhet av\n\n\t• Java/SpringBoot\n\t• Relationsdatabaser\n\t• Automatiserad testning\n\t• DevOps-arbete\n\t• Container-teknik\n\t• Angular\n\t• TypeScript\n\t• Agila arbetsmetoder\n\nVi lägger stor vikt vid dina personliga egenskaper och söker dig som är kreativ och ser utanför boxen, tänker i nya banor och finner nya lösningar på gamla problem. Du är van att sätta upp mål och uppnå resultat, både individuellt och gemensamt i team. Inom din profession håller du dig à jour och omvärldsbevakar. Du är samarbetsorienterad och ser till att hitta lösningar som bygger på gemensam nytta.\n\nTjänsten är säkerhetsklassad vilket innebär att du måste vara svensk medborgare samt att en säkerhetsprövning med registerkontroll och säkerhetssamtal kommer att genomföras innan anställning.\r\n\r\nAnställningsform: Tillsvidareanställning.\r\nVaraktighet: Tillsvidare, tillträde: Tillträde enligt överenskommelse.\r\n\r\nLantmäteriet är i ständig utveckling och det är också alla vi som jobbar här. Våra medarbetare är vår viktigaste resurs för att lyckas med vårt uppdrag. Vi arbetar utifrån det utvecklande medarbetarskapet och vi agerar utifrån den statliga värdegrunden. \n\nSom medarbetare på Lantmäteriet ska du kunna förena arbete med fritid och ha en bra balans i livet. När verksamheten tillåter har du bland annat möjlighet att utföra dina arbetsuppgifter till stor del på annan plats än kontoret. Läs mer om vårt erbjudande på lm.se/jobbahososs\n\nFör att skicka in din ansökan, klicka på länken i annonsen. Vi arbetar med kompetensbaserad rekrytering och fokuserar på din kompetens för att bedöma dig och andra kandidater objektivt. Vi önskar att du inte bifogar något foto till din ansökan. Du som har skyddade personuppgifter ska inte lägga in din ansökan i vårt rekryteringssystem, istället ber vi dig kontakta rekryterande chef. \n\nVi undanber oss alla erbjudanden om rekryterings- och annonshjälp.",
+    "employer": "Lantmäteriet",
+    "external_id": "31638070",
+    "location": "Gävle",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31638070",
+    "published_at": "2026-10-23T12:15:11Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "fg7B_yov_smw",
+        "label": "Systemutvecklare/Programmerare",
+        "legacy_ams_taxonomy_id": "2419"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Gävle",
+          "coordinates": [
+            17.1308489,
+            60.6370941
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Gävle",
+          "municipality_code": "2180",
+          "municipality_concept_id": "qk8Y_2b6_82D",
+          "postcode": "80182",
+          "region": "Gävleborgs län",
+          "region_code": "21",
+          "region_concept_id": "zupA_8Nt_xcD",
+          "street_address": "Lantmäteriet"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Systemutvecklare, Gävle",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Lantmäteriet är den myndighet som kartlägger Sverige.",
+    "p0002": "Till våra uppgifter hör också att registrera och säkra ägandet av alla fastigheter samt hantera deras gränser.",
+    "p0003": "Nu söker vi dig som har ett starkt samhällsengagemang.",
+    "p0004": "Utveckling och IT utgör en central del av Lantmäteriets verksamhet och är avgörande för vår långsiktiga utveckling.",
+    "p0005": "I nära samverkan med övriga verksamhetsområden arbetar vi med strategiska, taktiska och operativa frågor för att säkerställa att våra tekniska lösningar möter både dagens och morgondagens behov.",
+    "p0006": "Vi strävar efter att vara en modern myndighet där teknik och samhällsnytta går hand i hand samtidigt som vi erbjuder en kreativ och välkomnande arbetsmiljö.",
+    "p0007": "Vi har flera stora intressanta och samhällsviktiga utvecklingsprojekt på gång samt en utveckling av myndighetens digitala infrastruktur.",
+    "p0008": "Där behöver vi dig som vill vara med och forma framtiden.",
+    "p0009": "1 plats(er).",
+    "p0010": "ARBETSUPPGIFTER",
+    "p0011": "Som systemutvecklare hos oss blir du en del av ett team som utvecklar Sveriges fastighetsinskrivnings ärenderegister.",
+    "p0012": "Teamet arbetar självständigt och tar ett gemensamt ansvar för planering, prioritering och genomförande av sitt arbete.",
+    "p0013": "Du kommer att ansvara för hela utvecklingskedjan, från kravhantering och processanalys till utveckling, test, leverans och förvaltning.",
+    "p0014": "Du har en nära dialog med verksamheten och ansvarar för de kontakter som krävs för att driva både ditt eget och teamets arbete framåt.",
+    "p0015": "Du kommer att arbeta i en modern utvecklingsmiljö där backend-utvecklingen huvudsakligen sker i Java/Kotlin med Spring Boot och frontend-utvecklingen i Angular.",
+    "p0016": "Vi värdesätter kunskapsdelning högt och ser det som en självklarhet att du bidrar till teamets gemensamma arbetssätt, följer etablerade ramverk och aktivt deltar i det kontinuerliga förbättringsarbetet.",
+    "p0017": "På samma sätt stöttar teamet dig i din introduktion och vidare kompetensutveckling.",
+    "p0018": "KVALIFIKATIONER",
+    "p0019": "Vi söker dig som har flerårig och relevant arbetslivserfarenhet inom systemutveckling och har god förmåga att kommunicera på svenska i tal och skrift.",
+    "p0020": "Det är meriterande om du har erfarenhet av",
+    "p0021": "• Java/SpringBoot",
+    "p0022": "• Relationsdatabaser",
+    "p0023": "• Automatiserad testning",
+    "p0024": "• DevOps-arbete",
+    "p0025": "• Container-teknik",
+    "p0026": "• Angular",
+    "p0027": "• TypeScript",
+    "p0028": "• Agila arbetsmetoder",
+    "p0029": "Vi lägger stor vikt vid dina personliga egenskaper och söker dig som är kreativ och ser utanför boxen, tänker i nya banor och finner nya lösningar på gamla problem.",
+    "p0030": "Du är van att sätta upp mål och uppnå resultat, både individuellt och gemensamt i team.",
+    "p0031": "Inom din profession håller du dig à jour och omvärldsbevakar.",
+    "p0032": "Du är samarbetsorienterad och ser till att hitta lösningar som bygger på gemensam nytta.",
+    "p0033": "Tjänsten är säkerhetsklassad vilket innebär att du måste vara svensk medborgare samt att en säkerhetsprövning med registerkontroll och säkerhetssamtal kommer att genomföras innan anställning.",
+    "p0034": "Anställningsform: Tillsvidareanställning.",
+    "p0035": "Varaktighet: Tillsvidare, tillträde: Tillträde enligt överenskommelse.",
+    "p0036": "Lantmäteriet är i ständig utveckling och det är också alla vi som jobbar här.",
+    "p0037": "Våra medarbetare är vår viktigaste resurs för att lyckas med vårt uppdrag.",
+    "p0038": "Vi arbetar utifrån det utvecklande medarbetarskapet och vi agerar utifrån den statliga värdegrunden.",
+    "p0039": "Som medarbetare på Lantmäteriet ska du kunna förena arbete med fritid och ha en bra balans i livet.",
+    "p0040": "När verksamheten tillåter har du bland annat möjlighet att utföra dina arbetsuppgifter till stor del på annan plats än kontoret.",
+    "p0041": "Läs mer om vårt erbjudande på lm.se/jobbahososs",
+    "p0042": "För att skicka in din ansökan, klicka på länken i annonsen.",
+    "p0043": "Vi arbetar med kompetensbaserad rekrytering och fokuserar på din kompetens för att bedöma dig och andra kandidater objektivt.",
+    "p0044": "Vi önskar att du inte bifogar något foto till din ansökan.",
+    "p0045": "Du som har skyddade personuppgifter ska inte lägga in din ansökan i vårt rekryteringssystem, istället ber vi dig kontakta rekryterande chef.",
+    "p0046": "Vi undanber oss alla erbjudanden om rekryterings- och annonshjälp."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0019",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0021",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0022",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0023",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0031",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "mandatory"
+      }
+    ]
+  }
+}

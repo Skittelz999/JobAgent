@@ -1,0 +1,176 @@
+{
+  "source": {
+    "application_url": "https://husqvarnagroup.wd3.myworkdayjobs.com/External_Career_Site/job/Huskvarna/Backend-Developer---Robotics---Husqvarna-Group_R-18423",
+    "deadline": "2026-11-13T22:59:59Z",
+    "description": "Build the cloud platform behind the world's leading robotic lawn mowers!\nAt Husqvarna Robotics, you will help develop the cloud services behind hundreds of thousands of connected Husqvarna Automowers™ used by consumers and professionals worldwide.\nRobotics Digital Backend is a team of around 14 engineers responsible for services that enable positioning, navigation, fleet management and connected experiences for our robotic products. Our solutions run on AWS and play an important role in Husqvarna's continued investment in autonomous and connected products.\nOur teams own the full lifecycle of their services, from development to production. Working in a modern DevSecOps environment, you will use cloud-native technologies, AWS, microservices, Docker, and AI-powered solutions while collaborating through code reviews, knowledge sharing, and continuous improvement.\nAbout the role\nAs a Backend Developer, you will design, build and operate scalable cloud services that power the next generation of robotic solutions. You will collaborate closely with product owners, app teams, embedded software teams, platform engineers, architects, and AI and data teams to deliver reliable solutions used around the world.\nKey responsibilities include:\nDeveloping backend services primarily in Kotlin and Java\nBuilding and operating cloud-native solutions on AWS\nDeveloping distributed systems and microservice-based architectures\nContributing to CI/CD, observability and production operations\nDriving technical improvements, architecture discussions and engineering best practices\n\n\n\nAt Husqvarna Robotics, you will be part of a team developing products that are used by customers worldwide. You will build solutions that make a real difference, work closely with both the product and its users, and have the opportunity to influence technical decisions and architecture. Combining Robotics, Cloud and AI, you will work with modern technologies at scale and quickly see the impact of your contributions as part of a global leader in robotic lawn care.\nAbout you\nYou are an experienced developer who enjoys taking ownership, driving initiatives forward and solving complex challenges together with others. You are curious about new technologies, willing to share your knowledge, and motivated by building high-quality solutions. We believe you have:\nSeveral years of backend software development experience\nA B.Sc. or M.Sc. in Computer Science, Software Engineering or equivalent experience\nStrong proficiency in Kotlin and/or Java\nExperience building distributed systems and microservice architectures\nExperience working with AWS and modern cloud-based development\nExperience with CI/CD, containers and Infrastructure as Code\nProfessional proficiency in English\n\nExperience with Quarkus, Gradle, clean architecture principles, Databricks or other data-intensive platforms is considered an advantage.\nLocation\nHuskvarna. We believe the best ideas happen when we are connected. We spend most of our time together in the office, creating space for collaboration, creativity, and fast decision-making. This is consistent across all our global offices and helps us maintain a strong culture, support learning and development, and ensure everyone has access to the people and resources they need to thrive.\nYour application\nPlease apply with CV and Cover Letter. We do not accept applications via email due to GDPR regulations. For more questions regarding the position please contact:\nHiring Manager: Gustaf Lagercrantz, gustaf.lagercrantz@husqvarnagroup.com. For more information about the recruitment process, please contact: Recruiter: Gorjana Dubovina,gorjana.dubovina@husqvarnagroup.com.\nProcessing of personal data\nWhen you send in your application we will process your personal data. In case we choose to proceed with your application, we may ask you to verify your identity before giving you a job offer. For more information about how we process your personal data, who we may share it with and what rights you have, please see our privacy notice.\nWinning Through Culture \nWe believe that business is ultimately about people, as a team, we win and grow together. Our culture is built on bold ideas, strong commitment, and a shared purpose, creating an environment where innovation thrives, people grow, and every contribution matters.\nOur culture is built on three core themes: \nBold: We push boundaries, embrace challenges, and explore new possibilities.\nDedicated: We put in the hard work, bring passion and resilience to every challenge we take on.\nCare: We support each other, consider the impact of our actions, and strive to make a lasting difference. \n\nWhether you’re starting your career or looking for the next big step, we offer a place where passion and purpose come together. Join us in shaping the future!",
+    "employer": "Husqvarna AB",
+    "external_id": "31594353",
+    "location": "Jönköping",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31594353",
+    "published_at": "2026-10-14T08:20:25Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": [
+          {
+            "concept_id": "7wdX_4rv_33z",
+            "label": "Backend-utvecklare",
+            "legacy_ams_taxonomy_id": "7632",
+            "weight": 10
+          }
+        ]
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "7wdX_4rv_33z",
+        "label": "Backend-utvecklare",
+        "legacy_ams_taxonomy_id": "7632"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Huskvarna",
+          "coordinates": [
+            14.2746399,
+            57.7979477
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Jönköping",
+          "municipality_code": "0680",
+          "municipality_concept_id": "KURg_KJF_Lwc",
+          "postcode": "56182",
+          "region": "Jönköpings län",
+          "region_code": "06",
+          "region_concept_id": "MtbE_xWT_eMi",
+          "street_address": "Drottninggatan 2"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "Vbpe_rGe_vCW",
+        "label": "Hybridarbete"
+      }
+    },
+    "title": "Backend Developer  Robotics - Husqvarna Group",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Build the cloud platform behind the world's leading robotic lawn mowers!",
+    "p0002": "At Husqvarna Robotics, you will help develop the cloud services behind hundreds of thousands of connected Husqvarna Automowers™ used by consumers and professionals worldwide.",
+    "p0003": "Robotics Digital Backend is a team of around 14 engineers responsible for services that enable positioning, navigation, fleet management and connected experiences for our robotic products.",
+    "p0004": "Our solutions run on AWS and play an important role in Husqvarna's continued investment in autonomous and connected products.",
+    "p0005": "Our teams own the full lifecycle of their services, from development to production.",
+    "p0006": "Working in a modern DevSecOps environment, you will use cloud-native technologies, AWS, microservices, Docker, and AI-powered solutions while collaborating through code reviews, knowledge sharing, and continuous improvement.",
+    "p0007": "About the role",
+    "p0008": "As a Backend Developer, you will design, build and operate scalable cloud services that power the next generation of robotic solutions.",
+    "p0009": "You will collaborate closely with product owners, app teams, embedded software teams, platform engineers, architects, and AI and data teams to deliver reliable solutions used around the world.",
+    "p0010": "Key responsibilities include:",
+    "p0011": "Developing backend services primarily in Kotlin and Java",
+    "p0012": "Building and operating cloud-native solutions on AWS",
+    "p0013": "Developing distributed systems and microservice-based architectures",
+    "p0014": "Contributing to CI/CD, observability and production operations",
+    "p0015": "Driving technical improvements, architecture discussions and engineering best practices",
+    "p0016": "At Husqvarna Robotics, you will be part of a team developing products that are used by customers worldwide.",
+    "p0017": "You will build solutions that make a real difference, work closely with both the product and its users, and have the opportunity to influence technical decisions and architecture.",
+    "p0018": "Combining Robotics, Cloud and AI, you will work with modern technologies at scale and quickly see the impact of your contributions as part of a global leader in robotic lawn care.",
+    "p0019": "About you",
+    "p0020": "You are an experienced developer who enjoys taking ownership, driving initiatives forward and solving complex challenges together with others.",
+    "p0021": "You are curious about new technologies, willing to share your knowledge, and motivated by building high-quality solutions.",
+    "p0022": "We believe you have:",
+    "p0023": "Several years of backend software development experience",
+    "p0024": "A B.Sc. or M.Sc. in Computer Science, Software Engineering or equivalent experience",
+    "p0025": "Strong proficiency in Kotlin and/or Java",
+    "p0026": "Experience building distributed systems and microservice architectures",
+    "p0027": "Experience working with AWS and modern cloud-based development",
+    "p0028": "Experience with CI/CD, containers and Infrastructure as Code",
+    "p0029": "Professional proficiency in English",
+    "p0030": "Experience with Quarkus, Gradle, clean architecture principles, Databricks or other data-intensive platforms is considered an advantage.",
+    "p0031": "Location",
+    "p0032": "Huskvarna.",
+    "p0033": "We believe the best ideas happen when we are connected.",
+    "p0034": "We spend most of our time together in the office, creating space for collaboration, creativity, and fast decision-making.",
+    "p0035": "This is consistent across all our global offices and helps us maintain a strong culture, support learning and development, and ensure everyone has access to the people and resources they need to thrive.",
+    "p0036": "Your application",
+    "p0037": "Please apply with CV and Cover Letter.",
+    "p0038": "We do not accept applications via email due to GDPR regulations.",
+    "p0039": "For more questions regarding the position please contact:",
+    "p0040": "Hiring Manager: Gustaf Lagercrantz, gustaf.lagercrantz@husqvarnagroup.com.",
+    "p0041": "For more information about the recruitment process, please contact: Recruiter: Gorjana Dubovina,gorjana.dubovina@husqvarnagroup.com.",
+    "p0042": "Processing of personal data",
+    "p0043": "When you send in your application we will process your personal data.",
+    "p0044": "In case we choose to proceed with your application, we may ask you to verify your identity before giving you a job offer.",
+    "p0045": "For more information about how we process your personal data, who we may share it with and what rights you have, please see our privacy notice.",
+    "p0046": "Winning Through Culture",
+    "p0047": "We believe that business is ultimately about people, as a team, we win and grow together.",
+    "p0048": "Our culture is built on bold ideas, strong commitment, and a shared purpose, creating an environment where innovation thrives, people grow, and every contribution matters.",
+    "p0049": "Our culture is built on three core themes:",
+    "p0050": "Bold: We push boundaries, embrace challenges, and explore new possibilities.",
+    "p0051": "Dedicated: We put in the hard work, bring passion and resilience to every challenge we take on.",
+    "p0052": "Care: We support each other, consider the impact of our actions, and strive to make a lasting difference.",
+    "p0053": "Whether you’re starting your career or looking for the next big step, we offer a place where passion and purpose come together.",
+    "p0054": "Join us in shaping the future!"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0023",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "source": {
+    "application_url": "https://jobs.gigstep.se/jobs/4831739-civilingenjorer-se-hit/applications/new?promotion=2232157-arbetsformedlingen",
+    "deadline": "2027-04-04T21:59:59Z",
+    "description": "Nu söker vi dig som har en Civilingenjörsexamen inom datateknik, elektronikdesign, teknisk fysik, elektroteknik eller motsvarande för kommande gig!  \nFör dessa roller söker vi dig som är resultatinriktad och har god analytisk förmåga. Du tar ansvar för ditt arbete som du effektivt driver vidare på ett strukturerat sätt för att leverera efterfrågade resultat i tid. Vidare har du en god kommunikationsförmåga och samarbetar på ett bra och konstruktivt sätt med såväl kollegor som uppdragsgivare. Eftersom vi arbetar med flera globala bolag är det även viktigt att du kommunicerar väl både på svenska och engelska. Nyexaminerad eller några års erfarenhet!\n Utöver ovanstående kompetens bör du också ha god förståelse för: \n Något eller flera utvecklingsspråk så som C, C++, C#,Java, Python mm.\n Ha en god teknisk förståelse och ett genuint intresse till att utvecklas ännu mer.\n Tycka att det är kul att ta till dig ny information för att kunna utvecklas i ditt arbete.\n Projektledning i en teknisk befattning/område.\n \nDet är meriterande om du har erfarenhet inom ett eller flera av hårdvarunära programmering samt mjukvaruutveckling för styrning av extern elektronik och hårdvara. \nAtt jobba som konsult hos oss på Gigstep är perfekt för dig som är nyexaminerad och vill komma in på coola och spännande tekniska företag, men även för dig som har jobbat några år och vill ta nästa steg i karriären. Vi samarbetar med olika företag runt om i Sverige och främst i Malmö/Lund området. \nVill du höra mer om aktuella våra gig? Välkommen med ditt CV redan idag, vi återkommer om det dyker upp ett uppdrag som passar din erfarenhet!",
+    "employer": "Gigstep AB",
+    "external_id": "31560829",
+    "location": "Lund",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31560829",
+    "published_at": "2026-10-06T13:25:28Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "1paU_aCR_nGn",
+        "label": "Behovsanställning",
+        "legacy_ams_taxonomy_id": "4"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "Rd3G_bFa_zvR",
+        "label": "Civilingenjör, maskin",
+        "legacy_ams_taxonomy_id": "6504"
+      },
+      "occupation_group": {
+        "concept_id": "PRQn_9yw_NJA",
+        "label": "Civilingenjörsyrken inom maskinteknik",
+        "legacy_ams_taxonomy_id": "2144"
+      },
+      "working_hours_type": {
+        "concept_id": null,
+        "label": null,
+        "legacy_ams_taxonomy_id": null
+      },
+      "workplace_addresses": [
+        {
+          "city": "Lund",
+          "coordinates": [
+            13.19047329577472,
+            55.70727235621487
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Lund",
+          "municipality_code": "1281",
+          "municipality_concept_id": "muSY_tsR_vDZ",
+          "postcode": "22221",
+          "region": "Skåne län",
+          "region_code": "12",
+          "region_concept_id": "CaRE_1nn_cSU",
+          "street_address": "Lund C"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Civilingenjörer - se hit!",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Nu söker vi dig som har en Civilingenjörsexamen inom datateknik, elektronikdesign, teknisk fysik, elektroteknik eller motsvarande för kommande gig!",
+    "p0002": "För dessa roller söker vi dig som är resultatinriktad och har god analytisk förmåga.",
+    "p0003": "Du tar ansvar för ditt arbete som du effektivt driver vidare på ett strukturerat sätt för att leverera efterfrågade resultat i tid.",
+    "p0004": "Vidare har du en god kommunikationsförmåga och samarbetar på ett bra och konstruktivt sätt med såväl kollegor som uppdragsgivare.",
+    "p0005": "Eftersom vi arbetar med flera globala bolag är det även viktigt att du kommunicerar väl både på svenska och engelska.",
+    "p0006": "Nyexaminerad eller några års erfarenhet!",
+    "p0007": "Utöver ovanstående kompetens bör du också ha god förståelse för:",
+    "p0008": "Något eller flera utvecklingsspråk så som C, C++, C#,Java, Python mm.",
+    "p0009": "Ha en god teknisk förståelse och ett genuint intresse till att utvecklas ännu mer.",
+    "p0010": "Tycka att det är kul att ta till dig ny information för att kunna utvecklas i ditt arbete.",
+    "p0011": "Projektledning i en teknisk befattning/område.",
+    "p0012": "Det är meriterande om du har erfarenhet inom ett eller flera av hårdvarunära programmering samt mjukvaruutveckling för styrning av extern elektronik och hårdvara.",
+    "p0013": "Att jobba som konsult hos oss på Gigstep är perfekt för dig som är nyexaminerad och vill komma in på coola och spännande tekniska företag, men även för dig som har jobbat några år och vill ta nästa steg i karriären.",
+    "p0014": "Vi samarbetar med olika företag runt om i Sverige och främst i Malmö/Lund området.",
+    "p0015": "Vill du höra mer om aktuella våra gig?",
+    "p0016": "Välkommen med ditt CV redan idag, vi återkommer om det dyker upp ett uppdrag som passar din erfarenhet!"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0001",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0007",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0008",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0012",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

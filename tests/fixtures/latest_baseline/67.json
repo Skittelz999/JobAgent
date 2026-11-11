@@ -1,0 +1,160 @@
+{
+  "source": {
+    "application_url": "https://maxitech-se.intelliplan.net/jobb/1210/ansokningssida",
+    "deadline": "2026-11-24T22:59:59Z",
+    "description": "Om tjänsten\n\r\nÄr du en passionerad backend-utvecklare med ett skarpt öga för säkerhet och identitetshantering? Maxitech söker nu en Senior Java Backend Engineer med specialistkompetens inom IAM för ett spännande konsultuppdrag. Här får du chansen att arbeta i hjärtat av vår kunds identitetsplattform och forma hur miljontals användare säkert interagerar med deras produkter. Vi letar efter dig som vill ta nästa steg i din karriär och driva IAM-kapabiliteter till en helt ny nivå.\r\n\r\nDu erbjuds\n\r\nSom konsult hos Maxitech får du en unik möjlighet att arbeta i en tekniskt framkant miljö hos en av de mest framstående aktörerna i Göteborg. Du erbjuds en roll med stort tekniskt ansvar där du får direkt påverkan på säkerhetsarkitekturen. Vi erbjuder en inkluderande arbetsmiljö, kontinuerlig kompetensutveckling och ett nätverk av likasinnade experter, samt trygga anställningsvillkor och förmåner som stöttar din professionella tillväxt.\r\n\r\nArbetsuppgifter\n\r\n•\tDesigna, bygga och drifta IAM-lösningar baserade på Keycloak och Java-mikrotjänster.\n•\tUtöka och anpassa Keycloak genom anpassade SPI:er, providers, user federation och teman.\n•\tImplementera och underhålla autentiserings- och auktoriseringsflöden med OAuth 2.0, OpenID Connect, SAML och MFA.\n•\tDriva säkerhetsarbetet genom Secure Token Handling, sessionshantering och hotmodellering.\n•\tAnsvara för tjänster genom hela livscykeln – från design och driftsättning till observabilitet och incidenthantering.\n•\tSamarbeta tätt med produkt-, säkerhets- och plattformsteam för att leverera skalbara identitetslösningar.\n\r\n\r\nDin profil\n\r\nVi söker dig som har en gedigen bakgrund inom Java-utveckling och en säkerhetsfokuserad inställning. Krav för tjänsten:\n•\tOmfattande erfarenhet av Java backend-utveckling och mikrotjänster i produktionsmiljö.\n•\tDokumenterad praktisk erfarenhet av Keycloak, inklusive anpassning via SPI:er.\n•\tDjup förståelse för OAuth 2.0, OpenID Connect, JWT och SAML.\n•\tErfarenhet av distribuerade system, Docker, Kubernetes och CI/CD-pipelines.\n•\tKunskap inom PostgreSQL samt caching-lösningar som Infinispan eller Redis.\n•\tErfarenhet av molnplattformar såsom AWS eller Azure.\nMeriterande:\n•\tErfarenhet av CIAM i stor skala och identitetsupplösning.\n•\tKunskap inom WebAuthn/FIDO2, Zero Trust-arkitektur eller PKI.\n•\tErfarenhet av eventdrivna arkitekturer (t.ex. Kafka) samt verktyg som Prometheus och Grafana.\n\r\n\r\nÖvrigt\n\r\nAnställningsform: Konsultuppdrag (Heltid)\nPlacering: Göteborg\nStart: Enligt överenskommelse\nLön: Attraktiv och förmånlig lönemodell\n\r\n\r\nOm oss\n\r\nMaxitech är ett IT- och Tech-konsultbolag som arbetar med några av branschens skarpaste konsulter. Vi hjälper företag att stärka sina team genom både konsultlösningar och rekrytering, alltid anpassade efter varje kunds behov.",
+    "employer": "Maxitech AB",
+    "external_id": "31643773",
+    "location": "Göteborg",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31643773",
+    "published_at": "2026-10-26T10:03:25Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "7wdX_4rv_33z",
+        "label": "Backend-utvecklare",
+        "legacy_ams_taxonomy_id": "7632"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Göteborg",
+          "coordinates": [
+            11.9747916058549,
+            57.7001811051715
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Göteborg",
+          "municipality_code": "1480",
+          "municipality_concept_id": "PVZL_BQT_XtL",
+          "postcode": "41136",
+          "region": "Västra Götalands län",
+          "region_code": "14",
+          "region_concept_id": "zdoY_6u5_Krt",
+          "street_address": " Kungsportsavenyen 21 "
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Senior Java Backend Engineer - IAM Specialist",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Om tjänsten",
+    "p0002": "Är du en passionerad backend-utvecklare med ett skarpt öga för säkerhet och identitetshantering?",
+    "p0003": "Maxitech söker nu en Senior Java Backend Engineer med specialistkompetens inom IAM för ett spännande konsultuppdrag.",
+    "p0004": "Här får du chansen att arbeta i hjärtat av vår kunds identitetsplattform och forma hur miljontals användare säkert interagerar med deras produkter.",
+    "p0005": "Vi letar efter dig som vill ta nästa steg i din karriär och driva IAM-kapabiliteter till en helt ny nivå.",
+    "p0006": "Du erbjuds",
+    "p0007": "Som konsult hos Maxitech får du en unik möjlighet att arbeta i en tekniskt framkant miljö hos en av de mest framstående aktörerna i Göteborg.",
+    "p0008": "Du erbjuds en roll med stort tekniskt ansvar där du får direkt påverkan på säkerhetsarkitekturen.",
+    "p0009": "Vi erbjuder en inkluderande arbetsmiljö, kontinuerlig kompetensutveckling och ett nätverk av likasinnade experter, samt trygga anställningsvillkor och förmåner som stöttar din professionella tillväxt.",
+    "p0010": "Arbetsuppgifter",
+    "p0011": "•\tDesigna, bygga och drifta IAM-lösningar baserade på Keycloak och Java-mikrotjänster.",
+    "p0012": "•\tUtöka och anpassa Keycloak genom anpassade SPI:er, providers, user federation och teman.",
+    "p0013": "•\tImplementera och underhålla autentiserings- och auktoriseringsflöden med OAuth 2.0, OpenID Connect, SAML och MFA.",
+    "p0014": "•\tDriva säkerhetsarbetet genom Secure Token Handling, sessionshantering och hotmodellering.",
+    "p0015": "•\tAnsvara för tjänster genom hela livscykeln – från design och driftsättning till observabilitet och incidenthantering.",
+    "p0016": "•\tSamarbeta tätt med produkt-, säkerhets- och plattformsteam för att leverera skalbara identitetslösningar.",
+    "p0017": "Din profil",
+    "p0018": "Vi söker dig som har en gedigen bakgrund inom Java-utveckling och en säkerhetsfokuserad inställning.",
+    "p0019": "Krav för tjänsten:",
+    "p0020": "•\tOmfattande erfarenhet av Java backend-utveckling och mikrotjänster i produktionsmiljö.",
+    "p0021": "•\tDokumenterad praktisk erfarenhet av Keycloak, inklusive anpassning via SPI:er.",
+    "p0022": "•\tDjup förståelse för OAuth 2.0, OpenID Connect, JWT och SAML.",
+    "p0023": "•\tErfarenhet av distribuerade system, Docker, Kubernetes och CI/CD-pipelines.",
+    "p0024": "•\tKunskap inom PostgreSQL samt caching-lösningar som Infinispan eller Redis.",
+    "p0025": "•\tErfarenhet av molnplattformar såsom AWS eller Azure.",
+    "p0026": "Meriterande:",
+    "p0027": "•\tErfarenhet av CIAM i stor skala och identitetsupplösning.",
+    "p0028": "•\tKunskap inom WebAuthn/FIDO2, Zero Trust-arkitektur eller PKI.",
+    "p0029": "•\tErfarenhet av eventdrivna arkitekturer (t.ex. Kafka) samt verktyg som Prometheus och Grafana.",
+    "p0030": "Övrigt",
+    "p0031": "Anställningsform: Konsultuppdrag (Heltid)",
+    "p0032": "Placering: Göteborg",
+    "p0033": "Start: Enligt överenskommelse",
+    "p0034": "Lön: Attraktiv och förmånlig lönemodell",
+    "p0035": "Om oss",
+    "p0036": "Maxitech är ett IT- och Tech-konsultbolag som arbetar med några av branschens skarpaste konsulter.",
+    "p0037": "Vi hjälper företag att stärka sina team genom både konsultlösningar och rekrytering, alltid anpassade efter varje kunds behov."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0018",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0020",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0021",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0022",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0023",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "unclear"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

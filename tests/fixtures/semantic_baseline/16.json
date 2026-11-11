@@ -1,0 +1,74 @@
+{
+  "ad_id": 16,
+  "description": "What you'll do\nYou will join the Technology Department's Machine Protection and Electrical Integrity (MPE) Group, which develops and maintains systems that protect accelerator equipment, including magnets and particle-beam-related installations.\n\nWorking in a collaborative team of software engineers, you will design, develop and maintain reliable software that supports the safe and efficient operation of the Large Hadron Collider and its injector complex. You will have the opportunity to solve challenging engineering problems, collaborate with experts across different disciplines and contribute to systems that are essential to CERN's scientific mission.\n\nYour responsibilities\n-Design, implement, test and maintain software components that interface with equipment protection and interlock systems.\n-Monitor deployed applications, investigate technical issues and improve reliability, availability and maintainability.\n-Work with engineers, technical specialists and accelerator operations teams during commissioning, testing and operation.\n-Understand user requirements, contribute to technical decisions and help deliver sustainable software solutions.\n-Collaborate with colleagues to strengthen development workflows, automated testing, continuous integration and software quality, including exploring AI-assisted development tools where appropriate.\n-Provide technical guidance and mentoring to colleagues and students.\n\nYour profile\n-Solid software engineering experience, including proficiency in Java and/or C++.\n-Experience in designing, developing, testing and maintaining software throughout its lifecycle.\n-Proficiency with software development practices such as version control, automated testing, continuous integration and delivery.\n-Strong technical acumen in translating complex requirements into robust, efficient, and maintainable solutions.\n-Master's Degree or equivalent relevant experience in the field of Computing, Physics or Engineering or a related field.\n\nYour skills\n-Development of application software: core software design principles and application development.\n-Knowledge and application of software life-cycle tools and procedures: including Agile methodologies (Kanban, Scrum), Continuous Integration and Continuous Delivery, Quality Assurance and DevOps.\n-Capturing and analysis of requirements for ICT systems: working with end users to understand their needs and providing corresponding technical solutions.\n-Installation, operation and maintenance (preventive and corrective) of computing systems: including monitoring, diagnosing and support of live, operational systems.\n-Works well in groups and readily fits into a team; participates fully and takes an active role in team activities.\n-Expresses opinions, ideas and suggestions with conviction and in a logical/structured manner; keeps to the point.\n-Shares knowledge and expertise freely and willingly with others; coaches others to ensure knowledge transfer.\n-Has a structured and organised approach towards work; is able to set priorities and plan tasks with results in mind.\n-Is able to put self in the shoes of others in order to understand their needs and interests.\n-Spoken and written English, with a commitment to learn French.\n\nIdeal start date: 01/04/2027\nContract duration (in months): 60\nGrade range: 6\nBenchmark job: 200020 - Computing Engineer\nJob flexibility: Hybrid\nTeam supervision",
+  "original_passages": {
+    "p0001": "What you'll do",
+    "p0002": "You will join the Technology Department's Machine Protection and Electrical Integrity (MPE) Group, which develops and maintains systems that protect accelerator equipment, including magnets and particle-beam-related installations.",
+    "p0003": "Working in a collaborative team of software engineers, you will design, develop and maintain reliable software that supports the safe and efficient operation of the Large Hadron Collider and its injector complex. You will have the opportunity to solve challenging engineering problems, collaborate with experts across different disciplines and contribute to systems that are essential to CERN's scientific mission.",
+    "p0004": "Your responsibilities",
+    "p0005": "-Design, implement, test and maintain software components that interface with equipment protection and interlock systems.",
+    "p0006": "-Monitor deployed applications, investigate technical issues and improve reliability, availability and maintainability.",
+    "p0007": "-Work with engineers, technical specialists and accelerator operations teams during commissioning, testing and operation.",
+    "p0008": "-Understand user requirements, contribute to technical decisions and help deliver sustainable software solutions.",
+    "p0009": "-Collaborate with colleagues to strengthen development workflows, automated testing, continuous integration and software quality, including exploring AI-assisted development tools where appropriate.",
+    "p0010": "-Provide technical guidance and mentoring to colleagues and students.",
+    "p0011": "Your profile",
+    "p0012": "-Solid software engineering experience, including proficiency in Java and/or C++.",
+    "p0013": "-Experience in designing, developing, testing and maintaining software throughout its lifecycle.",
+    "p0014": "-Proficiency with software development practices such as version control, automated testing, continuous integration and delivery.",
+    "p0015": "-Strong technical acumen in translating complex requirements into robust, efficient, and maintainable solutions.",
+    "p0016": "-Master's Degree or equivalent relevant experience in the field of Computing, Physics or Engineering or a related field.",
+    "p0017": "Your skills",
+    "p0018": "-Development of application software: core software design principles and application development.",
+    "p0019": "-Knowledge and application of software life-cycle tools and procedures: including Agile methodologies (Kanban, Scrum), Continuous Integration and Continuous Delivery, Quality Assurance and DevOps.",
+    "p0020": "-Capturing and analysis of requirements for ICT systems: working with end users to understand their needs and providing corresponding technical solutions.",
+    "p0021": "-Installation, operation and maintenance (preventive and corrective) of computing systems: including monitoring, diagnosing and support of live, operational systems.",
+    "p0022": "-Works well in groups and readily fits into a team; participates fully and takes an active role in team activities.",
+    "p0023": "-Expresses opinions, ideas and suggestions with conviction and in a logical/structured manner; keeps to the point.",
+    "p0024": "-Shares knowledge and expertise freely and willingly with others; coaches others to ensure knowledge transfer.",
+    "p0025": "-Has a structured and organised approach towards work; is able to set priorities and plan tasks with results in mind.",
+    "p0026": "-Is able to put self in the shoes of others in order to understand their needs and interests.",
+    "p0027": "-Spoken and written English, with a commitment to learn French.",
+    "p0028": "Ideal start date: 01/04/2027",
+    "p0029": "Contract duration (in months): 60",
+    "p0030": "Grade range: 6",
+    "p0031": "Benchmark job: 200020 - Computing Engineer",
+    "p0032": "Job flexibility: Hybrid",
+    "p0033": "Team supervision"
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0012",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0013",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0014",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0015",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0016",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "expected"
+      }
+    ]
+  },
+  "source_attribution": {
+    "source": "platsbanken",
+    "external_id": "31665216",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31665216",
+    "employer": "CERN",
+    "title": "Control Software Engineer - Particle Accelerators"
+  }
+}

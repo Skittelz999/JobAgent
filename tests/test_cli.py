@@ -1,4 +1,6 @@
 import json
+
+import pytest
 from pathlib import Path
 
 from jobagent.cli import main
@@ -10,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_config_check_has_no_storage_side_effect(tmp_path, monkeypatch, capsys):
     path = tmp_path / "not-created" / "jobs.db"
     monkeypatch.setenv("JOBAGENT_DATABASE", str(path))
-    assert main(["--root", str(ROOT), "config-check", "--profile", "config/profile.example.toml"]) == 0
-    assert json.loads(capsys.readouterr().out)["profile_valid"] is True
+    assert main(["--root", str(ROOT), "config-check"]) == 0
+    assert json.loads(capsys.readouterr().out)["valid"] is True
     assert not path.parent.exists()
 
 
@@ -50,7 +52,7 @@ def test_partial_search_exit_code(tmp_path, monkeypatch, capsys):
     assert json.loads(capsys.readouterr().out)["status"] == "partial"
 
 
-def test_analyze_is_read_only_and_never_initializes_database(tmp_path, monkeypatch, capsys):
+def test_analyze_saves_separately_without_changing_source_rows(tmp_path, monkeypatch, capsys):
     from jobagent.database import Database
     from jobagent.models import JobAd, SourceAd
     from test_analysis import DESCRIPTION, output
@@ -59,16 +61,24 @@ def test_analyze_is_read_only_and_never_initializes_database(tmp_path, monkeypat
     db = Database(path)
     db.initialize()
     db.upsert_page([SourceAd(job=JobAd(source="test", external_id="1", title="Job", description=DESCRIPTION), raw={})])
-    before = path.read_bytes()
+    tables = ("jobs", "ad_versions", "search_runs", "match_results")
+    with db.connect(read_only=True) as connection:
+        before = {table: [tuple(row) for row in connection.execute("SELECT * FROM " + table)] for table in tables}
     monkeypatch.setenv("JOBAGENT_DATABASE", str(path))
     monkeypatch.setattr("jobagent.llm.LocalLLM.generate_json", lambda *args:
                         {"model": "mock", "content": json.dumps(output())})
-    monkeypatch.setattr(Database, "initialize", lambda *args: (_ for _ in ()).throw(AssertionError("Must not initialize")))
     assert main(["--root", str(ROOT), "analyze", "1"]) == 0
     result = json.loads(capsys.readouterr().out)
     assert result["validation"]["human_review_required"] is True
     assert result["ad_version"] == 1
-    assert path.read_bytes() == before
+    assert "profile_path" not in result
+    assert "profile_hash" not in result
+    assert result["analysis"]["requirements"]
+    with db.connect(read_only=True) as connection:
+        for table, rows in before.items():
+            assert [tuple(row) for row in connection.execute("SELECT * FROM " + table)] == rows
+        assert connection.execute("SELECT count(*) FROM analysis_results").fetchone()[0] == 1
+    assert result["filter"]["decision"] == "REVIEW"
     assert db.history() == []
 
 
@@ -87,3 +97,22 @@ def test_search_never_calls_llm(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr("jobagent.platsbanken.Platsbanken.search", lambda *args:
                         Page.model_validate({"total": {"value": 0}, "hits": []}))
     assert main(["--root", str(ROOT), "search", "--query", "Java"]) == 0
+
+
+@pytest.mark.parametrize("command", ["match", "match-show"])
+def test_removed_commands_rejected_before_storage_or_network(command, monkeypatch, capsys):
+    def fail(*args, **kwargs):
+        pytest.fail("Removed commands must be rejected before configuration is loaded")
+    monkeypatch.setattr("jobagent.cli.load_settings", fail)
+    with pytest.raises(SystemExit) as error:
+        main([command, "1"])
+    assert error.value.code == 2
+    assert "invalid choice" in capsys.readouterr().err
+
+
+@pytest.mark.parametrize("arguments", [["config-check"], ["analyze", "1"]])
+def test_profile_option_rejected(arguments, capsys):
+    with pytest.raises(SystemExit) as error:
+        main([*arguments, "--profile", "missing.toml"])
+    assert error.value.code == 2
+    assert "unrecognized arguments" in capsys.readouterr().err

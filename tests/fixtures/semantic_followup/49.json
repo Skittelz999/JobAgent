@@ -1,0 +1,213 @@
+{
+  "source": {
+    "application_url": "https://jobs.smartrecruiters.com/HMGroup/744000157774153-software-engineer-java",
+    "deadline": "2026-11-26T22:59:59Z",
+    "description": "Job Description\nH&M is reshaping the future of promotions and customer incentives at a global scale! We are driving a major transformation across all our channels, involving significant architectural improvements, and unlocking endless business opportunities. \nWe are looking for a Software Engineer with strong experience in backend development using Java to help drive and deliver our ongoing initiatives. Join us in redefining the tech landscape and building innovative solutions that create impact worldwide. \nWHAT YOU’LL DO \nCreating and delivering technical solutions to business challenges \nDelivering software solutions that run globally and impact millions of customers \nDevelop in both spec-driven development fashion with AI agents and in traditional way \nUse engineering expertise to ensure AI-generated and manually developed solutions meet quality, performance, security, and maintainability standards, and participating in increasing said standards \nMaintain and contribute to the team’s strong collaboration culture \nWork on tests and automation around it \n\nWHO YOU’LL WORK WITH  \nYou will be part of one of our dedicated product teams, collaborating closely with colleagues to bring these transformations to life. You are passionate about programming and take pride in delivering high-quality, polished solutions. As a developer, you have a genuine interest in the technology you work with, always striving to build a strong tech foundation that supports future ventures. You are eager to be involved in various parts of the development process: from design, build, test, deploy, monitor and maintain.   \nWe value teamwork, and we are looking for someone with excellent interpersonal skills who thrives in a dynamic, fun and engaging professional environment. If this sounds exciting, we want to hear from you!  \nWHO YOU ARE  \nSomone who is used to work in very collaborative fashion \nHands on experience of end-to-end development in a microservice and cloud environment - from idea, design, build, test, deploy, monitor and running microservices at global scale in production  \n3 to 5 years' experience in developing and testing applications/components  \nExperience with Kubernetes and container technologies, such as Docker  \nAdvanced level of Java 21+ and prior working experience with Spring Boot and Spring Framework  \nPractical experience developing though specification-driven development with LLMs \nExperience developing with AI agents, including effective context management, tool integration, and agent orchestration \nCreating, running and maintaining testing setups including component, integration and performance tests \nAutomation through CI/CD pipelines including continuous deployment  \nExcellent in English communication \n\nNice to have:  \nHave experience creating and running applications with LLMs and MCPs in production \nAbility to design and structure data models and knowledge repositories that enable reliable AI and agent-based solutions \nHands-on experience integrating AI agent workflows with traditional engineering practices, such as CI/CD, test automation and automation of deployments \nExperience working in, or helping teams transition to, AI-agent-enabled development processes and ways of working. \nExperience with Azure, GCP \nInfrastructure as code, such as Terraform  \nDatabase experience, such as NoSQL \n\nWHO WE ARE  \nH&M Group is a global company with strong fashion brands and ventures. Our goal is to prove that there is no compromise between exceptional design, affordable prices, and sustainable solutions. We want to liberate fashion for the many, and our customers are at the heart of every decision we make.  \nWe are made up of thousands of passionate and talented colleagues united by our shared culture and values. Together, we use our scale and knowledge to push the fashion industry towards a more inclusive and sustainable future.  \nWHY YOU’LL LOVE WORKING HERE  \nAt H&M Group, we are proud to be a vibrant and welcoming company. We offer our employees attractive benefits with extensive development opportunities around the globe.  \nAll our employees are included in our H&M Incentive Program (HIP)  \nStaff discount usable across all H&M Group brands, in stores and online  \nWork-life balance, 30 days’ vacation, and wellness allowance of 4000 SEK/year  \nAccess to Benify for discounts on gym memberships, travel, hotels, and more  \nCompensation boost during parental leave  \n\nJOIN US  \nOur uniqueness comes from a combination of many things – our inclusive and collaborative culture, our strong values, and opportunities for growth. But most of all, it is our people who make us who we are.  \nThis is a full-time, permanent position, starting as soon as possible according to agreement. The role is hybrid, based in Stockholm, Sweden, where close collaboration with stakeholders is an important part of the role.  \nApply by submitting your CV in English as soon as possible. Due to data policies, we only accept applications through our career page. Application deadline 5th oct 2026 \nWe are committed to a recruitment process that is fair, equitable, and based on competency. We therefore kindly ask you not to attach a cover letter.",
+    "employer": "H & M Hennes & Mauritz GBC AB",
+    "external_id": "31649235",
+    "location": "Stockholm",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31649235",
+    "published_at": "2026-10-27T09:56:35Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "kpPX_CNN_gDU",
+        "label": "Tillsvidareanställning (inkl. eventuell provanställning)",
+        "legacy_ams_taxonomy_id": null
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "rQds_YGd_quU",
+        "label": "Mjukvaruutvecklare",
+        "legacy_ams_taxonomy_id": "80"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "STOCKHOLM",
+          "coordinates": [
+            18.07002465623814,
+            59.33464475582677
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Stockholm",
+          "municipality_code": "0180",
+          "municipality_concept_id": "AvNB_uwa_6n6",
+          "postcode": "11144",
+          "region": "Stockholms län",
+          "region_code": "01",
+          "region_concept_id": "CifL_Rzy_Mku",
+          "street_address": null
+        }
+      ],
+      "workplace_model": {
+        "concept_id": "ZxwM_gtz_n61",
+        "label": "Arbete på plats"
+      }
+    },
+    "title": "Software Engineer - Java",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Job Description",
+    "p0002": "H&M is reshaping the future of promotions and customer incentives at a global scale!",
+    "p0003": "We are driving a major transformation across all our channels, involving significant architectural improvements, and unlocking endless business opportunities.",
+    "p0004": "We are looking for a Software Engineer with strong experience in backend development using Java to help drive and deliver our ongoing initiatives.",
+    "p0005": "Join us in redefining the tech landscape and building innovative solutions that create impact worldwide.",
+    "p0006": "WHAT YOU’LL DO",
+    "p0007": "Creating and delivering technical solutions to business challenges",
+    "p0008": "Delivering software solutions that run globally and impact millions of customers",
+    "p0009": "Develop in both spec-driven development fashion with AI agents and in traditional way",
+    "p0010": "Use engineering expertise to ensure AI-generated and manually developed solutions meet quality, performance, security, and maintainability standards, and participating in increasing said standards",
+    "p0011": "Maintain and contribute to the team’s strong collaboration culture",
+    "p0012": "Work on tests and automation around it",
+    "p0013": "WHO YOU’LL WORK WITH",
+    "p0014": "You will be part of one of our dedicated product teams, collaborating closely with colleagues to bring these transformations to life.",
+    "p0015": "You are passionate about programming and take pride in delivering high-quality, polished solutions.",
+    "p0016": "As a developer, you have a genuine interest in the technology you work with, always striving to build a strong tech foundation that supports future ventures.",
+    "p0017": "You are eager to be involved in various parts of the development process: from design, build, test, deploy, monitor and maintain.",
+    "p0018": "We value teamwork, and we are looking for someone with excellent interpersonal skills who thrives in a dynamic, fun and engaging professional environment.",
+    "p0019": "If this sounds exciting, we want to hear from you!",
+    "p0020": "WHO YOU ARE",
+    "p0021": "Somone who is used to work in very collaborative fashion",
+    "p0022": "Hands on experience of end-to-end development in a microservice and cloud environment - from idea, design, build, test, deploy, monitor and running microservices at global scale in production",
+    "p0023": "3 to 5 years' experience in developing and testing applications/components",
+    "p0024": "Experience with Kubernetes and container technologies, such as Docker",
+    "p0025": "Advanced level of Java 21+ and prior working experience with Spring Boot and Spring Framework",
+    "p0026": "Practical experience developing though specification-driven development with LLMs",
+    "p0027": "Experience developing with AI agents, including effective context management, tool integration, and agent orchestration",
+    "p0028": "Creating, running and maintaining testing setups including component, integration and performance tests",
+    "p0029": "Automation through CI/CD pipelines including continuous deployment",
+    "p0030": "Excellent in English communication",
+    "p0031": "Nice to have:",
+    "p0032": "Have experience creating and running applications with LLMs and MCPs in production",
+    "p0033": "Ability to design and structure data models and knowledge repositories that enable reliable AI and agent-based solutions",
+    "p0034": "Hands-on experience integrating AI agent workflows with traditional engineering practices, such as CI/CD, test automation and automation of deployments",
+    "p0035": "Experience working in, or helping teams transition to, AI-agent-enabled development processes and ways of working.",
+    "p0036": "Experience with Azure, GCP",
+    "p0037": "Infrastructure as code, such as Terraform",
+    "p0038": "Database experience, such as NoSQL",
+    "p0039": "WHO WE ARE",
+    "p0040": "H&M Group is a global company with strong fashion brands and ventures.",
+    "p0041": "Our goal is to prove that there is no compromise between exceptional design, affordable prices, and sustainable solutions.",
+    "p0042": "We want to liberate fashion for the many, and our customers are at the heart of every decision we make.",
+    "p0043": "We are made up of thousands of passionate and talented colleagues united by our shared culture and values.",
+    "p0044": "Together, we use our scale and knowledge to push the fashion industry towards a more inclusive and sustainable future.",
+    "p0045": "WHY YOU’LL LOVE WORKING HERE",
+    "p0046": "At H&M Group, we are proud to be a vibrant and welcoming company.",
+    "p0047": "We offer our employees attractive benefits with extensive development opportunities around the globe.",
+    "p0048": "All our employees are included in our H&M Incentive Program (HIP)",
+    "p0049": "Staff discount usable across all H&M Group brands, in stores and online",
+    "p0050": "Work-life balance, 30 days’ vacation, and wellness allowance of 4000 SEK/year",
+    "p0051": "Access to Benify for discounts on gym memberships, travel, hotels, and more",
+    "p0052": "Compensation boost during parental leave",
+    "p0053": "JOIN US",
+    "p0054": "Our uniqueness comes from a combination of many things – our inclusive and collaborative culture, our strong values, and opportunities for growth.",
+    "p0055": "But most of all, it is our people who make us who we are.",
+    "p0056": "This is a full-time, permanent position, starting as soon as possible according to agreement.",
+    "p0057": "The role is hybrid, based in Stockholm, Sweden, where close collaboration with stakeholders is an important part of the role.",
+    "p0058": "Apply by submitting your CV in English as soon as possible.",
+    "p0059": "Due to data policies, we only accept applications through our career page.",
+    "p0060": "Application deadline 5th oct 2026",
+    "p0061": "We are committed to a recruitment process that is fair, equitable, and based on competency.",
+    "p0062": "We therefore kindly ask you not to attach a cover letter."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0021",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0022",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0023",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0024",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0034",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0035",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0036",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0037",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0038",
+        "importance": "preferred"
+      }
+    ]
+  }
+}

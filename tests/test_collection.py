@@ -139,3 +139,25 @@ def test_null_fields_and_timezone_conversion():
 def test_unsafe_url_rejected():
     with pytest.raises(ValueError):
         normalize(raw(webpage_url="javascript:alert(1)"), "Europe/Stockholm")
+
+
+def test_expired_ads_are_skipped_without_ending_pagination(db):
+    expired = raw("old", application_deadline="2000-01-01T23:59:59")
+    open_ad = raw("open", application_deadline="2099-01-01T23:59:59")
+    def handler(request):
+        hit = expired if request.url.params["offset"] == "0" else open_ad
+        return httpx.Response(200, json={"total": {"value": 2}, "hits": [hit]})
+    result = collect(db, source(handler), Search(page_size=1))
+    assert result["status"] == "complete"
+    assert result["skipped_expired"] == 1
+    assert [job["external_id"] for job in db.list_jobs()] == ["open"]
+    assert db.get_job(2) is None
+
+
+def test_existing_ad_with_shortened_deadline_disappears_from_lists(db):
+    db.upsert_page([normalize(raw(application_deadline="2099-01-01T23:59:59"), "Europe/Stockholm")])
+    expired = raw(application_deadline="2000-01-01T23:59:59")
+    result = collect(db, source(lambda _: httpx.Response(200, json={"total": {"value": 1}, "hits": [expired]})), Search())
+    assert result["updated"] == 1
+    assert db.list_jobs() == db.jobs_with_latest_analysis() == []
+    assert db.get_job(1)["version"] == 2

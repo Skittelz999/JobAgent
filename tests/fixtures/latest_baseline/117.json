@@ -1,0 +1,180 @@
+{
+  "source": {
+    "application_url": "https://pnty-apply.ponty-system.se/friday?id=5272&pnty_src=platsbanken",
+    "deadline": "2026-11-06T22:59:59Z",
+    "description": "Vill du arbeta med databaser i ett uppdrag där din problemlösningsförmåga gör verklig skillnad? Vi söker nu en erfaren databasutvecklare till vår kund i Lund, där du får kliva in i ett omfattande och tekniskt komplext migreringsprojekt inom försvarsindustrin. Rollen passar dig som gillar att ta ägarskap, ställa frågor och hitta lösningar även när alla svar inte finns dokumenterade från början. Välkommen med din ansökan!\nOM TJÄNSTEN:\nI rollen driver du den logiska datamigreringen för teknisk information kopplad till ett större fartygsprojekt, som ritningar, PDF och teknisk dokumentation och annan teknisk dokumentation som ska föras över från ett äldre Oracle-baserat PLM-system till Windchill. Det handlar inte enbart om att flytta data, en stor del av arbetet består av att undersöka hur informationen är uppbyggd, förstå datarelationer och säkerställa att rätt information migreras på rätt sätt. Dokumentationen i det befintliga systemet är begränsad, vilket gör att rollen passar dig som trivs med detektivarbete och gillar att lösa komplexa problem på ett smidigt och strukturerat sätt.\nDu driver arbetet självständigt, men har stöd av en befintlig utvecklare och användare i verksamheten. För att lyckas behöver du ta egna initiativ, aktivt söka upp information och ställa rätt frågor för att förstå både systemen och hur informationen används.\nDu blir en del av ett team i Lund med cirka 25 personer och bred kompetens inom utveckling, systemadministration, databaser och metodutveckling. I en Microsoftmiljö arbetar teamet både med att anpassa befintliga system efter verksamhetens behov och att utveckla nya verktyg från grunden. Framåt finns också fokus på modernisering, cloud, AI och datadrivna arbetssätt, vilket ger dig möjlighet att arbeta i en verksamhet under utveckling.\nUppdraget är initialt kopplat till ett projekt som planeras pågå i minst ett år. Vår kund befinner sig i en stark tillväxtfas, och därmed finns goda möjligheter till förlängning och en långsiktig fortsättning för dig som gör ett bra arbete.\nDu kommer bland annat att:\nAnalysera databaser, datastrukturer och relationer i ett äldre Oracle-baserat PLM-system\nUndersöka hur teknisk information är uppbyggd och används i verksamheten\nTa fram och implementera logik för migrering till Windchill\nSäkerställa att ritningar, PDF och annan dokumentation överförs korrekt\nFelsöka och lösa problem som uppstår under migreringen\nSamarbeta nära användare och verksamhet för att inhämta kunskap och verifiera information\nDriva arbetet självständigt, med stöd från en befintlig utvecklare i teamet\n\nVI SÖKER DIG SOM:\nHar minst 3 års arbetslivserfarenhet av en relevant tjänst\nHar god och praktisk förståelse för databaser, datastrukturer och dataanalys\nHar erfarenhet av system- eller datamigrering, alternativt av att tolka, strukturera och flytta komplex data mellan system\nHar god förmåga att kommunicera med både tekniska och verksamhetsnära personer\nErfarenhet av Oracle, Java, .NET\nÄr flytande svenska och engelska, både i tal och skrift\n\nDet är även meriterande om du har:\nErfarenhet av PLM-system\nErfarenhet av Windchill\n\nVi lägger stor vikt vid dina personliga egenskaper. För att trivas i rollen är du nyfiken och har ett genuint intresse för att förstå hur både system och verksamhet fungerar. Du är självgående, tar ansvar för att driva arbetet framåt och trivs med att själv söka information när alla svar inte finns dokumenterade.\nDu är analytisk och gillar att lösa komplexa problem. Samtidigt är du kommunikativ och har lätt för att samarbeta med både tekniska kollegor och verksamhetsnära användare. Du vågar ställa frågor, utmana invanda arbetssätt och är trygg i att ta dig an uppgifter där du behöver undersöka, reda ut och hitta rätt väg framåt.\nOM ANSTÄLLNINGEN:\nTjänsten är en konsultuppdrag där du kommer att vara anställd av Friday.\nDenna befattning kräver att du genomgår och blir godkänd enligt vid var tid gällande bestämmelser för säkerhetsskydd. För befattningar där vår kund har krav på säkerhetsklassplacering kan det, i förekommande fall, medföra krav på visst medborgarskap.\nÖVRIG INFO:\nOmfattning: Heltid\nStart: Enligt överenskommelse\nPlacering: Lund\nRekryteringsansvarig: Ellen Brobeck, Ellen.Brobeck@friday.se\nLön: Marknadsmässig\n\nAnsök genom att klicka på länken nedan. Kom ihåg att vara snabb med din ansökan då vi gör löpande urval av kandidater och att annonsen kan stängas ner innan tjänsten är tillsatt om vi har gått vidare till urvals- och intervjufasen.\nOM FRIDAY:\nPå Friday brinner vi för att hjälpa dig att ta nästa steg i din karriär inom IT och teknik, oavsett om du söker ditt första jobb eller redan har några års erfarenhet. Genom att lyssna på vad just du vill och drivs av matchar vi dig med företag och möjligheter som får dig att se fram emot att gå till jobbet.\nVi värderar ambition och potential högt och arbetar aktivt för en fördomsfri rekrytering, där alla ges samma chans att lyckas.\nVi finns i Stockholm, Göteborg, Malmö, Linköping och Örebro. Varje år genomför vi över 5 000 karriärmöten och matchar kandidater med allt från globala företag till innovativa startups.",
+    "employer": "Friday Väst AB",
+    "external_id": "31614627",
+    "location": "Lund",
+    "original_url": "https://arbetsformedlingen.se/platsbanken/annonser/31614627",
+    "published_at": "2026-10-19T12:22:06Z",
+    "removed": false,
+    "source": "platsbanken",
+    "source_requirements": {
+      "employment_type": {
+        "concept_id": "PFZr_Syz_cUq",
+        "label": "Vanlig anställning",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "experience_required": true,
+      "must_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "nice_to_have": {
+        "education": [],
+        "education_level": [],
+        "languages": [],
+        "skills": [],
+        "work_experiences": []
+      },
+      "occupation": {
+        "concept_id": "rz2m_96d_vyF",
+        "label": "Databasutvecklare",
+        "legacy_ams_taxonomy_id": "2423"
+      },
+      "occupation_group": {
+        "concept_id": "DJh5_yyF_hEM",
+        "label": "Mjukvaru- och systemutvecklare m.fl.",
+        "legacy_ams_taxonomy_id": "2512"
+      },
+      "working_hours_type": {
+        "concept_id": "6YE1_gAC_R2G",
+        "label": "Heltid",
+        "legacy_ams_taxonomy_id": "1"
+      },
+      "workplace_addresses": [
+        {
+          "city": "Lund",
+          "coordinates": [
+            13.0010378671146,
+            55.6073863995885
+          ],
+          "country": "Sverige",
+          "country_code": "199",
+          "country_concept_id": "i46j_HmG_v64",
+          "municipality": "Lund",
+          "municipality_code": "1281",
+          "municipality_concept_id": "muSY_tsR_vDZ",
+          "postcode": "21122",
+          "region": "Skåne län",
+          "region_code": "12",
+          "region_concept_id": "CaRE_1nn_cSU",
+          "street_address": "Adelgatan 9"
+        }
+      ],
+      "workplace_model": {
+        "concept_id": null,
+        "label": null
+      }
+    },
+    "title": "Databasutvecklare till bolag inom försvarsindustrin",
+    "work_arrangement": "unknown"
+  },
+  "original_passages": {
+    "p0001": "Vill du arbeta med databaser i ett uppdrag där din problemlösningsförmåga gör verklig skillnad?",
+    "p0002": "Vi söker nu en erfaren databasutvecklare till vår kund i Lund, där du får kliva in i ett omfattande och tekniskt komplext migreringsprojekt inom försvarsindustrin.",
+    "p0003": "Rollen passar dig som gillar att ta ägarskap, ställa frågor och hitta lösningar även när alla svar inte finns dokumenterade från början.",
+    "p0004": "Välkommen med din ansökan!",
+    "p0005": "OM TJÄNSTEN:",
+    "p0006": "I rollen driver du den logiska datamigreringen för teknisk information kopplad till ett större fartygsprojekt, som ritningar, PDF och teknisk dokumentation och annan teknisk dokumentation som ska föras över från ett äldre Oracle-baserat PLM-system till Windchill.",
+    "p0007": "Det handlar inte enbart om att flytta data, en stor del av arbetet består av att undersöka hur informationen är uppbyggd, förstå datarelationer och säkerställa att rätt information migreras på rätt sätt.",
+    "p0008": "Dokumentationen i det befintliga systemet är begränsad, vilket gör att rollen passar dig som trivs med detektivarbete och gillar att lösa komplexa problem på ett smidigt och strukturerat sätt.",
+    "p0009": "Du driver arbetet självständigt, men har stöd av en befintlig utvecklare och användare i verksamheten.",
+    "p0010": "För att lyckas behöver du ta egna initiativ, aktivt söka upp information och ställa rätt frågor för att förstå både systemen och hur informationen används.",
+    "p0011": "Du blir en del av ett team i Lund med cirka 25 personer och bred kompetens inom utveckling, systemadministration, databaser och metodutveckling.",
+    "p0012": "I en Microsoftmiljö arbetar teamet både med att anpassa befintliga system efter verksamhetens behov och att utveckla nya verktyg från grunden.",
+    "p0013": "Framåt finns också fokus på modernisering, cloud, AI och datadrivna arbetssätt, vilket ger dig möjlighet att arbeta i en verksamhet under utveckling.",
+    "p0014": "Uppdraget är initialt kopplat till ett projekt som planeras pågå i minst ett år.",
+    "p0015": "Vår kund befinner sig i en stark tillväxtfas, och därmed finns goda möjligheter till förlängning och en långsiktig fortsättning för dig som gör ett bra arbete.",
+    "p0016": "Du kommer bland annat att:",
+    "p0017": "Analysera databaser, datastrukturer och relationer i ett äldre Oracle-baserat PLM-system",
+    "p0018": "Undersöka hur teknisk information är uppbyggd och används i verksamheten",
+    "p0019": "Ta fram och implementera logik för migrering till Windchill",
+    "p0020": "Säkerställa att ritningar, PDF och annan dokumentation överförs korrekt",
+    "p0021": "Felsöka och lösa problem som uppstår under migreringen",
+    "p0022": "Samarbeta nära användare och verksamhet för att inhämta kunskap och verifiera information",
+    "p0023": "Driva arbetet självständigt, med stöd från en befintlig utvecklare i teamet",
+    "p0024": "VI SÖKER DIG SOM:",
+    "p0025": "Har minst 3 års arbetslivserfarenhet av en relevant tjänst",
+    "p0026": "Har god och praktisk förståelse för databaser, datastrukturer och dataanalys",
+    "p0027": "Har erfarenhet av system- eller datamigrering, alternativt av att tolka, strukturera och flytta komplex data mellan system",
+    "p0028": "Har god förmåga att kommunicera med både tekniska och verksamhetsnära personer",
+    "p0029": "Erfarenhet av Oracle, Java, .NET",
+    "p0030": "Är flytande svenska och engelska, både i tal och skrift",
+    "p0031": "Det är även meriterande om du har:",
+    "p0032": "Erfarenhet av PLM-system",
+    "p0033": "Erfarenhet av Windchill",
+    "p0034": "Vi lägger stor vikt vid dina personliga egenskaper.",
+    "p0035": "För att trivas i rollen är du nyfiken och har ett genuint intresse för att förstå hur både system och verksamhet fungerar.",
+    "p0036": "Du är självgående, tar ansvar för att driva arbetet framåt och trivs med att själv söka information när alla svar inte finns dokumenterade.",
+    "p0037": "Du är analytisk och gillar att lösa komplexa problem.",
+    "p0038": "Samtidigt är du kommunikativ och har lätt för att samarbeta med både tekniska kollegor och verksamhetsnära användare.",
+    "p0039": "Du vågar ställa frågor, utmana invanda arbetssätt och är trygg i att ta dig an uppgifter där du behöver undersöka, reda ut och hitta rätt väg framåt.",
+    "p0040": "OM ANSTÄLLNINGEN:",
+    "p0041": "Tjänsten är en konsultuppdrag där du kommer att vara anställd av Friday.",
+    "p0042": "Denna befattning kräver att du genomgår och blir godkänd enligt vid var tid gällande bestämmelser för säkerhetsskydd.",
+    "p0043": "För befattningar där vår kund har krav på säkerhetsklassplacering kan det, i förekommande fall, medföra krav på visst medborgarskap.",
+    "p0044": "ÖVRIG INFO:",
+    "p0045": "Omfattning: Heltid",
+    "p0046": "Start: Enligt överenskommelse",
+    "p0047": "Placering: Lund",
+    "p0048": "Rekryteringsansvarig: Ellen Brobeck, Ellen.Brobeck@friday.se",
+    "p0049": "Lön: Marknadsmässig",
+    "p0050": "Ansök genom att klicka på länken nedan.",
+    "p0051": "Kom ihåg att vara snabb med din ansökan då vi gör löpande urval av kandidater och att annonsen kan stängas ner innan tjänsten är tillsatt om vi har gått vidare till urvals- och intervjufasen.",
+    "p0052": "OM FRIDAY:",
+    "p0053": "På Friday brinner vi för att hjälpa dig att ta nästa steg i din karriär inom IT och teknik, oavsett om du söker ditt första jobb eller redan har några års erfarenhet.",
+    "p0054": "Genom att lyssna på vad just du vill och drivs av matchar vi dig med företag och möjligheter som får dig att se fram emot att gå till jobbet.",
+    "p0055": "Vi värderar ambition och potential högt och arbetar aktivt för en fördomsfri rekrytering, där alla ges samma chans att lyckas.",
+    "p0056": "Vi finns i Stockholm, Göteborg, Malmö, Linköping och Örebro.",
+    "p0057": "Varje år genomför vi över 5 000 karriärmöten och matchar kandidater med allt från globala företag till innovativa startups."
+  },
+  "recorded_model_selection": {
+    "requirements": [
+      {
+        "passage_id": "p0014",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0025",
+        "importance": "mandatory"
+      },
+      {
+        "passage_id": "p0026",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0027",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0028",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0029",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0030",
+        "importance": "expected"
+      },
+      {
+        "passage_id": "p0032",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0033",
+        "importance": "preferred"
+      },
+      {
+        "passage_id": "p0042",
+        "importance": "expected"
+      }
+    ]
+  }
+}
