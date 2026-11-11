@@ -1,4 +1,4 @@
-"""Manual CLI. Only explicit analyze commands contact a local AI runtime."""
+"""Manual CLI. Only explicit analysis commands contact the configured model provider."""
 import argparse
 from datetime import UTC, datetime
 import json
@@ -42,14 +42,18 @@ def parser() -> argparse.ArgumentParser:
     jobs = commands.add_parser("list", help="List stored ads")
     jobs.add_argument("--keyword")
     jobs.add_argument("--limit", type=int, default=20)
+    jobs.add_argument("--decision", choices=["KEEP", "EXCLUDE", "REVIEW"], help="Filter current ad versions using the configured year limit")
     show = commands.add_parser("show", help="Show one stored ad including description")
     show.add_argument("id", type=int)
     history = commands.add_parser("history", help="Show search runs and completeness")
     history.add_argument("--limit", type=int, default=20)
-    analyze = commands.add_parser("analyze", help="Analyze one stored ad locally, without saving or scoring")
-    analyze.add_argument("id", type=int)
+    analyze = commands.add_parser("analyze", help="Analyze and save one or more stored ads using the configured model provider")
+    analyze.add_argument("ids", type=int, nargs="+", help="Stored job IDs; each invocation reanalyzes them")
+    saved = commands.add_parser("analysis-show", help="Show a saved analysis, source evidence and filter reasons without an LLM call")
+    saved.add_argument("id", type=int, help="Saved analysis ID")
     manual = commands.add_parser("import", help="Import a UTF-8 JSON ad without fetching a URL")
     manual.add_argument("file", type=Path)
+    commands.add_parser("analyze-pending", help="Analyze new, changed, failed or outdated ads")
     return cli
 
 
@@ -83,19 +87,29 @@ def main(argv: list[str] | None = None) -> int:
             spec = Search.model_validate(values)
         database = Database(settings.storage.database)
         if args.command == "analyze":
-            # Lazy imports and read-only access keep collection independent of AI.
-            from jobagent.analysis import analyze_job
-            from jobagent.llm import LocalLLM
-            from jobagent.models import JobAd
+            # Preflight all IDs without creating a missing database or calling AI.
+            from jobagent.llm import create_provider
+            from jobagent.processing import analyze_stored_job
 
-            row = database.get_job(args.id)
-            if row is None:
-                raise ValueError("No stored job with that ID")
-            job = JobAd.model_validate_json(row["payload_json"])
-            result = analyze_job(job, LocalLLM(settings.llm))
-            emit({"ad_id": args.id, "ad_version": row["version"],
-                  "ad_content_hash": row["content_hash"], "title": job.title,
-                  "original_url": job.original_url, **result})
+            rows = []
+            for job_id in dict.fromkeys(args.ids):
+                row = database.get_job(job_id)
+                if row is None:
+                    raise ValueError(f"No stored job with ID {job_id}")
+                rows.append(row)
+            database.initialize()
+            provider = create_provider(settings.llm)
+            results = [analyze_stored_job(database, row, provider, settings.filter) for row in rows]
+            failed = sum(result["status"] == "error" for result in results)
+            emit(results[0] if len(results) == 1 else {
+                "results": results, "succeeded": len(results) - failed, "failed": failed})
+            return 1 if failed else 0
+        if args.command == "analysis-show":
+            from jobagent.processing import show_analysis
+            if not database.path.is_file():
+                raise ValueError("No existing database")
+            database.initialize()
+            emit(show_analysis(database, args.id, settings.filter))
             return 0
         database.initialize()
         if args.command == "import":
@@ -103,6 +117,12 @@ def main(argv: list[str] | None = None) -> int:
             from jobagent.search import import_ad
             value = ManualImport.model_validate_json(args.file.read_text(encoding="utf-8-sig"))
             emit(import_ad(database, value))
+        elif args.command == "analyze-pending":
+            from jobagent.llm import create_provider
+            from jobagent.processing import analyze_pending
+            result = analyze_pending(database, create_provider(settings.llm), settings.filter)
+            emit(result)
+            return 1 if result["failed"] else 0
         elif args.command == "init":
             emit({"database": str(database.path), "schema_version": SCHEMA_VERSION})
         elif args.command == "search":
@@ -111,6 +131,10 @@ def main(argv: list[str] | None = None) -> int:
             emit(result)
             return {"complete": 0, "partial": 2, "failed": 1}[result["status"]]
         elif args.command == "list":
+            if args.decision:
+                from jobagent.processing import list_decisions
+                emit(list_decisions(database, settings.filter, args.decision, args.limit, args.keyword))
+                return 0
             rows = database.list_jobs(args.limit, args.keyword)
             for row in rows:
                 row.pop("payload_json")
@@ -130,7 +154,8 @@ def main(argv: list[str] | None = None) -> int:
             emit(rows)
         return 0
     except KeyboardInterrupt:
-        print("Search interrupted; committed pages are preserved.", file=sys.stderr)
+        print("Analysis interrupted; saved results are preserved." if args.command == "analyze"
+              else "Search interrupted; committed pages are preserved.", file=sys.stderr)
         return 130
     except ValidationError as exc:
         # Avoid echoing possibly private configuration values.

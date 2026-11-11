@@ -52,7 +52,7 @@ def test_partial_search_exit_code(tmp_path, monkeypatch, capsys):
     assert json.loads(capsys.readouterr().out)["status"] == "partial"
 
 
-def test_analyze_is_read_only_and_never_initializes_database(tmp_path, monkeypatch, capsys):
+def test_analyze_saves_separately_without_changing_source_rows(tmp_path, monkeypatch, capsys):
     from jobagent.database import Database
     from jobagent.models import JobAd, SourceAd
     from test_analysis import DESCRIPTION, output
@@ -61,11 +61,12 @@ def test_analyze_is_read_only_and_never_initializes_database(tmp_path, monkeypat
     db = Database(path)
     db.initialize()
     db.upsert_page([SourceAd(job=JobAd(source="test", external_id="1", title="Job", description=DESCRIPTION), raw={})])
-    before = path.read_bytes()
+    tables = ("jobs", "ad_versions", "search_runs", "match_results")
+    with db.connect(read_only=True) as connection:
+        before = {table: [tuple(row) for row in connection.execute("SELECT * FROM " + table)] for table in tables}
     monkeypatch.setenv("JOBAGENT_DATABASE", str(path))
     monkeypatch.setattr("jobagent.llm.LocalLLM.generate_json", lambda *args:
                         {"model": "mock", "content": json.dumps(output())})
-    monkeypatch.setattr(Database, "initialize", lambda *args: (_ for _ in ()).throw(AssertionError("Must not initialize")))
     assert main(["--root", str(ROOT), "analyze", "1"]) == 0
     result = json.loads(capsys.readouterr().out)
     assert result["validation"]["human_review_required"] is True
@@ -73,7 +74,11 @@ def test_analyze_is_read_only_and_never_initializes_database(tmp_path, monkeypat
     assert "profile_path" not in result
     assert "profile_hash" not in result
     assert result["analysis"]["requirements"]
-    assert path.read_bytes() == before
+    with db.connect(read_only=True) as connection:
+        for table, rows in before.items():
+            assert [tuple(row) for row in connection.execute("SELECT * FROM " + table)] == rows
+        assert connection.execute("SELECT count(*) FROM analysis_results").fetchone()[0] == 1
+    assert result["filter"]["decision"] == "REVIEW"
     assert db.history() == []
 
 

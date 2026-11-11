@@ -1,5 +1,6 @@
-"""OpenAI-compatible local transport, separate from collection and storage."""
-from typing import Any
+"""Local model transport for structured analysis."""
+import copy
+from typing import Any, Protocol
 
 import httpx
 
@@ -20,7 +21,7 @@ class LocalLLM:
             "model": self.settings.model, "messages": messages, "temperature": 0,
             "max_tokens": self.settings.max_tokens, "stream": False,
             "response_format": {"type": "json_schema", "json_schema": {
-                "name": "job_analysis", "strict": True, "schema": schema}},
+                "name": "job_analysis", "strict": True, "schema": openai_schema(schema, enforce_limit=False)}},
         }
         # No tools, redirects, proxy environment, implicit downloads or cloud fallback.
         owned = self._client is None
@@ -31,7 +32,7 @@ class LocalLLM:
         try:
             response = client.post(self.settings.base_url + "/chat/completions", json=payload)
         except httpx.TimeoutException:
-            raise LLMError("LM Studio timed out; no analysis was saved. Try again or adjust llm.timeout_seconds.") from None
+            raise LLMError("LM Studio timed out; no valid result was produced. Try again or adjust llm.timeout_seconds.") from None
         except httpx.TransportError:
             raise LLMError("Cannot reach LM Studio. Start its local API server and load the configured model.") from None
         finally:
@@ -53,3 +54,39 @@ class LocalLLM:
             if isinstance(exc, LLMError):
                 raise
             raise LLMError("LM Studio returned an invalid API response.") from None
+
+
+class LLMProvider(Protocol):
+    settings: LLMSettings
+    def generate_json(self, messages: list[dict[str, str]], schema: dict[str, Any]) -> dict[str, Any]: ...
+
+
+def openai_schema(schema: dict, *, enforce_limit: bool = True) -> dict:
+    """Share source-ID enums so long ads do not repeat hundreds of enum values."""
+    result = copy.deepcopy(schema)
+    shared = {}
+    def visit(node):
+        if isinstance(node, dict):
+            values = node.get("enum")
+            if values and all(isinstance(v, str) and v.startswith("p") and v[1:].isdigit() for v in values):
+                key = tuple(values)
+                if key not in shared:
+                    shared[key] = "SourcePassageId" + (str(len(shared) + 1) if shared else "")
+                node.clear()
+                node["$ref"] = "#/$defs/" + shared[key]
+            else:
+                for value in list(node.values()):
+                    visit(value)
+        elif isinstance(node, list):
+            for value in node:
+                visit(value)
+    visit(result)
+    if enforce_limit and sum(len(ids) for ids in shared) > 900:
+        raise LLMError("Too many source passages for OpenAI structured output; nothing was sent.")
+    for ids, name in shared.items():
+        result.setdefault("$defs", {})[name] = {"type": "string", "enum": list(ids)}
+    return result
+
+
+def create_provider(settings: LLMSettings) -> LLMProvider:
+    return LocalLLM(settings)
