@@ -59,8 +59,8 @@ class LLMSettings(StrictModel):
     base_url: str = "http://127.0.0.1:1234/v1"
     model: str = Field(default="openai/gpt-oss-20b", min_length=1)
     timeout_seconds: float = Field(default=180, gt=0, le=600)
-    max_tokens: int = Field(default=4000, ge=256, le=16000)
-    max_input_chars: int = Field(default=20000, ge=1000, le=100000)
+    max_tokens: int = Field(default=8000, ge=256, le=16000)
+    max_input_chars: int = Field(default=40000, ge=1000, le=100000)
 
     @field_validator("base_url")
     @classmethod
@@ -79,11 +79,16 @@ class LLMSettings(StrictModel):
         return base + "/v1" if not parsed.path.strip("/") else base
 
 
+class FilterSettings(StrictModel):
+    max_required_years: float = Field(default=3, ge=0, allow_inf_nan=False, strict=True)
+
+
 class Settings(StrictModel):
     storage: Storage = Field(default_factory=Storage)
     source: Source = Field(default_factory=Source)
     search: Search = Field(default_factory=Search)
     llm: LLMSettings = Field(default_factory=LLMSettings)
+    filter: FilterSettings = Field(default_factory=FilterSettings)
 
 
 def load_settings(project_root: Path, config_path: Path | None = None) -> Settings:

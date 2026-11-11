@@ -159,5 +159,5 @@ def test_existing_ad_with_shortened_deadline_disappears_from_lists(db):
     expired = raw(application_deadline="2000-01-01T23:59:59")
     result = collect(db, source(lambda _: httpx.Response(200, json={"total": {"value": 1}, "hits": [expired]})), Search())
     assert result["updated"] == 1
-    assert db.list_jobs() == []
+    assert db.list_jobs() == db.jobs_with_latest_analysis() == []
     assert db.get_job(1)["version"] == 2

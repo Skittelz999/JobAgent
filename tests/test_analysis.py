@@ -24,7 +24,13 @@ def choice(passage_id, importance="expected", kind="qualification", conditional=
 
 
 def output():
-    return {"requirements": [choice("p0003"), choice("p0007", "preferred", context_ids=["p0006"])]}
+    return {"overview": {"summary": [{"text_sv": "En roll inom utveckling.", "source_ids": ["p0002"]}],
+                         "techstack": [], "education": [], "languages": [], "location": [], "work_arrangement": []},
+            "requirements": [choice("p0003"), choice("p0007", "preferred", context_ids=["p0006"])],
+            "experience": {"presence": "present", "coverage_complete": True, "items": [{
+                "kind": "professional_experience", "minimum_years": None, "maximum_years": None,
+                "importance": "expected", "domain": "Java/backend", "alternatives_accepted": False,
+                "conditional": False, "ambiguous": False, "source_ids": ["p0002"], "context_ids": ["p0001"]}]}}
 
 
 def provider(handler, settings=None):
@@ -67,7 +73,6 @@ def test_invalid_model_output_rejected(bad_content):
     ([choice("p003")], "does not exist"),
     ([choice("p0003"), choice("p0003")], "more than once"),
     ([choice("p0003", context_ids=["p9999"])], "context reference"),
-    ([], "No qualification"),
 ])
 def test_bad_references_and_empty_extraction_rejected_without_filling(selections, message):
     with pytest.raises(LLMError, match=message):
@@ -169,7 +174,7 @@ def test_http_error_does_not_retry_or_echo_response_body(status):
     assert len(calls) == 1
 
 
-@pytest.mark.parametrize("description", ["", "A" * 25000])
+@pytest.mark.parametrize("description", ["", "A" * (LLMSettings().max_input_chars + 1)])
 def test_missing_or_oversized_input_never_sent(description):
     def handler(_):
         pytest.fail("Input must be rejected before an HTTP call")

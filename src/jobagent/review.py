@@ -7,7 +7,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from jobagent.analysis import Extraction
-from jobagent.llm import LLMError, LocalLLM
+from jobagent.llm import LLMError, LLMProvider, create_provider
 from jobagent.models import JobAd
 from jobagent.passages import Passage, number_passages
 
@@ -134,7 +134,7 @@ def verify_review(review: Review, extraction: Extraction, passages: list[Passage
     return results
 
 
-def review_extraction(job: JobAd, extraction: Extraction, provider: LocalLLM) -> dict:
+def review_extraction(job: JobAd, extraction: Extraction, provider: LLMProvider) -> dict:
     """Explicit opt-in API; accepts raw extraction, never profile-enriched analysis."""
     if not job.description.strip():
         raise LLMError("Ad has no description to review.")
@@ -169,7 +169,7 @@ def main() -> int:
     from pathlib import Path
     from jobagent.settings import load_settings
 
-    parser = argparse.ArgumentParser(description="Optional local second opinion; never applies suggestions.")
+    parser = argparse.ArgumentParser(description="Optional second opinion using the configured provider; never applies suggestions.")
     parser.add_argument("--source", required=True, type=Path, help="Saved JobAd JSON")
     parser.add_argument("--extraction", required=True, type=Path, help="Raw Extraction JSON, without profile fields")
     parser.add_argument("--root", type=Path, default=Path.cwd())
@@ -177,7 +177,7 @@ def main() -> int:
     try:
         job = JobAd.model_validate_json(args.source.read_text(encoding="utf-8"))
         extraction = Extraction.model_validate_json(args.extraction.read_text(encoding="utf-8"))
-        result = review_extraction(job, extraction, LocalLLM(load_settings(args.root).llm))
+        result = review_extraction(job, extraction, create_provider(load_settings(args.root).llm))
     except (OSError, ValidationError):
         parser.exit(1, "Cannot read/validate source or extraction/configuration. No review was saved.\n")
     except LLMError as error:

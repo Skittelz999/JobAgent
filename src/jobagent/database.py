@@ -10,7 +10,7 @@ from typing import Any, Literal
 
 from jobagent.models import SourceAd
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 def utc_now() -> str:
     return datetime.now(UTC).isoformat()
@@ -42,6 +42,11 @@ class Database:
             version = connection.execute("PRAGMA user_version").fetchone()[0]
             if version > SCHEMA_VERSION:
                 raise ValueError("Database is newer than this application")
+            if 0 < version < SCHEMA_VERSION:
+                stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
+                backup = self.path.with_name(f"{self.path.stem}.pre-v{SCHEMA_VERSION}.{stamp}.sqlite3")
+                with sqlite3.connect(backup) as destination:
+                    connection.backup(destination)
             connection.execute("PRAGMA journal_mode=WAL")
             if version == 0:
                 connection.executescript("""
@@ -101,6 +106,32 @@ class Database:
                         FOREIGN KEY(job_id, ad_version) REFERENCES ad_versions(job_id, version)
                     );
                     PRAGMA user_version=2;
+                    COMMIT;
+                """)
+            if version < 3:
+                connection.executescript("""
+                    BEGIN IMMEDIATE;
+                    CREATE TABLE analysis_results (
+                        id INTEGER PRIMARY KEY,
+                        job_id INTEGER NOT NULL,
+                        ad_version INTEGER NOT NULL,
+                        ad_content_hash TEXT NOT NULL,
+                        status TEXT NOT NULL CHECK(status IN ('success', 'error')),
+                        result_json TEXT,
+                        error_message TEXT,
+                        decision TEXT NOT NULL CHECK(decision IN ('KEEP', 'EXCLUDE', 'REVIEW')),
+                        filter_json TEXT NOT NULL,
+                        model TEXT NOT NULL,
+                        prompt_version TEXT NOT NULL,
+                        created_at TEXT NOT NULL,
+                        FOREIGN KEY(job_id, ad_version) REFERENCES ad_versions(job_id, version),
+                        CHECK((status='success' AND result_json IS NOT NULL AND error_message IS NULL)
+                           OR (status='error' AND result_json IS NULL AND error_message IS NOT NULL
+                               AND decision='REVIEW'))
+                    );
+                    CREATE INDEX analysis_version_latest ON analysis_results
+                        (job_id, ad_version, ad_content_hash, id DESC);
+                    PRAGMA user_version=3;
                     COMMIT;
                 """)
 
@@ -188,3 +219,54 @@ class Database:
         with self.connect() as connection:
             return [dict(row) for row in connection.execute(
                 "SELECT * FROM search_runs ORDER BY id DESC LIMIT ?", (limit,))]
+
+    def get_ad_version(self, job_id: int, version: int) -> dict[str, Any] | None:
+        with self.connect(read_only=True) as connection:
+            row = connection.execute("SELECT * FROM ad_versions WHERE job_id=? AND version=?",
+                                     (job_id, version)).fetchone()
+            return dict(row) if row else None
+
+    def save_analysis(self, job_id: int, ad_version: int, ad_content_hash: str, *,
+                      result: dict | None, error: str | None, evaluation: dict,
+                      model: str, prompt_version: str) -> int:
+        """Append an attempt against an immutable version; never update an ad."""
+        if (result is None) != (error is not None):
+            raise ValueError("An analysis attempt needs either a result or an error")
+        with self.connect() as connection:
+            connection.execute("BEGIN IMMEDIATE")
+            version = connection.execute(
+                "SELECT content_hash FROM ad_versions WHERE job_id=? AND version=?",
+                (job_id, ad_version)).fetchone()
+            if version is None or version["content_hash"] != ad_content_hash:
+                raise ValueError("Analysis content hash does not match the referenced ad version")
+            cursor = connection.execute("""INSERT INTO analysis_results
+                (job_id, ad_version, ad_content_hash, status, result_json, error_message,
+                 decision, filter_json, model, prompt_version, created_at)
+                VALUES(?,?,?,?,?,?,?,?,?,?,?)""",
+                (job_id, ad_version, ad_content_hash, "error" if error is not None else "success",
+                 json_text(result) if result is not None else None, error,
+                 evaluation["decision"], json_text(evaluation), model, prompt_version, utc_now()))
+            return int(cursor.lastrowid)
+
+    def get_analysis(self, analysis_id: int) -> dict[str, Any] | None:
+        with self.connect(read_only=True) as connection:
+            row = connection.execute("SELECT * FROM analysis_results WHERE id=?", (analysis_id,)).fetchone()
+            return dict(row) if row else None
+
+    def jobs_with_latest_analysis(self, keyword: str | None = None) -> list[dict[str, Any]]:
+        """Latest attempt for each CURRENT version and hash; no stale exclusions."""
+        sql = """SELECT j.*, a.id AS analysis_id, a.result_json AS analysis_result_json,
+            a.status AS analysis_status, a.error_message AS analysis_error,
+            a.prompt_version AS analysis_prompt_version, a.model AS analysis_model
+            FROM jobs j LEFT JOIN analysis_results a ON a.id=(
+                SELECT latest.id FROM analysis_results latest
+                WHERE latest.job_id=j.id AND latest.ad_version=j.version
+                  AND latest.ad_content_hash=j.content_hash ORDER BY latest.id DESC LIMIT 1)
+            WHERE (j.deadline IS NULL OR julianday(j.deadline) >= julianday('now'))"""
+        params = []
+        if keyword:
+            sql += " AND instr(lower(j.title || ' ' || coalesce(j.employer,'') || ' ' || coalesce(j.location,'')),lower(?)) > 0"
+            params.append(keyword)
+        sql += " ORDER BY julianday(j.published_at) DESC, j.first_seen DESC, j.id DESC"
+        with self.connect(read_only=True) as connection:
+            return [dict(row) for row in connection.execute(sql, params)]
