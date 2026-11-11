@@ -1,5 +1,5 @@
 """Read-only JobTech adapter. Does not use an LLM or browser automation."""
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from email.utils import parsedate_to_datetime
 import random
 import time
@@ -10,11 +10,8 @@ import httpx
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, ValidationError
 
 from jobagent.models import JobAd, SourceAd
-from jobagent.settings import Source
-
-
-class SourceError(Exception):
-    """An upstream failure safe to display without raw ad content."""
+from jobagent.settings import Source, Search
+from jobagent.sources import SourceError, SourceBatch
 
 
 class Total(BaseModel):
@@ -70,6 +67,56 @@ def normalize(raw: dict[str, Any], timezone: str) -> SourceAd:
 
 
 class Platsbanken:
+    name = "platsbanken"
+
+    def batches(self, spec: Search):
+        now = datetime.now(UTC)
+        zone = ZoneInfo(self.settings.timezone)
+        after = (now - timedelta(days=spec.days)).astimezone(zone).strftime("%Y-%m-%dT%H:%M:%S")
+        before = now.astimezone(zone).strftime("%Y-%m-%dT%H:%M:%S")
+        for query in spec.queries:
+            outcome = {"query": query, "status": "complete", "pages": 0, "received": 0,
+                       "unique_seen": 0, "reported_total": None}
+            seen = set()
+            try:
+                for page_number in range(spec.max_pages):
+                    offset = page_number * spec.page_size
+                    if offset > 2000:
+                        outcome.update(status="partial", reason="API offset limit reached; narrow query or date window")
+                        break
+                    page = self.search(query, offset, spec.page_size, after, before)
+                    outcome["reported_total"] = max(outcome["reported_total"] or 0, page.total.value)
+                    outcome["pages"] += 1
+                    outcome["received"] += len(page.hits)
+                    ads, invalid = [], 0
+                    previous_count = len(seen)
+                    for raw in page.hits:
+                        try:
+                            ad = normalize(raw, self.settings.timezone)
+                        except (ValueError, TypeError):
+                            invalid += 1
+                            outcome.update(status="partial", reason="One or more invalid ads skipped")
+                            continue
+                        ads.append(ad)
+                        seen.add(ad.job.external_id)
+                    outcome["unique_seen"] = len(seen)
+                    if page.total.relation not in (None, "eq"):
+                        outcome.update(status="partial", reason="API reports a lower bound, not an exact total")
+                    yield SourceBatch(ads, invalid, dict(outcome))
+                    if len(seen) >= outcome["reported_total"]:
+                        break
+                    if len(page.hits) < spec.page_size:
+                        outcome.update(status="partial", reason="Results ended before the reported total")
+                        break
+                    if len(seen) == previous_count:
+                        outcome.update(status="partial", reason="Page contains no new valid IDs")
+                        break
+                else:
+                    outcome.update(status="partial", reason="Configured page limit reached")
+            except SourceError as exc:
+                outcome.update(status="failed", reason=str(exc))
+            yield SourceBatch(outcome=dict(outcome))
+
     def __init__(self, settings: Source, client: httpx.Client | None = None,
                  sleep: Callable[[float], None] = time.sleep):
         self.settings = settings

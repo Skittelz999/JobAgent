@@ -48,6 +48,8 @@ def parser() -> argparse.ArgumentParser:
     history.add_argument("--limit", type=int, default=20)
     analyze = commands.add_parser("analyze", help="Analyze one stored ad locally, without saving or scoring")
     analyze.add_argument("id", type=int)
+    manual = commands.add_parser("import", help="Import a UTF-8 JSON ad without fetching a URL")
+    manual.add_argument("file", type=Path)
     return cli
 
 
@@ -96,7 +98,12 @@ def main(argv: list[str] | None = None) -> int:
                   "original_url": job.original_url, **result})
             return 0
         database.initialize()
-        if args.command == "init":
+        if args.command == "import":
+            from jobagent.sources import ManualImport
+            from jobagent.search import import_ad
+            value = ManualImport.model_validate_json(args.file.read_text(encoding="utf-8-sig"))
+            emit(import_ad(database, value))
+        elif args.command == "init":
             emit({"database": str(database.path), "schema_version": SCHEMA_VERSION})
         elif args.command == "search":
             with Platsbanken(settings.source) as source:
