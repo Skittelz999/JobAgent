@@ -238,6 +238,23 @@ def test_schema_three_upgrade_preserves_all_existing_rows(db):
         assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
 
 
+def test_queue_remembers_provider_when_server_settings_change(db, settings):
+    import_ad(db, imported())
+    queue = TaskQueue(db, settings)
+    task_id = queue.enqueue("analyze_pending")
+    payload = json.loads(queue.get(task_id)["payload_json"])
+    assert payload["llm"]["provider"] == "local"
+    settings.llm.provider = "openai"
+    received = []
+    def factory(snapshot):
+        received.append(snapshot.provider)
+        return model_provider()
+    restarted = TaskQueue(db, settings, factory)
+    restarted.run_once()
+    assert received == ["local"]
+    assert restarted.get(task_id)["status"] == "success"
+
+
 def test_upgrade_creates_recoverable_sqlite_backup(db, settings):
     import_ad(db, imported())
     with db.connect() as conn:

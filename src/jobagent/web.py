@@ -34,7 +34,7 @@ def browse_jobs(database, settings, *, q="", source="", location="", technology=
         row["job"] = job
         row["state"] = row["analysis_status"] or "pending"
         result = json.loads(row["analysis_result_json"]) if row["analysis_result_json"] else None
-        if row["analysis_status"] == "success" and not analysis_is_current(row, settings.llm.model, "local"):
+        if row["analysis_status"] == "success" and not analysis_is_current(row, settings.llm.active_model, settings.llm.provider):
             row["state"] = "outdated"
         row["result"] = result if row["state"] == "success" else None
         row["experience_rows"] = [dict(item, **proof) for item, proof in zip(
@@ -73,7 +73,7 @@ def create_app(settings, *, start_worker=True, provider_factory=None):
     queue = TaskQueue(database, settings, **({"provider_factory": provider_factory} if provider_factory else {}))
     token = secrets.token_urlsafe(32)
     templates = Jinja2Templates(directory=str(Path(__file__).parent / "templates"))
-    templates.env.globals.update(csrf=token, labels=STATUS_LABELS, llm_provider="local", llm_model=settings.llm.model,
+    templates.env.globals.update(csrf=token, labels=STATUS_LABELS, llm_provider=settings.llm.provider, llm_model=settings.llm.active_model,
                                 importance_labels={"mandatory": "Obligatoriskt", "expected": "Förväntat", "preferred": "Meriterande", "unclear": "Oklart", "not_applicable": "Omnämnd teknik"})
 
     @asynccontextmanager

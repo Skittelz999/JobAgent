@@ -1,6 +1,7 @@
 """Explicit configuration loading; no filesystem side effects at import time."""
 import os
 from pathlib import Path
+from typing import Literal
 import tomllib
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
@@ -56,6 +57,13 @@ class Search(StrictModel):
 
 
 class LLMSettings(StrictModel):
+    provider: Literal["local", "openai"] = "local"
+    openai_model: str = Field(default="gpt-4.1-mini", min_length=1)
+
+    @property
+    def active_model(self) -> str:
+        return self.openai_model if self.provider == "openai" else self.model
+
     base_url: str = "http://127.0.0.1:1234/v1"
     model: str = Field(default="openai/gpt-oss-20b", min_length=1)
     timeout_seconds: float = Field(default=180, gt=0, le=600)
@@ -91,8 +99,33 @@ class Settings(StrictModel):
     filter: FilterSettings = Field(default_factory=FilterSettings)
 
 
+def load_dotenv(path: Path) -> None:
+    """Load simple KEY=VALUE lines from a .env file without overriding existing os.environ."""
+    if not path.is_file():
+        return
+    for raw_line in path.read_text(encoding="utf-8-sig").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export ") and "=" in line[7:]:
+            line = line[7:].strip()
+        if "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        if not key or key in os.environ:
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+            value = value[1:-1]
+        elif " #" in value:
+            value = value.split(" #", 1)[0].rstrip()
+        os.environ[key] = value
+
+
 def load_settings(project_root: Path, config_path: Path | None = None) -> Settings:
     root = project_root.resolve()
+    load_dotenv(root / ".env")
     path = config_path or root / "config/settings.toml"
     if not path.is_absolute():
         path = root / path
@@ -103,6 +136,8 @@ def load_settings(project_root: Path, config_path: Path | None = None) -> Settin
         "JOBAGENT_API_BASE_URL": ("source", "base_url"),
         "JOBAGENT_LLM_BASE_URL": ("llm", "base_url"),
         "JOBAGENT_LLM_MODEL": ("llm", "model"),
+        "JOBAGENT_LLM_PROVIDER": ("llm", "provider"),
+        "JOBAGENT_OPENAI_MODEL": ("llm", "openai_model"),
     }
     for name, (section, key) in overrides.items():
         if name in os.environ:

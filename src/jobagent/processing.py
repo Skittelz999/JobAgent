@@ -24,6 +24,7 @@ def analyze_stored_job(database: Database, row: dict, provider: LLMProvider, set
     job = JobAd.model_validate_json(row["payload_json"])
     try:
         result = analyze_job(job, provider)
+        result["provider"] = provider.settings.provider
         result["requested_model"] = provider.settings.model
     except LLMError as exc:
         error = str(exc)
@@ -94,7 +95,7 @@ def pending_jobs(database: Database, model: str, provider: str = "local") -> lis
 
 
 def analyze_pending(database: Database, provider: LLMProvider, settings: FilterSettings, progress=None) -> dict:
-    rows = pending_jobs(database, provider.settings.model)
+    rows = pending_jobs(database, provider.settings.model, provider.settings.provider)
     results = []
     for row in rows:
         # Read again: the ad may have changed since selection.

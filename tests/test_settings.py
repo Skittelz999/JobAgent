@@ -58,3 +58,29 @@ def test_obsolete_settings_rejected_without_creating_database(tmp_path, capsys, 
     error = capsys.readouterr().err
     assert legacy_section in error and "Extra inputs are not permitted" in error
     assert not (root / "var").exists()
+
+
+def test_dotenv_loaded_without_overriding_existing_environment(tmp_path, monkeypatch):
+    root = tmp_path / "project"
+    (root / "config").mkdir(parents=True)
+    (root / "config/settings.toml").write_text((ROOT / "config/settings.toml").read_text(encoding="utf-8"), encoding="utf-8")
+    (root / ".env").write_text(
+        "# Comment line\n"
+        "JOBAGENT_LLM_PROVIDER=openai\n"
+        "export JOBAGENT_OPENAI_MODEL='gpt-4.1-mini'\n"
+        'OPENAI_API_KEY="dotenv-secret-key"\n'
+        "JOBAGENT_DATABASE=var/from-dotenv.sqlite3 # inline comment\n",
+        encoding="utf-8",
+    )
+    monkeypatch.delenv("JOBAGENT_LLM_PROVIDER", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.setenv("JOBAGENT_OPENAI_MODEL", "env-wins-model")
+    monkeypatch.delenv("JOBAGENT_DATABASE", raising=False)
+
+    settings = load_settings(root)
+    assert settings.llm.provider == "openai"
+    assert settings.llm.openai_model == "env-wins-model"
+    assert settings.storage.database == (root / "var/from-dotenv.sqlite3").resolve()
+    import os
+    assert os.environ["OPENAI_API_KEY"] == "dotenv-secret-key"
+    assert "dotenv-secret-key" not in settings.model_dump_json()
