@@ -76,6 +76,7 @@ def test_schema_two_migration_preserves_all_rows_including_legacy_results(db):
     db.finish_run(run, "complete", {})
     # Recreate schema 2 and seed an opaque historical row.
     with db.connect() as connection:
+        connection.execute("DROP TABLE background_tasks")
         connection.execute("DROP TABLE analysis_results")
         connection.execute("PRAGMA user_version=2")
         connection.execute("""INSERT INTO match_results
@@ -97,7 +98,7 @@ def test_schema_two_migration_preserves_all_rows_including_legacy_results(db):
         for table, rows in before.items():
             assert [tuple(row) for row in connection.execute("SELECT * FROM " + table)] == rows
         assert [tuple(row) for row in connection.execute(
-            "SELECT type, name, tbl_name, sql FROM sqlite_master WHERE name NOT IN ('analysis_results', 'analysis_version_latest') ORDER BY type, name")] == schema_before
+            "SELECT type, name, tbl_name, sql FROM sqlite_master WHERE name NOT IN ('analysis_results', 'analysis_version_latest', 'background_tasks') ORDER BY type, name")] == schema_before
         assert connection.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
         assert connection.execute("PRAGMA foreign_key_check").fetchall() == []
     # Collection can create a new ad version while the historical reference stays intact.
@@ -113,6 +114,7 @@ def test_schema_one_migration_preserves_all_original_rows(db):
     run = db.start_run({"queries": ["Java"]})
     db.finish_run(run, "complete", {})
     with db.connect() as connection:
+        connection.execute("DROP TABLE background_tasks")
         connection.execute("DROP TABLE analysis_results")
         connection.execute("DROP TABLE match_results")
         connection.execute("PRAGMA user_version=1")

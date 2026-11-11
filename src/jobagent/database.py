@@ -10,7 +10,7 @@ from typing import Any, Literal
 
 from jobagent.models import SourceAd
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 def utc_now() -> str:
     return datetime.now(UTC).isoformat()
@@ -132,6 +132,24 @@ class Database:
                     CREATE INDEX analysis_version_latest ON analysis_results
                         (job_id, ad_version, ad_content_hash, id DESC);
                     PRAGMA user_version=3;
+                    COMMIT;
+                """)
+
+            if version < 4:
+                connection.executescript("""
+                    BEGIN IMMEDIATE;
+                    CREATE TABLE background_tasks (
+                        id INTEGER PRIMARY KEY,
+                        kind TEXT NOT NULL CHECK(kind IN ('collect','analyze_pending','analyze_one')),
+                        payload_json TEXT NOT NULL,
+                        status TEXT NOT NULL CHECK(status IN ('queued','running','success','partial','error','interrupted')),
+                        created_at TEXT NOT NULL,
+                        updated_at TEXT NOT NULL,
+                        progress_json TEXT NOT NULL DEFAULT '{}',
+                        result_json TEXT,
+                        error_message TEXT
+                    );
+                    PRAGMA user_version=4;
                     COMMIT;
                 """)
 
