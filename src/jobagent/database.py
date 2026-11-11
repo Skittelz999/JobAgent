@@ -104,13 +104,15 @@ class Database:
                     COMMIT;
                 """)
 
-    def upsert_page(self, ads: list[SourceAd]) -> dict[str, int]:
+    def upsert_page(self, ads: list[SourceAd], *, skip_new_expired_at: datetime | None = None) -> dict[str, int]:
         """Commit an entire validated page; identity is source + external ID.
 
         Hash normalized content, not raw search ranking or retrieval metadata.
         Raw input is retained with each material normalized content version.
         """
         counts = {"inserted": 0, "updated": 0, "unchanged": 0}
+        if skip_new_expired_at is not None:
+            counts["skipped_expired"] = 0
         now = utc_now()
         with self.connect() as connection:
             connection.execute("BEGIN IMMEDIATE")
@@ -122,6 +124,10 @@ class Database:
                     "SELECT id, content_hash, version FROM jobs WHERE source=? AND external_id=?",
                     (job.source, job.external_id),
                 ).fetchone()
+                # Keep deadline updates for known ads so a shortened deadline hides them.
+                if existing is None and skip_new_expired_at is not None and job.deadline is not None and job.deadline < skip_new_expired_at:
+                    counts["skipped_expired"] += 1
+                    continue
                 if existing and existing["content_hash"] == digest:
                     connection.execute("UPDATE jobs SET last_seen=? WHERE id=?", (now, existing["id"]))
                     counts["unchanged"] += 1
@@ -163,12 +169,12 @@ class Database:
                                (utc_now(), status, json_text(result), run_id))
 
     def list_jobs(self, limit: int = 20, keyword: str | None = None) -> list[dict[str, Any]]:
-        sql = "SELECT * FROM jobs"
+        sql = "SELECT * FROM jobs WHERE (deadline IS NULL OR julianday(deadline) >= julianday('now'))"
         params: list[Any] = []
         if keyword:
-            sql += " WHERE instr(lower(title || ' ' || coalesce(employer,'') || ' ' || coalesce(location,'')),lower(?)) > 0"
+            sql += " AND instr(lower(title || ' ' || coalesce(employer,'') || ' ' || coalesce(location,'')),lower(?)) > 0"
             params.append(keyword)
-        sql += " ORDER BY first_seen DESC, id DESC LIMIT ?"
+        sql += " ORDER BY julianday(published_at) DESC, first_seen DESC, id DESC LIMIT ?"
         params.append(limit)
         with self.connect() as connection:
             return [dict(row) for row in connection.execute(sql, params)]
